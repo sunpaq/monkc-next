@@ -15,15 +15,15 @@
 struct cls { struct supercls Super;
 
 #define constructor(cls)\
-struct cls* cls(void* any)
+void* cls(void* any)
 
 #define new(cls)\
 cls(mc_alloc(sizeof(struct cls)))
 
 #define as(cls)\
-{ struct cls* obj = (struct cls*)any;
+{ struct cls* it = (struct cls*)any;
 
 #define let(any, cls)\
-{ struct cls* obj = (struct cls*)any;
+{ struct cls* it = (struct cls*)any;
 
 #endif /* monkc_h */

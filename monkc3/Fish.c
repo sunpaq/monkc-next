@@ -9,24 +9,24 @@
 #include "Fish.h"
 
 fun(initWithAge, void*), int age) as(Cell)
-    obj->age = age;
-    return obj;
+    it->age = age;
+    return it;
 }
 
 fun(getAge, int)) as(Cell)
-    return obj->age;
+    return it->age;
 }
 
 constructor(Fish) {
     Cell(any);
     as(MCObject)
-    if (obj->loadClass(obj, "Fish")) {
-        funbind(initWithAge);
-        funbind(getAge);
-    }
+        if (it->loadClass(it, "Fish")) {
+            funbind(initWithAge);
+            funbind(getAge);
+        }
     }
     as(Cell)
-        obj->age = 10;
+        it->age = 10;
     }
     as(Fish)
         funadd(initWithAge);

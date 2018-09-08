@@ -13,7 +13,7 @@ void retain(void* any)
 {
     if (!any) return;
     as(MCObject)
-        obj->ref_count++;
+        it->ref_count++;
     }
 }
 
@@ -23,13 +23,13 @@ bool release(void* any)
         return false;
     }
     as(MCObject)
-        if (obj->ref_count > 0) {
-            obj->ref_count--;
+        if (it->ref_count > 0) {
+            it->ref_count--;
         }
-        if (obj->ref_count <= 0) {
+        if (it->ref_count <= 0) {
             //call clean
-            printf("free object %p\n", obj);
-            mc_free(obj);
+            printf("free object %p\n", it);
+            mc_free(it);
             return true;
         }
     }
@@ -39,22 +39,22 @@ bool release(void* any)
 fun(info, void), char* buff) as(MCObject)
     if (buff) {
         const char* cname = "";
-        if (obj->claz) {
-            cname = obj->claz->name;
+        if (it->claz) {
+            cname = it->claz->name;
         }
-        sprintf(buff, "claz=%s\nref_count=%d\n", cname, obj->ref_count);
+        sprintf(buff, "claz=%s\nref_count=%d\n", cname, it->ref_count);
     }
 }
 
 fun(loadClass, bool), const char* name) as(MCObject)
-    if (obj->claz && strncmp(name, obj->claz->name, strlen(name)) == 0) {
+    if (it->claz && strncmp(name, it->claz->name, strlen(name)) == 0) {
         printf("class %s already loaded\n", name);
         return false;
     } else {
         T(MCClass) c = MCClass_load(name);
         if (c) {
-            obj->claz = c;
-            obj->claz->appendInstance(obj->claz, obj);
+            it->claz = c;
+            it->claz->appendInstance(it->claz, it);
             return true;
         }
     }
@@ -62,21 +62,21 @@ fun(loadClass, bool), const char* name) as(MCObject)
 }
 
 fun(getClass, struct MCClass*)) as(MCObject)
-    return obj->claz;
+    return it->claz;
 }
 
 fun(setFunction, void), const char* key, MCFunction value) as(MCObject)
-    if (obj->claz && key && value) {
-        obj->claz->setFunction(obj->claz, key, value);
-        printf("%s binding %s\n", obj->claz->name, key);
+    if (it->claz && key && value) {
+        it->claz->setFunction(it->claz, key, value);
+        printf("%s binding %s\n", it->claz->name, key);
     }
 }
 
 constructor(MCObject) {
     if (any) {
         as(MCObject)
-        obj->claz = null;
-        obj->ref_count = 1;
+        it->claz = null;
+        it->ref_count = 1;
         
         funadd(info);
         funadd(loadClass);

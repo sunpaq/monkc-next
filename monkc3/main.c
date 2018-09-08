@@ -12,21 +12,25 @@
 
 int main(int argc, const char * argv[]) {
     
-    T(Fish) f = new(Fish);
-    T(Fish) f2 = new(Fish);
+    val f1 = new(Fish);
     
-    f2->getAge(f2);
-    f->initWithAge(f, 33);
-    printf("age=%d\n", f->getAge(f));
-    
-    let(f, MCObject)
-        char buff[1024];
-        obj->info(obj, buff);
-        printf("%s\n", buff);
+    let(f1, Fish)
+        it->getAge(it);
+        it->initWithAge(it, 33);
+        printf("age=%d\n", it->getAge(it));
     }
-    
-    delete(f);
+
+    obj f2 = new(Fish);
+
+    char buff[1024];
+    f2->info(f2, buff);
+    printf("%s\n", buff);
+
+    def(f3, Fish) = new(Fish);
+
+    release(f1);
     delete(f2);
+    delete(f3);
 
     return 0;
 }

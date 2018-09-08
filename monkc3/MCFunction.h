@@ -16,10 +16,10 @@ static type name(void* any
 rtype (*name)(void* any
 
 #define funadd(name)\
-obj->name = name
+it->name = name
 
 #define funbind(name)\
-obj->setFunction(obj, #name, (void*(*)(void))name);
+it->setFunction(it, #name, (void*(*)(void))name);
 
 typedef void* (*MCFunction)(void);
 

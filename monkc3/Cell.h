@@ -14,7 +14,6 @@
 
 structure(Cell, MCObject)
     int age;
-
     fundef(cellfunc, void));
 };
 

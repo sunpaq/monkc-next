@@ -40,24 +40,24 @@ fun(setFunction, void), const char* key, MCFunction value) {
 }
 
 fun(appendInstance, void), void* instance) as(MCClass)
-    struct MCItem it;
-    it.data = instance;
-    it.next = null;
-    if (obj->instances) {
-        obj->instances->append(obj->instances, it);
+    struct MCItem item;
+    item.data = instance;
+    item.next = null;
+    if (it->instances) {
+        it->instances->append(it->instances, item);
     }
 }
 
 fun(clearInstances, void)) as(MCClass)
-    if (obj->instances) {
-        obj->instances->clear(obj->instances);
+    if (it->instances) {
+        it->instances->clear(it->instances);
     }
 }
 
 constructor(MCClass) {
     as(MCClass)
         void* mem = mc_alloc(sizeof(MCLinkedList));
-        obj->instances = MCLinkedList(mem);
+        it->instances = MCLinkedList(mem);
     
         funadd(setFunction);
         funadd(appendInstance);

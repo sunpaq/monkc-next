@@ -15,12 +15,12 @@ fun(cellfunc, void)) {
 constructor(Cell) {
     MCObject(any);
     as(MCObject)
-        if (obj->loadClass(obj, "Cell")) {
+        if (it->loadClass(it, "Cell")) {
             funbind(cellfunc);
         }
     }
     as(Cell)
-        obj->age = 0;
+        it->age = 0;
     }
     return any;
 }

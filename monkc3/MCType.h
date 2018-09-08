@@ -17,4 +17,9 @@
 #define K(key) #key
 #define F(value) (void*(*)(void))value
 
+#define def(any, type) struct type* any
+
+typedef void* var;
+typedef void* const val;
+
 #endif /* MCType_h */

@@ -14,7 +14,6 @@
 
 structure(Fish, Cell)
     char name[256];
-
     fundef(initWithAge, void*), int age);
     fundef(getAge, int));
 };

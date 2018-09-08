@@ -9,21 +9,21 @@
 #include "MCLock.h"
 #include <pthread.h>
 
-static void lock(struct MCLock* obj) {
-    while (pthread_mutex_trylock(&obj->mutex)) {
+static void lock(struct MCLock* it) {
+    while (pthread_mutex_trylock(&it->mutex)) {
         //wait lock
     }
 }
 
-static void unlock(struct MCLock* obj) {
-    pthread_mutex_unlock(&obj->mutex);
+static void unlock(struct MCLock* it) {
+    pthread_mutex_unlock(&it->mutex);
 }
 
 void MCLock(void* any) {
-    struct MCLock* obj = (struct MCLock*)any;
+    struct MCLock* it = (struct MCLock*)any;
     pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
-    obj->mutex = mutex;
-    obj->lock = lock;
-    obj->unlock = unlock;
-    obj->initialized = true;
+    it->mutex = mutex;
+    it->lock = lock;
+    it->unlock = unlock;
+    it->initialized = true;
 }

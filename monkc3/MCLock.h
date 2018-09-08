@@ -16,8 +16,8 @@ struct MCLock {
     bool initialized;
     pthread_mutex_t mutex;
     
-    void (*lock)(struct MCLock* obj);
-    void (*unlock)(struct MCLock* obj);
+    void (*lock)(struct MCLock* it);
+    void (*unlock)(struct MCLock* it);
 };
 
 void MCLock(void* any);

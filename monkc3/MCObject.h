@@ -28,4 +28,6 @@ constructor(MCObject);
 
 #define delete(obj) if (release(obj)) {obj = null;}
 
+typedef struct MCObject* obj;
+
 #endif /* MCObject_h */
