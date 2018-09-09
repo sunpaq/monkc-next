@@ -4,6 +4,13 @@
 - it will take some syntax ideas form modern languages like Swift & Kotlin
 - change from C99 to ANSI C standard for porting to more platforms
 
+## Structure as first class
+
+- the C struct and Monk-C class is the same thing.
+- you can define constructor and add function into a C struct
+- basically you should add 'struct' prefix before Monk-C class
+- for easy of use. T(Class) and alias(Class) => Class_t can help
+
 ## Default hidden pointers
 
     void* any
@@ -21,13 +28,6 @@
 
 - most of the syntax C macros have a hidden open paren '(' or curly '{'
 - don't worry about the unbalenced parens. C compiler will notice you to close it.
-
-## Structure as first class
-
-- the C struct and Monk-C class is the same thing.
-- you can define constructor and add function into a C struct
-- basically you should add 'struct' prefix before Monk-C class
-- for easy of use. T(Class) and alias(Class) => Class_t can help
 
 ## Types
 
