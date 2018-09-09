@@ -14,7 +14,7 @@
 - you can cast [any] into [struct Class* it] pointer use let()/as()
 - you access super class data by cast the [any] pointer to super type
 
-## Default hidden open parenthesis '(' 
+## Default hidden open parenthesis '(' 
 
     #define fun(name, type)\
     static type name(void* any
