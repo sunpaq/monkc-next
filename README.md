@@ -4,6 +4,24 @@
 - it will take some syntax ideas form modern languages like Swift & Kotlin
 - change from C99 to ANSI C standard for porting to more platforms
 
+## Default hidden pointers
+
+    void* any
+
+    struct Class* it
+
+- all functions (include constructor) have [void* any] hidden pointer as first argument.
+- you can cast [any] into [struct Class* it] pointer use let()/as()
+- you access super class data by cast the [any] pointer to super type
+
+## Default hidden open parenthesis '(' 
+
+    #define fun(name, type)\
+    static type name(void* any
+
+- most of the syntax C macros have a hidden open paren '(' or curly '{'
+- don't worry about the unbalenced parens. just close them at the end
+
 ## Types
 
     var
@@ -25,16 +43,6 @@
         it->data = 0;
     }
 
-## Default hidden pointers
-
-    void* any
-
-    struct Class* it
-
-- all functions (include constructor) have [void* any] hidden pointer as first argument.
-- you can cast [any] into [struct Class* it] pointer use let()/as()
-- you access super class data by cast the [any] pointer to super type
- 
 ## Class define
 
     structure(cls, super)
