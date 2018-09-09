@@ -13,7 +13,7 @@ fun(initWithAge, void*), int age) as(Cell)
     return it;
 }
 
-fun(getAge, int)) as(Cell)
+fun(getAge, int)) let(any, Cell)
     return it->age;
 }
 

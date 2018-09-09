@@ -22,12 +22,20 @@
 - most of the syntax C macros have a hidden open paren '(' or curly '{'
 - don't worry about the unbalenced parens. C compiler will notice you to close it.
 
+## Structure as first class
+
+- the C struct and Monk-C class is the same thing.
+- you can define constructor and add function into a C struct
+- basically you should add 'struct' prefix before Monk-C class
+- for easy of use. T(Class) and alias(Class) => Class_t can help
+
 ## Types
 
     var
     val
     obj
     Class_t
+    T(Class)
 
 ## Type cast
 
@@ -39,6 +47,7 @@
         it->name(it);
     }
 
+    //cast default 'any' pointer
     as(Class)
         it->data = 0;
     }
@@ -52,8 +61,13 @@
     //no params
     constructor(cls));
 
+    or
+
     //with params
     constructor(cls), int arg1, float arg2);
+
+    //typedef the cls_t for easy to use
+    alias(cls);
 
 ## Function define
 
@@ -70,8 +84,13 @@
         //any pointer is void* type
     }
 
-    //will access data
+    //will access data, cast default 'any' to 'it'
     fun(name, rtype), int arg) as(Class)
+        //it pointer is strunct Class* type
+    }
+
+    //will access data, cast 'any' to 'it'
+    fun(name, rtype), int arg) let(any, Class)
         //it pointer is strunct Class* type
     }
 
@@ -109,7 +128,9 @@
 
     Class_t d = Class(alloc(Class), 4, "F22");
 
-    def(e, Class) = Class(alloc(Class), 5, "F35");
+    T(Class) e = Class(alloc(Class), 5, "F35");
+
+    def(f, Class) = Class(alloc(Class), 6, "F117");
 
 ## Object type cast
 
