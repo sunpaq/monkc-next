@@ -11,14 +11,16 @@
 
 #define T(cls) struct cls*
 
+#define alias(cls) typedef struct cls* cls##_t
+
 #define structure(cls, supercls)\
 struct cls { struct supercls Super;
 
 #define constructor(cls)\
-void* cls(void* any)
+void* cls(void* any
 
-#define new(cls)\
-cls(mc_alloc(sizeof(struct cls)))
+#define alloc(cls)\
+mc_alloc(sizeof(struct cls))
 
 #define as(cls)\
 { struct cls* it = (struct cls*)any;

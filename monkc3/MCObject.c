@@ -72,7 +72,7 @@ fun(setFunction, void), const char* key, MCFunction value) as(MCObject)
     }
 }
 
-constructor(MCObject) {
+constructor(MCObject)) {
     if (any) {
         as(MCObject)
         it->claz = null;

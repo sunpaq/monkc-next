@@ -54,7 +54,7 @@ fun(clearInstances, void)) as(MCClass)
     }
 }
 
-constructor(MCClass) {
+constructor(MCClass)) {
     as(MCClass)
         void* mem = mc_alloc(sizeof(MCLinkedList));
         it->instances = MCLinkedList(mem);

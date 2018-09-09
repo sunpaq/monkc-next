@@ -24,9 +24,7 @@ struct MCObject {
     fundef(setFunction, void), const char* key, MCFunction value);
 };
 
-constructor(MCObject);
-
-#define delete(obj) if (release(obj)) {obj = null;}
+constructor(MCObject));
 
 typedef struct MCObject* obj;
 

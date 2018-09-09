@@ -44,7 +44,7 @@ fun(clear, void)) as(MCLinkedList)
     }
 }
 
-constructor(MCLinkedList) {
+constructor(MCLinkedList)) {
     if (any) {
         as(MCLinkedList)
         it->head.data = null;

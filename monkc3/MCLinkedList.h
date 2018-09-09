@@ -28,6 +28,6 @@ struct MCLinkedList {
     fundef(clear, void));
 };
 
-constructor(MCLinkedList);
+constructor(MCLinkedList));
 
 #endif /* MCLinkedList_h */

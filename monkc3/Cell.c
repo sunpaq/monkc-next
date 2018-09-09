@@ -12,7 +12,7 @@ fun(cellfunc, void)) {
     printf("cell function\n");
 }
 
-constructor(Cell) {
+constructor(Cell), int age) {
     MCObject(any);
     as(MCObject)
         if (it->loadClass(it, "Cell")) {
@@ -20,7 +20,7 @@ constructor(Cell) {
         }
     }
     as(Cell)
-        it->age = 0;
+        it->age = age;
     }
     return any;
 }

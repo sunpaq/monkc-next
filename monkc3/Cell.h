@@ -17,6 +17,6 @@ structure(Cell, MCObject)
     fundef(cellfunc, void));
 };
 
-constructor(Cell);
+constructor(Cell), int age);
 
 #endif /* Cell_h */

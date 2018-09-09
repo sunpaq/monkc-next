@@ -25,7 +25,7 @@ struct MCClass {
     fundef(clearInstances, void));
 };
 
-constructor(MCClass);
+constructor(MCClass));
 
 struct MCClass* MCClass_load(const char* name);
 void MCClass_gc(void);

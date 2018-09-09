@@ -17,4 +17,6 @@ void mc_free(void* any);
 void retain(void* any);
 bool release(void* any);
 
+#define delete(obj) if (release(obj)) {obj = null;}
+
 #endif /* MCMem_h */
