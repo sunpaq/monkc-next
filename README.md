@@ -1,4 +1,4 @@
-# monkc-next
+# Monk-C next version
 
 - experimental implementation of next version Monk-C
 - it will take some syntax ideas form modern languages like Swift & Kotlin
@@ -20,7 +20,7 @@
     static type name(void* any
 
 - most of the syntax C macros have a hidden open paren '(' or curly '{'
-- don't worry about the unbalenced parens. just close them at the end
+- don't worry about the unbalenced parens. C compiler will notice you to close it.
 
 ## Types
 
