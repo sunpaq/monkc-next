@@ -19,8 +19,8 @@ rtype (*name)(void* any
 it->name = name
 
 #define funbind(name)\
-it->setFunction(it, #name, (void*(*)(void))name);
+it->setFunction(it, #name, (MCFunction)name);
 
-typedef void* (*MCFunction)(void);
+typedef void* (*MCFunction)(void*, ...);
 
 #endif /* Function_h */
