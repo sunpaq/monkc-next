@@ -21,6 +21,20 @@
         it->name(it);
     }
 
+    as(Class)
+        it->data = 0;
+    }
+
+## Default hidden pointers
+
+    void* any
+
+    struct Class* it
+
+- all functions (include constructor) have [void* any] hidden pointer as first argument.
+- you can cast [any] into [struct Class* it] pointer use let()/as()
+- you access super class data by cast the [any] pointer to super type
+ 
 ## Class define
 
     structure(cls, super)
