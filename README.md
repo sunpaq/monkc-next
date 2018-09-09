@@ -150,3 +150,9 @@
 
     ff(a, functionName), p1, p2);
 
+# Runtime
+
+- Monk-C next will support dynamic method calling like Objective-C
+- the runtime system currently not implemented
+- will copy & refactoring the old Monk-C runtime.
+https://github.com/sunpaq/monkc
