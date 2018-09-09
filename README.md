@@ -54,7 +54,7 @@
 
 ## Class define
 
-    structure(Class, Super)
+    structure(Class, Super)
         //define your data
     };
 
