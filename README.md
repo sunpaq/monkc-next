@@ -54,20 +54,20 @@
 
 ## Class define
 
-    structure(cls, super)
+    structure(Class, Super)
         //define your data
     };
 
     //no params
-    constructor(cls));
+    constructor(Class));
 
     or
 
     //with params
-    constructor(cls), int arg1, float arg2);
+    constructor(Class), int arg1, float arg2);
 
-    //typedef the cls_t for easy to use
-    alias(cls);
+    //typedef the Class_t for easy to use
+    alias(Class);
 
 ## Function define
 
@@ -96,7 +96,7 @@
 
 ## Constructor implementation
 
-    constructor(cls), int arg1, float arg2) {
+    constructor(Class), int arg1, float arg2) {
         Super(any), "yeah");
         as(MCObject)
             if (it->loadClass(it, "Class")) {
