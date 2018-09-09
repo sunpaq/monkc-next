@@ -98,3 +98,12 @@
     let(a, Class)
         it->name(it);
     }
+
+## Call static function
+
+    a->functionName(a, p1, p2);
+
+## Call dynamic function (working on)
+
+    ff(a, functionName), p1, p2);
+
