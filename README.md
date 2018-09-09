@@ -1,8 +1,8 @@
 # monkc-next
 
-experimental implementation of next version Monk-C
-it will take some syntax ideas form modern languages like Swift & Kotlin
-change from C99 to ANSI C standard for porting to more platforms
+- experimental implementation of next version Monk-C
+- it will take some syntax ideas form modern languages like Swift & Kotlin
+- change from C99 to ANSI C standard for porting to more platforms
 
 ## Types
 
