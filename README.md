@@ -4,6 +4,23 @@
 - it will take some syntax ideas form modern languages like Swift & Kotlin
 - change from C99 to ANSI C standard for porting to more platforms
 
+## How to Build the demo
+
+1. via Xcode
+2. via CLion
+3. via cmake
+
+```
+cd proj/root/path
+cmake ./monkc3
+make
+```
+
+run the demo
+```
+./app/demo
+```
+
 ## Structure as first class
 
 - the C struct and Monk-C class is the same thing.
@@ -152,7 +169,6 @@
 
 # Runtime
 
-- Monk-C next will support dynamic method calling like Objective-C
-- the runtime system currently not implemented
-- will copy & refactoring the old Monk-C runtime.
+- Monk-C next support dynamic method calling like Objective-C
+- the runtime copy & refactoring from old Monk-C runtime.
 https://github.com/sunpaq/monkc

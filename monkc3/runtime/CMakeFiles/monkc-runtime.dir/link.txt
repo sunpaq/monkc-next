@@ -1,0 +1,2 @@
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc libmonkc-runtime.a  CMakeFiles/monkc-runtime.dir/MCClass.c.o CMakeFiles/monkc-runtime.dir/MCFunction.c.o CMakeFiles/monkc-runtime.dir/MCHashTable.c.o CMakeFiles/monkc-runtime.dir/MCLinkedList.c.o CMakeFiles/monkc-runtime.dir/MCLock.c.o CMakeFiles/monkc-runtime.dir/MCMem.c.o CMakeFiles/monkc-runtime.dir/MCObject.c.o CMakeFiles/monkc-runtime.dir/MCType.c.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib libmonkc-runtime.a
