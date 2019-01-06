@@ -17,6 +17,7 @@ structure(Fish, Cell)
     fundef(initWithAge, void*), int age);
     fundef(getAge, int));
     fundef(printName, void));
+    fundef(release, void));
 };
 
 constructor(Fish), const char* name);

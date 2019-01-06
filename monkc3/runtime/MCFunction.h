@@ -11,9 +11,6 @@
 
 #include "MCType.h"
 
-#define util(cla, name, rtype)\
-rtype cla##_##name(void* any
-
 #define fun(name, type)\
 static type name(void* any
 
@@ -27,10 +24,12 @@ it->name = name
 claz->setFunction(claz, #name, (MCFunction)name);it->name = name
 
 #define ff(it, name)\
-it->claz->getFunction(it->claz, #name)(it
+((obj)it)->claz->getFunction(((obj)it)->claz, #name)(it
 
-typedef mc_generic (*MCFunction)(void*, ...);
+#define ff_double(it, name)\
+((obj)it)->claz->getFunctionDouble(((obj)it)->claz, #name)(it
 
-
+typedef int64_t (*MCFunction)(void*, ...);
+typedef double (*MCFunctionDouble)(void*, ...);
 
 #endif /* Function_h */

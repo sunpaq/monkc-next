@@ -26,9 +26,11 @@ struct MCClass {
 
     fundef(setFunction, void), const char* key, MCFunction value);
     fundef(getFunction, MCFunction), const char* key);
+    fundef(getFunctionDouble, MCFunctionDouble), const char* key);
 
     fundef(appendInstance, void), void* instance);
     fundef(clearInstances, void));
+
     char name[256];
 };
 

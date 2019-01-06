@@ -9,9 +9,8 @@
 #ifndef monkc_h
 #define monkc_h
 
-#define T(cls) struct cls*
-
-#define alias(cls) typedef struct cls* cls##_t
+#define alias(cls)\
+typedef struct cls cls##_t
 
 #define structure(cls, supercls)\
 struct cls { struct supercls Super;

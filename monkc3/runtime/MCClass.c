@@ -54,6 +54,18 @@ fun(getFunction, MCFunction), const char* key) as(MCClass)
     return null;
 }
 
+fun(getFunctionDouble, MCFunctionDouble), const char* key) as(MCClass)
+    struct MCClass* iter = it;
+    while (iter) {
+        MCFunctionDouble f = iter->methodtable->get(iter->methodtable, key).p;
+        if (f) {
+            return f;
+        }
+        iter = iter->super;
+    }
+    return null;
+}
+
 fun(appendInstance, void), void* instance) as(MCClass)
     struct MCItem item;
     item.data = gen_p(instance);
@@ -82,6 +94,7 @@ constructor(MCClass), const char* name) {
 
         funadd(setFunction);
         funadd(getFunction);
+        funadd(getFunctionDouble);
         funadd(appendInstance);
         funadd(clearInstances);
     }

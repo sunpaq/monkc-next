@@ -34,12 +34,6 @@ MCLinkedList.h
 MCHashTable.h
 /Users/sunyuli/Dev/monkc3/monkc3/runtime/MCHashTable.h
 
-/Users/sunyuli/Dev/monkc3/monkc3/runtime/MCFunction.c
-stdlib.h
--
-MCFunction.h
-/Users/sunyuli/Dev/monkc3/monkc3/runtime/MCFunction.h
-
 /Users/sunyuli/Dev/monkc3/monkc3/runtime/MCFunction.h
 MCType.h
 /Users/sunyuli/Dev/monkc3/monkc3/runtime/MCType.h
@@ -68,26 +62,6 @@ MCClass.h
 MCType.h
 /Users/sunyuli/Dev/monkc3/monkc3/runtime/MCType.h
 
-/Users/sunyuli/Dev/monkc3/monkc3/runtime/MCLock.c
-MCLock.h
-/Users/sunyuli/Dev/monkc3/monkc3/runtime/MCLock.h
-pthread.h
--
-
-/Users/sunyuli/Dev/monkc3/monkc3/runtime/MCLock.h
-stdbool.h
--
-pthread.h
--
-
-/Users/sunyuli/Dev/monkc3/monkc3/runtime/MCMem.c
-stdlib.h
--
-MCMem.h
-/Users/sunyuli/Dev/monkc3/monkc3/runtime/MCMem.h
-MCLock.h
-/Users/sunyuli/Dev/monkc3/monkc3/runtime/MCLock.h
-
 /Users/sunyuli/Dev/monkc3/monkc3/runtime/MCMem.h
 MCType.h
 /Users/sunyuli/Dev/monkc3/monkc3/runtime/MCType.h
@@ -101,10 +75,6 @@ MCMem.h
 /Users/sunyuli/Dev/monkc3/monkc3/runtime/MCObject.h
 MCClass.h
 /Users/sunyuli/Dev/monkc3/monkc3/runtime/MCClass.h
-
-/Users/sunyuli/Dev/monkc3/monkc3/runtime/MCType.c
-MCType.h
-/Users/sunyuli/Dev/monkc3/monkc3/runtime/MCType.h
 
 /Users/sunyuli/Dev/monkc3/monkc3/runtime/MCType.h
 stdio.h

@@ -18,8 +18,11 @@ structure(Cell, MCObject)
     fundef(initWithAge, void*), int age);
     fundef(getAge, int));
     fundef(printName, void));
+    fundef(release, void));
 };
 
 constructor(Cell), int age);
+
+alias(Cell);
 
 #endif /* Cell_h */

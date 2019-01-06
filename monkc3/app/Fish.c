@@ -21,6 +21,10 @@ fun(printName, void)) as(Fish)
     printf("%s\n", it->name);
 }
 
+fun(release, void)) as(Cell)
+    it->release(it);
+}
+
 constructor(Fish), const char* name) {
     Cell(any, 30);
     as(Cell)
@@ -29,6 +33,7 @@ constructor(Fish), const char* name) {
     as(Fish)
         strncpy(it->name, name, strlen(name));
         it->name[strlen(name)] = '\0';
+        funadd(release);
     }
     dynamic(Fish)
         //override

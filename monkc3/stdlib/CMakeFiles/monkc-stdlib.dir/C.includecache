@@ -6,13 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/Users/sunyuli/Dev/monkc3/monkc3/stdlib/MCArray.c
-MCArray.h
-/Users/sunyuli/Dev/monkc3/monkc3/stdlib/MCArray.h
+/Users/sunyuli/Dev/monkc3/monkc3/stdlib/MCMap.c
+MCMap.h
+/Users/sunyuli/Dev/monkc3/monkc3/stdlib/MCMap.h
 
-/Users/sunyuli/Dev/monkc3/monkc3/stdlib/MCArray.h
+/Users/sunyuli/Dev/monkc3/monkc3/stdlib/MCMap.h
 MCObject.h
 /Users/sunyuli/Dev/monkc3/monkc3/stdlib/MCObject.h
+MCHashTable.h
+/Users/sunyuli/Dev/monkc3/monkc3/stdlib/MCHashTable.h
 
 runtime/MCClass.h
 stdio.h

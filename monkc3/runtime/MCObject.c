@@ -9,31 +9,21 @@
 #include "MCObject.h"
 #include "MCMem.h"
 
-void retain(void* any)
-{
-    if (!any) return;
-    as(MCObject)
-        it->ref_count++;
-    }
+fun(retain, void)) as(MCObject)
+    if (!it) return;
+    it->ref_count++;
 }
 
-bool release(void* any)
-{
-    if (!any) {
-        return false;
+fun(release, void)) as(MCObject)
+    if (!it) return;
+    if (it->ref_count > 0) {
+        it->ref_count--;
     }
-    as(MCObject)
-        if (it->ref_count > 0) {
-            it->ref_count--;
-        }
-        if (it->ref_count <= 0) {
-            //call clean
-            printf("free object %p\n", it);
-            mc_free(it);
-            return true;
-        }
+    if (it->ref_count <= 0) {
+        //call clean
+        printf("free object %p\n", it);
+        mc_free(it);
     }
-    return false;
 }
 
 fun(info, void), char* buff) as(MCObject)
@@ -46,13 +36,29 @@ fun(info, void), char* buff) as(MCObject)
     }
 }
 
+fun(responseTo, void*), const char* name) as(MCObject)
+    if (name != null) {
+        if (it->claz != null) {
+            MCFunction f;
+            if ((f = it->claz->getFunction(it->claz, name)) != null) {
+                return f;
+            }
+            MCFunctionDouble fd;
+            if ((fd = it->claz->getFunctionDouble(it->claz, name)) != null) {
+                return fd;
+            }
+        }
+    }
+    return null;
+}
+
 bool MCObject_class(obj it, const char* name) {
     if (it->claz && strncmp(name, it->claz->name, strlen(name)) == 0) {
         printf("class %s already loaded\n", name);
         return false;
     } else {
         val root = it->claz;
-        T(MCClass) c = MCClass_load(name);
+        struct MCClass* c = MCClass_load(name);
         if (c) {
             it->claz = c;
             it->claz->super = root;
@@ -63,17 +69,15 @@ bool MCObject_class(obj it, const char* name) {
     return false;
 }
 
-fun(bye, void)) {
-    //nothing
-}
-
 constructor(MCObject)) {
     if (any) {
         as(MCObject)
             it->claz = null;
             it->ref_count = 1;
             funadd(info);
-            funadd(bye);
+            funadd(responseTo);
+            funadd(retain);
+            funadd(release);
         }
     }
     return any;

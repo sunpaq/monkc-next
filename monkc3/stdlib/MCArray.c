@@ -66,7 +66,7 @@ fun(removeAt, void), size_t index) as(MCArray)
 }
 
 fun(clear, void)) as(MCArray)
-    it->bye(it);
+    it->release(it);
     it->buff = (mc_generic*)malloc(sizeof(mc_generic) * 100);
 }
 
@@ -82,12 +82,14 @@ fun(printAll, void), const char* delimiter) as(MCArray)
     printf("\n");
 }
 
-fun(bye, void)) as(MCArray)
+fun(release, void)) {
     as(MCObject)
-        it->bye(it);
+        it->release(it);
     }
-    if (it->buff) {
-        free(it->buff);
+    as(MCArray)
+        if (it->buff) {
+            free(it->buff);
+        }
     }
 }
 
@@ -98,6 +100,7 @@ constructor(MCArray), size_t maxcount) {
         it->count = 0;
         it->indexLast = 0;
         it->buff = (mc_generic*)malloc(sizeof(mc_generic) * 100);
+        funadd(release);
     }
     dynamic(MCArray)
         funbind(addItem);
@@ -108,7 +111,6 @@ constructor(MCArray), size_t maxcount) {
         funbind(clear);
         funbind(itemAt);
         funbind(printAll);
-        funbind(bye);
     }
     return any;
 }

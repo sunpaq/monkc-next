@@ -14,17 +14,19 @@ struct MCHashItem {
     struct MCHashItem* next;
     MCHash hash;
     bool tombstone;
+    bool doesAutoReleaseObject;
     mc_generic value;
     char key[MAX_KEY_CHARS + 1];
+
+    fundef(release, void));
 };
 
 constructor(MCHashItem), const char* key, mc_generic value);
 
-alias(MCHashItem);
-
 struct MCHashTable {
     int lock;
-    int cache_count;
+    size_t cache_count;
+    size_t count;
 
     //will return the item if already have one with same key.
     fundef(putItem, struct MCHashItem*), struct MCHashItem* item);
@@ -39,7 +41,18 @@ struct MCHashTable {
 
 constructor(MCHashTable));
 
-util(MCHashTable, hash, MCHash), const char *s);
+MCHash MCHashTable_hash(const char* key);
+
+typedef enum {
+    MCHashTableLevel1 = 0,
+    MCHashTableLevel2,
+    MCHashTableLevel3,
+    MCHashTableLevel4,
+    MCHashTableLevelMax,
+    MCHashTableLevelCount
+} MCHashTableLevel;
+
+unsigned get_tablesize(MCHashTableLevel level);
 
 /*
 MCInline MCHashTableIndex firstHashIndex(MCHash nkey, MCHashTableSize slots) {

@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="monkc-demo"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\app\;CMake Files\stdlib\;CMake Files\runtime\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/sunyuli/Dev/monkc3/monkc3"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/sunyuli/Dev/monkc3/monkc3/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/sunyuli/Dev/monkc3/monkc3/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/sunyuli/Dev/monkc3/monkc3/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/sunyuli/Dev/monkc3/monkc3/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/sunyuli/Dev/monkc3/monkc3"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/sunyuli/Dev/monkc3/monkc3/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/sunyuli/Dev/monkc3/monkc3/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/sunyuli/Dev/monkc3/monkc3/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/sunyuli/Dev/monkc3/monkc3/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/sunyuli/Dev/monkc3/monkc3"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/sunyuli/Dev/monkc3/monkc3/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/sunyuli/Dev/monkc3/monkc3/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/sunyuli/Dev/monkc3/monkc3/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/sunyuli/Dev/monkc3/monkc3/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="demo">
+				<Option output="/Users/sunyuli/Dev/monkc3/monkc3/app/demo" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/sunyuli/Dev/monkc3/monkc3/app"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/sunyuli/Dev/monkc3/monkc3/runtime"/>
+					<Add directory="/Users/sunyuli/Dev/monkc3/monkc3/stdlib"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/sunyuli/Dev/monkc3/monkc3/app/Makefile&quot;  VERBOSE=1 demo"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/sunyuli/Dev/monkc3/monkc3/app/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/sunyuli/Dev/monkc3/monkc3/app/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/sunyuli/Dev/monkc3/monkc3/app/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="demo/fast">
+				<Option output="/Users/sunyuli/Dev/monkc3/monkc3/app/demo" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/sunyuli/Dev/monkc3/monkc3/app"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/sunyuli/Dev/monkc3/monkc3/runtime"/>
+					<Add directory="/Users/sunyuli/Dev/monkc3/monkc3/stdlib"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/sunyuli/Dev/monkc3/monkc3/app/Makefile&quot;  VERBOSE=1 demo/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/sunyuli/Dev/monkc3/monkc3/app/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/sunyuli/Dev/monkc3/monkc3/app/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/sunyuli/Dev/monkc3/monkc3/app/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="monkc-stdlib">
+				<Option output="/Users/sunyuli/Dev/monkc3/monkc3/stdlib/libmonkc-stdlib.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/sunyuli/Dev/monkc3/monkc3/stdlib"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/sunyuli/Dev/monkc3/monkc3/stdlib"/>
+					<Add directory="/Users/sunyuli/Dev/monkc3/monkc3/runtime"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/sunyuli/Dev/monkc3/monkc3/stdlib/Makefile&quot;  VERBOSE=1 monkc-stdlib"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/sunyuli/Dev/monkc3/monkc3/stdlib/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/sunyuli/Dev/monkc3/monkc3/stdlib/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/sunyuli/Dev/monkc3/monkc3/stdlib/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="monkc-stdlib/fast">
+				<Option output="/Users/sunyuli/Dev/monkc3/monkc3/stdlib/libmonkc-stdlib.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/sunyuli/Dev/monkc3/monkc3/stdlib"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/sunyuli/Dev/monkc3/monkc3/stdlib"/>
+					<Add directory="/Users/sunyuli/Dev/monkc3/monkc3/runtime"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/sunyuli/Dev/monkc3/monkc3/stdlib/Makefile&quot;  VERBOSE=1 monkc-stdlib/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/sunyuli/Dev/monkc3/monkc3/stdlib/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/sunyuli/Dev/monkc3/monkc3/stdlib/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/sunyuli/Dev/monkc3/monkc3/stdlib/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="monkc-runtime">
+				<Option output="/Users/sunyuli/Dev/monkc3/monkc3/runtime/libmonkc-runtime.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/sunyuli/Dev/monkc3/monkc3/runtime"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/sunyuli/Dev/monkc3/monkc3/runtime"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/sunyuli/Dev/monkc3/monkc3/runtime/Makefile&quot;  VERBOSE=1 monkc-runtime"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/sunyuli/Dev/monkc3/monkc3/runtime/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/sunyuli/Dev/monkc3/monkc3/runtime/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/sunyuli/Dev/monkc3/monkc3/runtime/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="monkc-runtime/fast">
+				<Option output="/Users/sunyuli/Dev/monkc3/monkc3/runtime/libmonkc-runtime.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/sunyuli/Dev/monkc3/monkc3/runtime"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/sunyuli/Dev/monkc3/monkc3/runtime"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/sunyuli/Dev/monkc3/monkc3/runtime/Makefile&quot;  VERBOSE=1 monkc-runtime/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/sunyuli/Dev/monkc3/monkc3/runtime/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/sunyuli/Dev/monkc3/monkc3/runtime/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/sunyuli/Dev/monkc3/monkc3/runtime/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/app/Cell.c">
+			<Option target="demo"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/app/Cell.h">
+			<Option target="demo"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/app/Fish.c">
+			<Option target="demo"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/app/Fish.h">
+			<Option target="demo"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/app/main.c">
+			<Option target="demo"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/runtime/MCClass.c">
+			<Option target="monkc-runtime"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/runtime/MCClass.h">
+			<Option target="monkc-runtime"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/runtime/MCFunction.c">
+			<Option target="monkc-runtime"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/runtime/MCFunction.h">
+			<Option target="monkc-runtime"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/runtime/MCHashTable.c">
+			<Option target="monkc-runtime"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/runtime/MCHashTable.h">
+			<Option target="monkc-runtime"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/runtime/MCLinkedList.c">
+			<Option target="monkc-runtime"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/runtime/MCLinkedList.h">
+			<Option target="monkc-runtime"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/runtime/MCLock.c">
+			<Option target="monkc-runtime"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/runtime/MCLock.h">
+			<Option target="monkc-runtime"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/runtime/MCMem.c">
+			<Option target="monkc-runtime"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/runtime/MCMem.h">
+			<Option target="monkc-runtime"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/runtime/MCObject.c">
+			<Option target="monkc-runtime"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/runtime/MCObject.h">
+			<Option target="monkc-runtime"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/runtime/MCType.c">
+			<Option target="monkc-runtime"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/runtime/MCType.h">
+			<Option target="monkc-runtime"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/stdlib/MCArray.c">
+			<Option target="monkc-stdlib"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/stdlib/MCArray.h">
+			<Option target="monkc-stdlib"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/stdlib/MCArrayList.c">
+			<Option target="monkc-stdlib"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/stdlib/MCArrayList.h">
+			<Option target="monkc-stdlib"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/stdlib/MCBits.c">
+			<Option target="monkc-stdlib"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/stdlib/MCBits.h">
+			<Option target="monkc-stdlib"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/stdlib/MCBuffer.c">
+			<Option target="monkc-stdlib"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/stdlib/MCBuffer.h">
+			<Option target="monkc-stdlib"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/stdlib/MCClock.c">
+			<Option target="monkc-stdlib"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/stdlib/MCClock.h">
+			<Option target="monkc-stdlib"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/stdlib/MCContext.c">
+			<Option target="monkc-stdlib"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/stdlib/MCContext.h">
+			<Option target="monkc-stdlib"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/stdlib/MCException.c">
+			<Option target="monkc-stdlib"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/stdlib/MCException.h">
+			<Option target="monkc-stdlib"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/stdlib/MCGeometry.c">
+			<Option target="monkc-stdlib"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/stdlib/MCGeometry.h">
+			<Option target="monkc-stdlib"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/stdlib/MCGraph.c">
+			<Option target="monkc-stdlib"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/stdlib/MCGraph.h">
+			<Option target="monkc-stdlib"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/stdlib/MCHeap.c">
+			<Option target="monkc-stdlib"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/stdlib/MCHeap.h">
+			<Option target="monkc-stdlib"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/stdlib/MCIO.c">
+			<Option target="monkc-stdlib"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/stdlib/MCIO.h">
+			<Option target="monkc-stdlib"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/stdlib/MCLinkedList.c">
+			<Option target="monkc-stdlib"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/stdlib/MCLinkedList.h">
+			<Option target="monkc-stdlib"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/stdlib/MCMap.c">
+			<Option target="monkc-stdlib"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/stdlib/MCMap.h">
+			<Option target="monkc-stdlib"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/stdlib/MCMath.c">
+			<Option target="monkc-stdlib"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/stdlib/MCMath.h">
+			<Option target="monkc-stdlib"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/stdlib/MCProcess.c">
+			<Option target="monkc-stdlib"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/stdlib/MCProcess.h">
+			<Option target="monkc-stdlib"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/stdlib/MCSet.c">
+			<Option target="monkc-stdlib"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/stdlib/MCSet.h">
+			<Option target="monkc-stdlib"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/stdlib/MCSocket.c">
+			<Option target="monkc-stdlib"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/stdlib/MCSocket.h">
+			<Option target="monkc-stdlib"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/stdlib/MCSort.c">
+			<Option target="monkc-stdlib"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/stdlib/MCSort.h">
+			<Option target="monkc-stdlib"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/stdlib/MCString.c">
+			<Option target="monkc-stdlib"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/stdlib/MCString.h">
+			<Option target="monkc-stdlib"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/stdlib/MCThread.c">
+			<Option target="monkc-stdlib"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/stdlib/MCThread.h">
+			<Option target="monkc-stdlib"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/stdlib/MCTree.c">
+			<Option target="monkc-stdlib"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/stdlib/MCTree.h">
+			<Option target="monkc-stdlib"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/stdlib/MCUnitTest.c">
+			<Option target="monkc-stdlib"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/stdlib/MCUnitTest.h">
+			<Option target="monkc-stdlib"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/app/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\app\"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/stdlib/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\stdlib\"/>
+		</Unit>
+		<Unit filename="/Users/sunyuli/Dev/monkc3/monkc3/runtime/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\runtime\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

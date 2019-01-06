@@ -10,9 +10,8 @@
 
 //copy form << The C Programming language >>
 //BKDR Hash Function
-util(MCHashTable, hash, MCHash), const char *s)
-{
-    register MCHash hashval;
+MCHash MCHashTable_hash(const char* s) {
+    register MCHash hashval = 0;
     for (hashval = 0; *s != '\0'; s++)
         hashval = *s + 31 * hashval;
     //keep the value positive
@@ -32,15 +31,6 @@ static unsigned probe(MCHash nkey, unsigned slots, unsigned times) {
  other tables will expand(rehash) until they reach the max
  */
 
-typedef enum {
-    MCHashTableLevel1 = 0,
-    MCHashTableLevel2,
-    MCHashTableLevel3,
-    MCHashTableLevel4,
-    MCHashTableLevelMax,
-    MCHashTableLevelCount
-} MCHashTableLevel;
-
 static unsigned mc_hashtable_sizes[MCHashTableLevelCount] = {
     MIN_HASHTABLE_SIZE,
     3101,
@@ -49,7 +39,7 @@ static unsigned mc_hashtable_sizes[MCHashTableLevelCount] = {
     130001
 };
 
-unsigned get_tablesize(const MCHashTableLevel level)
+unsigned get_tablesize(MCHashTableLevel level)
 {
     if (level > MCHashTableLevelMax) {
         return mc_hashtable_sizes[MCHashTableLevelMax];
@@ -90,20 +80,30 @@ static void copykey(char* des, const char* key, size_t maxlen) {
     des[len] = '\0';
 }
 
-constructor(MCHashItem), const char* key, mc_generic value) as(MCHashItem)
+fun(release, void)) as(MCHashItem)
+    if (it->doesAutoReleaseObject && it->value.mcobject) {
+        it->value.mcobject->release(it->value.mcobject);
+    }
+}
+
+constructor(MCHashItem), const char* key, mc_generic value) {
     MCObject(any);
-    it->next = null;
-    it->value = value;
-    it->tombstone = false;
-    it->hash = MCHashTable_hash(null, key);
-    copykey(it->key, key, MAX_KEY_CHARS);
+    as(MCHashItem)
+        it->next = null;
+        it->value = value;
+        it->tombstone = false;
+        it->doesAutoReleaseObject = false;
+        it->hash = MCHashTable_hash(key);
+        copykey(it->key, key, MAX_KEY_CHARS);
+        funadd(release);
+    }
     return any;
 }
 
 //MCHashTable
 
 fun(getItem, struct MCHashItem*), const char* key) as(MCHashTable)
-    MCHash hashval = MCHashTable_hash(any, key);
+    MCHash hashval = MCHashTable_hash(key);
     unsigned tsize = get_tablesize(0);
 
     unsigned t = 0;
@@ -135,16 +135,14 @@ fun(putItem, struct MCHashItem*), struct MCHashItem* item) as(MCHashTable)
         //slot empty
         if (!it->items[i]) {
             it->items[i] = item;
-            retain(item);
             printf("add item[%d] = %s\n", i, item->key);
             return null;
         } else {
             struct MCHashItem* old = it->items[i];
             //slot deleted
             if (old->tombstone) {
-                release(old);
+                free(old);
                 it->items[i] = item;
-                retain(item);
                 printf("add item[%d] = %s\n", i, item->key);
                 return null;
             }
@@ -183,13 +181,13 @@ fun(get, mc_generic), const char* key)
 
 constructor(MCHashTable))
 {
-    MCObject(any);
     as(MCHashTable)
         it->lock = 0;
         it->cache_count = 0;
+        it->count = MIN_HASHTABLE_SIZE;
         //set all the slot to nil
         int i;
-        for(i=0; i<MIN_HASHTABLE_SIZE; i++) {
+        for(i=0; i<it->count; i++) {
             it->items[i] = null;
         }
         //add functions

@@ -17,7 +17,11 @@ struct MCObject {
     
     //instance
     fundef(info, void), char* buff);
-    fundef(bye, void));
+    fundef(responseTo, void*), const char* name);
+
+    //mem manage
+    fundef(retain, void));
+    fundef(release, void));
 };
 
 constructor(MCObject));

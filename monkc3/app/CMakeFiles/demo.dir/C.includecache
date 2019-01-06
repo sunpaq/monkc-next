@@ -31,6 +31,14 @@ Fish.h
 /Users/sunyuli/Dev/monkc3/monkc3/app/Fish.h
 MCArray.h
 /Users/sunyuli/Dev/monkc3/monkc3/app/MCArray.h
+MCLinkedList.h
+/Users/sunyuli/Dev/monkc3/monkc3/app/MCLinkedList.h
+MCMap.h
+/Users/sunyuli/Dev/monkc3/monkc3/app/MCMap.h
+MCString.h
+/Users/sunyuli/Dev/monkc3/monkc3/app/MCString.h
+MCClock.h
+/Users/sunyuli/Dev/monkc3/monkc3/app/MCClock.h
 
 runtime/MCClass.h
 stdio.h
@@ -87,6 +95,28 @@ stdbool.h
 runtime/monkc.h
 
 stdlib/MCArray.h
+MCObject.h
+stdlib/MCObject.h
+
+stdlib/MCClock.h
+time.h
+-
+limits.h
+-
+MCObject.h
+stdlib/MCObject.h
+
+stdlib/MCMap.h
+MCObject.h
+stdlib/MCObject.h
+MCHashTable.h
+stdlib/MCHashTable.h
+
+stdlib/MCString.h
+string.h
+-
+stdbool.h
+-
 MCObject.h
 stdlib/MCObject.h
 

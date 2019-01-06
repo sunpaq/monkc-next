@@ -1,6 +1,10 @@
 #include "MCHashTable.h"
 #include "Fish.h"
 #include "MCArray.h"
+#include "MCLinkedList.h"
+#include "MCMap.h"
+#include "MCString.h"
+#include "MCClock.h"
 
 void test_hashtable() {
     struct MCHashTable* table = MCHashTable(alloc(MCHashTable));
@@ -11,6 +15,7 @@ void test_hashtable() {
     } else {
         printf("hash feature correct\n");
     }
+    free(table);
 }
 
 void static_call() {
@@ -21,15 +26,15 @@ void static_call() {
         printf("age=%d\n", it->getAge(it));
         it->printName(it);
     }
-    release(f);
+    ((obj)f)->release(f);
 }
 
 void dynamic_call() {
     obj f = Fish(alloc(Fish), "sanma");
-    mc_generic age = ff(f, getAge));
+    int age = (int)ff(f, getAge));
     ff(f, printName));
-    printf("age=%d\n", age.i);
-    release(f);
+    printf("age=%d\n", age);
+    ((obj)f)->release(f);
 }
 
 void type_cast() {
@@ -38,22 +43,25 @@ void type_cast() {
     f0->info(f0, buff);
     printf("%s\n", buff);
     cast(f0, Fish)->printName(f0);
-    release(f0);
+    ((obj)f0)->release(f0);
 
     def(f3, Fish) = Fish(alloc(Fish), "maguro");
     f3->printName(f3);
 
-    Fish_t f4 = Fish(alloc(Fish), "hokei");
+    Fish_t* f4 = Fish(alloc(Fish), "hokei");
     f4->printName(f4);
 
-    delete(f3);
-    delete(f4);
+    f3->release(f3);
+    f4->release(f4);
+    f3 = null;
+    f4 = null;
 }
 
 void method_override() {
-    obj f = Fish(alloc(Fish), "shark");
+    Fish_t* f = Fish(alloc(Fish), "shark");
     ff(f, cellfunc));
     ff(f, printName));
+    f->release(f);
 }
 
 void test_stdlib() {
@@ -64,6 +72,44 @@ void test_stdlib() {
     array->addItem(array, gen_f(0.4));
     array->addItem(array, gen_f(0.5));
     array->printAll(array, "/");
+    array->release(array);
+}
+
+void test_LinkedList() {
+    struct MCLinkedList* list = MCLinkedList(alloc(MCLinkedList));
+    struct MCItem item;
+
+    item.next = null;
+    item.data = gen_f(0.9);
+    strcpy(item.key, "key");
+
+    list->append(list, item);
+    free(list);
+}
+
+void test_MCMap() {
+    struct MCMap* map = MCMap(alloc(MCMap));
+    mc_generic result;
+    map->setValueForKey(map, gen_i(100), "age");
+    map->getValueForKey(map, &result, "age");
+    printf("age is = %d\n", result.i);
+    map->release(map);
+}
+
+void test_MCString() {
+    struct MCString string;
+    MCString_t* strobj = MCString(&string, "1234567");
+    char* endptr;
+    double res1 = strobj->toDoubleValue(strobj, &endptr);
+    double res2 = ff_double(strobj, toDoubleValue), &endptr);
+    printf("%lf,%lf", res1, res2);
+}
+
+void test_MCClock() {
+    struct MCClock clock;
+    struct MCClock* c = MCClock(&clock);
+    c->setTimeToNow(c);
+    c->printCurrentGMTTime(c);
 }
 
 int main(int argc, const char * argv[]) {
@@ -73,5 +119,10 @@ int main(int argc, const char * argv[]) {
     type_cast();
     method_override();
     test_stdlib();
+    test_LinkedList();
+    test_MCMap();
+    test_MCString();
+    test_MCClock();
+
     return 0;
 }

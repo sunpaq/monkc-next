@@ -25,10 +25,15 @@ fun(printName, void)) {
     printf("Cell\n");
 }
 
+fun(release, void)) as(MCObject)
+    it->release(it);
+}
+
 constructor(Cell), int age) {
     MCObject(any);
     as(Cell)
         it->age = age;
+        funadd(release);
     }
     dynamic(Cell)
         funbind(cellfunc);

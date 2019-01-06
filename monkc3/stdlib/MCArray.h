@@ -21,11 +21,9 @@ structure(MCArray, MCObject)
     fundef(clear, void));
     fundef(itemAt, mc_generic*), size_t index);
     fundef(printAll, void), const char* delimiter);
-    fundef(bye, void));
+    fundef(release, void));
 };
 
 constructor(MCArray), size_t maxcount);
-
-alias(MCArray);
 
 #endif //MONKC_DEMO_MCARRAY_H

@@ -14,9 +14,9 @@
 void* mc_alloc(size_t size);
 void mc_free(void* any);
 
-void retain(void* any);
-bool release(void* any);
+//void retain(struct MCObject* it);
+//bool release(struct MCObject* it);
 
-#define delete(obj) if (release(obj)) {obj = null;}
+//#define delete(obj) if (release(obj)) {obj = null;}
 
 #endif /* MCMem_h */
