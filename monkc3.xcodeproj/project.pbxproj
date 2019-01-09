@@ -21,7 +21,6 @@
 		FD1E8A0E21E650480091EB74 /* MCMem.c in Sources */ = {isa = PBXBuildFile; fileRef = FD1E898621E650480091EB74 /* MCMem.c */; };
 		FD1E8A0F21E650480091EB74 /* MCIO.c in Sources */ = {isa = PBXBuildFile; fileRef = FD1E898721E650480091EB74 /* MCIO.c */; };
 		FD1E8A2E21E650480091EB74 /* MCHeap.c in Sources */ = {isa = PBXBuildFile; fileRef = FD1E89B721E650480091EB74 /* MCHeap.c */; };
-		FD1E8A2F21E650480091EB74 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = FD1E89B821E650480091EB74 /* Makefile */; };
 		FD1E8A3021E650480091EB74 /* MCMath.c in Sources */ = {isa = PBXBuildFile; fileRef = FD1E89BA21E650480091EB74 /* MCMath.c */; };
 		FD1E8A3121E650480091EB74 /* MCContext.c in Sources */ = {isa = PBXBuildFile; fileRef = FD1E89BB21E650480091EB74 /* MCContext.c */; };
 		FD1E8A3221E650480091EB74 /* MCObject.c in Sources */ = {isa = PBXBuildFile; fileRef = FD1E89BD21E650480091EB74 /* MCObject.c */; };
@@ -71,7 +70,6 @@
 		FD1E898021E650480091EB74 /* MCArrayList.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MCArrayList.c; sourceTree = "<group>"; };
 		FD1E898121E650480091EB74 /* MCClock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCClock.h; sourceTree = "<group>"; };
 		FD1E898221E650480091EB74 /* MCSort.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MCSort.c; sourceTree = "<group>"; };
-		FD1E898321E650480091EB74 /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
 		FD1E898421E650480091EB74 /* MCLock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCLock.h; sourceTree = "<group>"; };
 		FD1E898521E650480091EB74 /* MCProcess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCProcess.h; sourceTree = "<group>"; };
 		FD1E898621E650480091EB74 /* MCMem.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MCMem.c; sourceTree = "<group>"; };
@@ -80,14 +78,12 @@
 		FD1E89B521E650480091EB74 /* MCMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCMap.h; sourceTree = "<group>"; };
 		FD1E89B621E650480091EB74 /* MCClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCClass.h; sourceTree = "<group>"; };
 		FD1E89B721E650480091EB74 /* MCHeap.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MCHeap.c; sourceTree = "<group>"; };
-		FD1E89B821E650480091EB74 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		FD1E89B921E650480091EB74 /* MCLinkedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCLinkedList.h; sourceTree = "<group>"; };
 		FD1E89BA21E650480091EB74 /* MCMath.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MCMath.c; sourceTree = "<group>"; };
 		FD1E89BB21E650480091EB74 /* MCContext.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MCContext.c; sourceTree = "<group>"; };
 		FD1E89BC21E650480091EB74 /* MCArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCArray.h; sourceTree = "<group>"; };
 		FD1E89BD21E650480091EB74 /* MCObject.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MCObject.c; sourceTree = "<group>"; };
 		FD1E89BE21E650480091EB74 /* MCGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCGeometry.h; sourceTree = "<group>"; };
-		FD1E89BF21E650480091EB74 /* cmake_install.cmake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cmake_install.cmake; sourceTree = "<group>"; };
 		FD1E89C021E650480091EB74 /* MCBuffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MCBuffer.c; sourceTree = "<group>"; };
 		FD1E89C121E650480091EB74 /* MCType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCType.h; sourceTree = "<group>"; };
 		FD1E89C221E650480091EB74 /* MCUnitTest.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MCUnitTest.c; sourceTree = "<group>"; };
@@ -174,7 +170,6 @@
 				FD1E898021E650480091EB74 /* MCArrayList.c */,
 				FD1E898121E650480091EB74 /* MCClock.h */,
 				FD1E898221E650480091EB74 /* MCSort.c */,
-				FD1E898321E650480091EB74 /* CMakeLists.txt */,
 				FD1E898421E650480091EB74 /* MCLock.h */,
 				FD1E898521E650480091EB74 /* MCProcess.h */,
 				FD1E898621E650480091EB74 /* MCMem.c */,
@@ -183,14 +178,12 @@
 				FD1E89B521E650480091EB74 /* MCMap.h */,
 				FD1E89B621E650480091EB74 /* MCClass.h */,
 				FD1E89B721E650480091EB74 /* MCHeap.c */,
-				FD1E89B821E650480091EB74 /* Makefile */,
 				FD1E89B921E650480091EB74 /* MCLinkedList.h */,
 				FD1E89BA21E650480091EB74 /* MCMath.c */,
 				FD1E89BB21E650480091EB74 /* MCContext.c */,
 				FD1E89BC21E650480091EB74 /* MCArray.h */,
 				FD1E89BD21E650480091EB74 /* MCObject.c */,
 				FD1E89BE21E650480091EB74 /* MCGeometry.h */,
-				FD1E89BF21E650480091EB74 /* cmake_install.cmake */,
 				FD1E89C021E650480091EB74 /* MCBuffer.c */,
 				FD1E89C121E650480091EB74 /* MCType.h */,
 				FD1E89C221E650480091EB74 /* MCUnitTest.c */,
@@ -328,7 +321,6 @@
 				FD1E8A3C21E650480091EB74 /* MCGeometry.c in Sources */,
 				FD1E8A3E21E650480091EB74 /* MCLinkedList.c in Sources */,
 				FD1E8A0E21E650480091EB74 /* MCMem.c in Sources */,
-				FD1E8A2F21E650480091EB74 /* Makefile in Sources */,
 				FD1E8A3721E650480091EB74 /* MCClock.c in Sources */,
 				FD1E8A2E21E650480091EB74 /* MCHeap.c in Sources */,
 				FD1E8A0A21E650480091EB74 /* MCGraph.c in Sources */,
@@ -395,7 +387,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_FUNCTION = NO;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -448,7 +440,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_FUNCTION = NO;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -465,6 +457,7 @@
 				DEVELOPMENT_TEAM = R7BTEXA73U;
 				GCC_C_LANGUAGE_STANDARD = c89;
 				GCC_INPUT_FILETYPE = sourcecode.c.c;
+				GCC_WARN_UNUSED_FUNCTION = NO;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/monkc3/runtime",
@@ -482,6 +475,7 @@
 				DEVELOPMENT_TEAM = R7BTEXA73U;
 				GCC_C_LANGUAGE_STANDARD = c89;
 				GCC_INPUT_FILETYPE = sourcecode.c.c;
+				GCC_WARN_UNUSED_FUNCTION = NO;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/monkc3/runtime",
