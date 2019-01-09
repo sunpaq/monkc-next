@@ -125,6 +125,114 @@ monkc-runtime/fast:
 	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/build
 .PHONY : monkc-runtime/fast
 
+MCArray.o: MCArray.c.o
+
+.PHONY : MCArray.o
+
+# target to build an object file
+MCArray.c.o:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCArray.c.o
+.PHONY : MCArray.c.o
+
+MCArray.i: MCArray.c.i
+
+.PHONY : MCArray.i
+
+# target to preprocess a source file
+MCArray.c.i:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCArray.c.i
+.PHONY : MCArray.c.i
+
+MCArray.s: MCArray.c.s
+
+.PHONY : MCArray.s
+
+# target to generate assembly for a file
+MCArray.c.s:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCArray.c.s
+.PHONY : MCArray.c.s
+
+MCArrayList.o: MCArrayList.c.o
+
+.PHONY : MCArrayList.o
+
+# target to build an object file
+MCArrayList.c.o:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCArrayList.c.o
+.PHONY : MCArrayList.c.o
+
+MCArrayList.i: MCArrayList.c.i
+
+.PHONY : MCArrayList.i
+
+# target to preprocess a source file
+MCArrayList.c.i:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCArrayList.c.i
+.PHONY : MCArrayList.c.i
+
+MCArrayList.s: MCArrayList.c.s
+
+.PHONY : MCArrayList.s
+
+# target to generate assembly for a file
+MCArrayList.c.s:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCArrayList.c.s
+.PHONY : MCArrayList.c.s
+
+MCBits.o: MCBits.c.o
+
+.PHONY : MCBits.o
+
+# target to build an object file
+MCBits.c.o:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCBits.c.o
+.PHONY : MCBits.c.o
+
+MCBits.i: MCBits.c.i
+
+.PHONY : MCBits.i
+
+# target to preprocess a source file
+MCBits.c.i:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCBits.c.i
+.PHONY : MCBits.c.i
+
+MCBits.s: MCBits.c.s
+
+.PHONY : MCBits.s
+
+# target to generate assembly for a file
+MCBits.c.s:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCBits.c.s
+.PHONY : MCBits.c.s
+
+MCBuffer.o: MCBuffer.c.o
+
+.PHONY : MCBuffer.o
+
+# target to build an object file
+MCBuffer.c.o:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCBuffer.c.o
+.PHONY : MCBuffer.c.o
+
+MCBuffer.i: MCBuffer.c.i
+
+.PHONY : MCBuffer.i
+
+# target to preprocess a source file
+MCBuffer.c.i:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCBuffer.c.i
+.PHONY : MCBuffer.c.i
+
+MCBuffer.s: MCBuffer.c.s
+
+.PHONY : MCBuffer.s
+
+# target to generate assembly for a file
+MCBuffer.c.s:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCBuffer.c.s
+.PHONY : MCBuffer.c.s
+
 MCClass.o: MCClass.c.o
 
 .PHONY : MCClass.o
@@ -151,6 +259,87 @@ MCClass.s: MCClass.c.s
 MCClass.c.s:
 	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCClass.c.s
 .PHONY : MCClass.c.s
+
+MCClock.o: MCClock.c.o
+
+.PHONY : MCClock.o
+
+# target to build an object file
+MCClock.c.o:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCClock.c.o
+.PHONY : MCClock.c.o
+
+MCClock.i: MCClock.c.i
+
+.PHONY : MCClock.i
+
+# target to preprocess a source file
+MCClock.c.i:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCClock.c.i
+.PHONY : MCClock.c.i
+
+MCClock.s: MCClock.c.s
+
+.PHONY : MCClock.s
+
+# target to generate assembly for a file
+MCClock.c.s:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCClock.c.s
+.PHONY : MCClock.c.s
+
+MCContext.o: MCContext.c.o
+
+.PHONY : MCContext.o
+
+# target to build an object file
+MCContext.c.o:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCContext.c.o
+.PHONY : MCContext.c.o
+
+MCContext.i: MCContext.c.i
+
+.PHONY : MCContext.i
+
+# target to preprocess a source file
+MCContext.c.i:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCContext.c.i
+.PHONY : MCContext.c.i
+
+MCContext.s: MCContext.c.s
+
+.PHONY : MCContext.s
+
+# target to generate assembly for a file
+MCContext.c.s:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCContext.c.s
+.PHONY : MCContext.c.s
+
+MCException.o: MCException.c.o
+
+.PHONY : MCException.o
+
+# target to build an object file
+MCException.c.o:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCException.c.o
+.PHONY : MCException.c.o
+
+MCException.i: MCException.c.i
+
+.PHONY : MCException.i
+
+# target to preprocess a source file
+MCException.c.i:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCException.c.i
+.PHONY : MCException.c.i
+
+MCException.s: MCException.c.s
+
+.PHONY : MCException.s
+
+# target to generate assembly for a file
+MCException.c.s:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCException.c.s
+.PHONY : MCException.c.s
 
 MCFunction.o: MCFunction.c.o
 
@@ -179,6 +368,60 @@ MCFunction.c.s:
 	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCFunction.c.s
 .PHONY : MCFunction.c.s
 
+MCGeometry.o: MCGeometry.c.o
+
+.PHONY : MCGeometry.o
+
+# target to build an object file
+MCGeometry.c.o:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCGeometry.c.o
+.PHONY : MCGeometry.c.o
+
+MCGeometry.i: MCGeometry.c.i
+
+.PHONY : MCGeometry.i
+
+# target to preprocess a source file
+MCGeometry.c.i:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCGeometry.c.i
+.PHONY : MCGeometry.c.i
+
+MCGeometry.s: MCGeometry.c.s
+
+.PHONY : MCGeometry.s
+
+# target to generate assembly for a file
+MCGeometry.c.s:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCGeometry.c.s
+.PHONY : MCGeometry.c.s
+
+MCGraph.o: MCGraph.c.o
+
+.PHONY : MCGraph.o
+
+# target to build an object file
+MCGraph.c.o:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCGraph.c.o
+.PHONY : MCGraph.c.o
+
+MCGraph.i: MCGraph.c.i
+
+.PHONY : MCGraph.i
+
+# target to preprocess a source file
+MCGraph.c.i:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCGraph.c.i
+.PHONY : MCGraph.c.i
+
+MCGraph.s: MCGraph.c.s
+
+.PHONY : MCGraph.s
+
+# target to generate assembly for a file
+MCGraph.c.s:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCGraph.c.s
+.PHONY : MCGraph.c.s
+
 MCHashTable.o: MCHashTable.c.o
 
 .PHONY : MCHashTable.o
@@ -205,6 +448,60 @@ MCHashTable.s: MCHashTable.c.s
 MCHashTable.c.s:
 	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCHashTable.c.s
 .PHONY : MCHashTable.c.s
+
+MCHeap.o: MCHeap.c.o
+
+.PHONY : MCHeap.o
+
+# target to build an object file
+MCHeap.c.o:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCHeap.c.o
+.PHONY : MCHeap.c.o
+
+MCHeap.i: MCHeap.c.i
+
+.PHONY : MCHeap.i
+
+# target to preprocess a source file
+MCHeap.c.i:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCHeap.c.i
+.PHONY : MCHeap.c.i
+
+MCHeap.s: MCHeap.c.s
+
+.PHONY : MCHeap.s
+
+# target to generate assembly for a file
+MCHeap.c.s:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCHeap.c.s
+.PHONY : MCHeap.c.s
+
+MCIO.o: MCIO.c.o
+
+.PHONY : MCIO.o
+
+# target to build an object file
+MCIO.c.o:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCIO.c.o
+.PHONY : MCIO.c.o
+
+MCIO.i: MCIO.c.i
+
+.PHONY : MCIO.i
+
+# target to preprocess a source file
+MCIO.c.i:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCIO.c.i
+.PHONY : MCIO.c.i
+
+MCIO.s: MCIO.c.s
+
+.PHONY : MCIO.s
+
+# target to generate assembly for a file
+MCIO.c.s:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCIO.c.s
+.PHONY : MCIO.c.s
 
 MCLinkedList.o: MCLinkedList.c.o
 
@@ -260,6 +557,87 @@ MCLock.c.s:
 	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCLock.c.s
 .PHONY : MCLock.c.s
 
+MCLog.o: MCLog.c.o
+
+.PHONY : MCLog.o
+
+# target to build an object file
+MCLog.c.o:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCLog.c.o
+.PHONY : MCLog.c.o
+
+MCLog.i: MCLog.c.i
+
+.PHONY : MCLog.i
+
+# target to preprocess a source file
+MCLog.c.i:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCLog.c.i
+.PHONY : MCLog.c.i
+
+MCLog.s: MCLog.c.s
+
+.PHONY : MCLog.s
+
+# target to generate assembly for a file
+MCLog.c.s:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCLog.c.s
+.PHONY : MCLog.c.s
+
+MCMap.o: MCMap.c.o
+
+.PHONY : MCMap.o
+
+# target to build an object file
+MCMap.c.o:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCMap.c.o
+.PHONY : MCMap.c.o
+
+MCMap.i: MCMap.c.i
+
+.PHONY : MCMap.i
+
+# target to preprocess a source file
+MCMap.c.i:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCMap.c.i
+.PHONY : MCMap.c.i
+
+MCMap.s: MCMap.c.s
+
+.PHONY : MCMap.s
+
+# target to generate assembly for a file
+MCMap.c.s:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCMap.c.s
+.PHONY : MCMap.c.s
+
+MCMath.o: MCMath.c.o
+
+.PHONY : MCMath.o
+
+# target to build an object file
+MCMath.c.o:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCMath.c.o
+.PHONY : MCMath.c.o
+
+MCMath.i: MCMath.c.i
+
+.PHONY : MCMath.i
+
+# target to preprocess a source file
+MCMath.c.i:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCMath.c.i
+.PHONY : MCMath.c.i
+
+MCMath.s: MCMath.c.s
+
+.PHONY : MCMath.s
+
+# target to generate assembly for a file
+MCMath.c.s:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCMath.c.s
+.PHONY : MCMath.c.s
+
 MCMem.o: MCMem.c.o
 
 .PHONY : MCMem.o
@@ -314,6 +692,195 @@ MCObject.c.s:
 	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCObject.c.s
 .PHONY : MCObject.c.s
 
+MCProcess.o: MCProcess.c.o
+
+.PHONY : MCProcess.o
+
+# target to build an object file
+MCProcess.c.o:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCProcess.c.o
+.PHONY : MCProcess.c.o
+
+MCProcess.i: MCProcess.c.i
+
+.PHONY : MCProcess.i
+
+# target to preprocess a source file
+MCProcess.c.i:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCProcess.c.i
+.PHONY : MCProcess.c.i
+
+MCProcess.s: MCProcess.c.s
+
+.PHONY : MCProcess.s
+
+# target to generate assembly for a file
+MCProcess.c.s:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCProcess.c.s
+.PHONY : MCProcess.c.s
+
+MCSet.o: MCSet.c.o
+
+.PHONY : MCSet.o
+
+# target to build an object file
+MCSet.c.o:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCSet.c.o
+.PHONY : MCSet.c.o
+
+MCSet.i: MCSet.c.i
+
+.PHONY : MCSet.i
+
+# target to preprocess a source file
+MCSet.c.i:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCSet.c.i
+.PHONY : MCSet.c.i
+
+MCSet.s: MCSet.c.s
+
+.PHONY : MCSet.s
+
+# target to generate assembly for a file
+MCSet.c.s:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCSet.c.s
+.PHONY : MCSet.c.s
+
+MCSocket.o: MCSocket.c.o
+
+.PHONY : MCSocket.o
+
+# target to build an object file
+MCSocket.c.o:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCSocket.c.o
+.PHONY : MCSocket.c.o
+
+MCSocket.i: MCSocket.c.i
+
+.PHONY : MCSocket.i
+
+# target to preprocess a source file
+MCSocket.c.i:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCSocket.c.i
+.PHONY : MCSocket.c.i
+
+MCSocket.s: MCSocket.c.s
+
+.PHONY : MCSocket.s
+
+# target to generate assembly for a file
+MCSocket.c.s:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCSocket.c.s
+.PHONY : MCSocket.c.s
+
+MCSort.o: MCSort.c.o
+
+.PHONY : MCSort.o
+
+# target to build an object file
+MCSort.c.o:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCSort.c.o
+.PHONY : MCSort.c.o
+
+MCSort.i: MCSort.c.i
+
+.PHONY : MCSort.i
+
+# target to preprocess a source file
+MCSort.c.i:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCSort.c.i
+.PHONY : MCSort.c.i
+
+MCSort.s: MCSort.c.s
+
+.PHONY : MCSort.s
+
+# target to generate assembly for a file
+MCSort.c.s:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCSort.c.s
+.PHONY : MCSort.c.s
+
+MCString.o: MCString.c.o
+
+.PHONY : MCString.o
+
+# target to build an object file
+MCString.c.o:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCString.c.o
+.PHONY : MCString.c.o
+
+MCString.i: MCString.c.i
+
+.PHONY : MCString.i
+
+# target to preprocess a source file
+MCString.c.i:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCString.c.i
+.PHONY : MCString.c.i
+
+MCString.s: MCString.c.s
+
+.PHONY : MCString.s
+
+# target to generate assembly for a file
+MCString.c.s:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCString.c.s
+.PHONY : MCString.c.s
+
+MCThread.o: MCThread.c.o
+
+.PHONY : MCThread.o
+
+# target to build an object file
+MCThread.c.o:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCThread.c.o
+.PHONY : MCThread.c.o
+
+MCThread.i: MCThread.c.i
+
+.PHONY : MCThread.i
+
+# target to preprocess a source file
+MCThread.c.i:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCThread.c.i
+.PHONY : MCThread.c.i
+
+MCThread.s: MCThread.c.s
+
+.PHONY : MCThread.s
+
+# target to generate assembly for a file
+MCThread.c.s:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCThread.c.s
+.PHONY : MCThread.c.s
+
+MCTree.o: MCTree.c.o
+
+.PHONY : MCTree.o
+
+# target to build an object file
+MCTree.c.o:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCTree.c.o
+.PHONY : MCTree.c.o
+
+MCTree.i: MCTree.c.i
+
+.PHONY : MCTree.i
+
+# target to preprocess a source file
+MCTree.c.i:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCTree.c.i
+.PHONY : MCTree.c.i
+
+MCTree.s: MCTree.c.s
+
+.PHONY : MCTree.s
+
+# target to generate assembly for a file
+MCTree.c.s:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCTree.c.s
+.PHONY : MCTree.c.s
+
 MCType.o: MCType.c.o
 
 .PHONY : MCType.o
@@ -341,6 +908,33 @@ MCType.c.s:
 	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCType.c.s
 .PHONY : MCType.c.s
 
+MCUnitTest.o: MCUnitTest.c.o
+
+.PHONY : MCUnitTest.o
+
+# target to build an object file
+MCUnitTest.c.o:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCUnitTest.c.o
+.PHONY : MCUnitTest.c.o
+
+MCUnitTest.i: MCUnitTest.c.i
+
+.PHONY : MCUnitTest.i
+
+# target to preprocess a source file
+MCUnitTest.c.i:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCUnitTest.c.i
+.PHONY : MCUnitTest.c.i
+
+MCUnitTest.s: MCUnitTest.c.s
+
+.PHONY : MCUnitTest.s
+
+# target to generate assembly for a file
+MCUnitTest.c.s:
+	cd /Users/sunyuli/Dev/monkc3/monkc3 && $(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/MCUnitTest.c.s
+.PHONY : MCUnitTest.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -350,30 +944,96 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... monkc-runtime"
+	@echo "... MCArray.o"
+	@echo "... MCArray.i"
+	@echo "... MCArray.s"
+	@echo "... MCArrayList.o"
+	@echo "... MCArrayList.i"
+	@echo "... MCArrayList.s"
+	@echo "... MCBits.o"
+	@echo "... MCBits.i"
+	@echo "... MCBits.s"
+	@echo "... MCBuffer.o"
+	@echo "... MCBuffer.i"
+	@echo "... MCBuffer.s"
 	@echo "... MCClass.o"
 	@echo "... MCClass.i"
 	@echo "... MCClass.s"
+	@echo "... MCClock.o"
+	@echo "... MCClock.i"
+	@echo "... MCClock.s"
+	@echo "... MCContext.o"
+	@echo "... MCContext.i"
+	@echo "... MCContext.s"
+	@echo "... MCException.o"
+	@echo "... MCException.i"
+	@echo "... MCException.s"
 	@echo "... MCFunction.o"
 	@echo "... MCFunction.i"
 	@echo "... MCFunction.s"
+	@echo "... MCGeometry.o"
+	@echo "... MCGeometry.i"
+	@echo "... MCGeometry.s"
+	@echo "... MCGraph.o"
+	@echo "... MCGraph.i"
+	@echo "... MCGraph.s"
 	@echo "... MCHashTable.o"
 	@echo "... MCHashTable.i"
 	@echo "... MCHashTable.s"
+	@echo "... MCHeap.o"
+	@echo "... MCHeap.i"
+	@echo "... MCHeap.s"
+	@echo "... MCIO.o"
+	@echo "... MCIO.i"
+	@echo "... MCIO.s"
 	@echo "... MCLinkedList.o"
 	@echo "... MCLinkedList.i"
 	@echo "... MCLinkedList.s"
 	@echo "... MCLock.o"
 	@echo "... MCLock.i"
 	@echo "... MCLock.s"
+	@echo "... MCLog.o"
+	@echo "... MCLog.i"
+	@echo "... MCLog.s"
+	@echo "... MCMap.o"
+	@echo "... MCMap.i"
+	@echo "... MCMap.s"
+	@echo "... MCMath.o"
+	@echo "... MCMath.i"
+	@echo "... MCMath.s"
 	@echo "... MCMem.o"
 	@echo "... MCMem.i"
 	@echo "... MCMem.s"
 	@echo "... MCObject.o"
 	@echo "... MCObject.i"
 	@echo "... MCObject.s"
+	@echo "... MCProcess.o"
+	@echo "... MCProcess.i"
+	@echo "... MCProcess.s"
+	@echo "... MCSet.o"
+	@echo "... MCSet.i"
+	@echo "... MCSet.s"
+	@echo "... MCSocket.o"
+	@echo "... MCSocket.i"
+	@echo "... MCSocket.s"
+	@echo "... MCSort.o"
+	@echo "... MCSort.i"
+	@echo "... MCSort.s"
+	@echo "... MCString.o"
+	@echo "... MCString.i"
+	@echo "... MCString.s"
+	@echo "... MCThread.o"
+	@echo "... MCThread.i"
+	@echo "... MCThread.s"
+	@echo "... MCTree.o"
+	@echo "... MCTree.i"
+	@echo "... MCTree.s"
 	@echo "... MCType.o"
 	@echo "... MCType.i"
 	@echo "... MCType.s"
+	@echo "... MCUnitTest.o"
+	@echo "... MCUnitTest.i"
+	@echo "... MCUnitTest.s"
 .PHONY : help
 
 

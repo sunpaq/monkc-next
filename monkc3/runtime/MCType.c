@@ -27,3 +27,14 @@ mc_generic gen_d(double d) {
 mc_generic gen_p(void* p) {
     return (mc_generic){.p = p};
 }
+
+int MCGenericCompare(mc_generic A, mc_generic B) {
+    if (A.f > B.f) {
+        return 1;
+    }
+    else if (A.f < B.f) {
+        return -1;
+    }
+    //A == B
+    return 0;
+}

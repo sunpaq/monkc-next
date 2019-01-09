@@ -86,7 +86,6 @@ app/preinstall:
 # Target rules for target app/CMakeFiles/demo.dir
 
 # All Build rule for target.
-app/CMakeFiles/demo.dir/all: stdlib/CMakeFiles/monkc-stdlib.dir/all
 app/CMakeFiles/demo.dir/all: runtime/CMakeFiles/monkc-runtime.dir/all
 	$(MAKE) -f app/CMakeFiles/demo.dir/build.make app/CMakeFiles/demo.dir/depend
 	$(MAKE) -f app/CMakeFiles/demo.dir/build.make app/CMakeFiles/demo.dir/build
@@ -100,7 +99,7 @@ all: app/CMakeFiles/demo.dir/all
 
 # Build rule for subdir invocation for target.
 app/CMakeFiles/demo.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sunyuli/Dev/monkc3/monkc3/CMakeFiles 36
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sunyuli/Dev/monkc3/monkc3/CMakeFiles 35
 	$(MAKE) -f CMakeFiles/Makefile2 app/CMakeFiles/demo.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sunyuli/Dev/monkc3/monkc3/CMakeFiles 0
 .PHONY : app/CMakeFiles/demo.dir/rule
@@ -117,61 +116,6 @@ app/CMakeFiles/demo.dir/clean:
 
 # clean rule for target.
 clean: app/CMakeFiles/demo.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Directory level rules for directory stdlib
-
-# Convenience name for "all" pass in the directory.
-stdlib/all: stdlib/CMakeFiles/monkc-stdlib.dir/all
-
-.PHONY : stdlib/all
-
-# Convenience name for "clean" pass in the directory.
-stdlib/clean: stdlib/CMakeFiles/monkc-stdlib.dir/clean
-
-.PHONY : stdlib/clean
-
-# Convenience name for "preinstall" pass in the directory.
-stdlib/preinstall:
-
-.PHONY : stdlib/preinstall
-
-#=============================================================================
-# Target rules for target stdlib/CMakeFiles/monkc-stdlib.dir
-
-# All Build rule for target.
-stdlib/CMakeFiles/monkc-stdlib.dir/all: runtime/CMakeFiles/monkc-runtime.dir/all
-	$(MAKE) -f stdlib/CMakeFiles/monkc-stdlib.dir/build.make stdlib/CMakeFiles/monkc-stdlib.dir/depend
-	$(MAKE) -f stdlib/CMakeFiles/monkc-stdlib.dir/build.make stdlib/CMakeFiles/monkc-stdlib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/sunyuli/Dev/monkc3/monkc3/CMakeFiles --progress-num=14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36 "Built target monkc-stdlib"
-.PHONY : stdlib/CMakeFiles/monkc-stdlib.dir/all
-
-# Include target in all.
-all: stdlib/CMakeFiles/monkc-stdlib.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-stdlib/CMakeFiles/monkc-stdlib.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sunyuli/Dev/monkc3/monkc3/CMakeFiles 32
-	$(MAKE) -f CMakeFiles/Makefile2 stdlib/CMakeFiles/monkc-stdlib.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sunyuli/Dev/monkc3/monkc3/CMakeFiles 0
-.PHONY : stdlib/CMakeFiles/monkc-stdlib.dir/rule
-
-# Convenience name for target.
-monkc-stdlib: stdlib/CMakeFiles/monkc-stdlib.dir/rule
-
-.PHONY : monkc-stdlib
-
-# clean rule for target.
-stdlib/CMakeFiles/monkc-stdlib.dir/clean:
-	$(MAKE) -f stdlib/CMakeFiles/monkc-stdlib.dir/build.make stdlib/CMakeFiles/monkc-stdlib.dir/clean
-.PHONY : stdlib/CMakeFiles/monkc-stdlib.dir/clean
-
-# clean rule for target.
-clean: stdlib/CMakeFiles/monkc-stdlib.dir/clean
 
 .PHONY : clean
 
@@ -200,7 +144,7 @@ runtime/preinstall:
 runtime/CMakeFiles/monkc-runtime.dir/all:
 	$(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/depend
 	$(MAKE) -f runtime/CMakeFiles/monkc-runtime.dir/build.make runtime/CMakeFiles/monkc-runtime.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/sunyuli/Dev/monkc3/monkc3/CMakeFiles --progress-num=5,6,7,8,9,10,11,12,13 "Built target monkc-runtime"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/sunyuli/Dev/monkc3/monkc3/CMakeFiles --progress-num=5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35 "Built target monkc-runtime"
 .PHONY : runtime/CMakeFiles/monkc-runtime.dir/all
 
 # Include target in all.
@@ -210,7 +154,7 @@ all: runtime/CMakeFiles/monkc-runtime.dir/all
 
 # Build rule for subdir invocation for target.
 runtime/CMakeFiles/monkc-runtime.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sunyuli/Dev/monkc3/monkc3/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sunyuli/Dev/monkc3/monkc3/CMakeFiles 31
 	$(MAKE) -f CMakeFiles/Makefile2 runtime/CMakeFiles/monkc-runtime.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sunyuli/Dev/monkc3/monkc3/CMakeFiles 0
 .PHONY : runtime/CMakeFiles/monkc-runtime.dir/rule

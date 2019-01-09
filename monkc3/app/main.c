@@ -1,10 +1,10 @@
 #include "MCHashTable.h"
-#include "Fish.h"
 #include "MCArray.h"
 #include "MCLinkedList.h"
 #include "MCMap.h"
 #include "MCString.h"
 #include "MCClock.h"
+#include "Fish.h"
 
 void test_hashtable() {
     struct MCHashTable* table = MCHashTable(alloc(MCHashTable));
@@ -75,18 +75,6 @@ void test_stdlib() {
     array->release(array);
 }
 
-void test_LinkedList() {
-    struct MCLinkedList* list = MCLinkedList(alloc(MCLinkedList));
-    struct MCItem item;
-
-    item.next = null;
-    item.data = gen_f(0.9);
-    strcpy(item.key, "key");
-
-    list->append(list, item);
-    free(list);
-}
-
 void test_MCMap() {
     struct MCMap* map = MCMap(alloc(MCMap));
     mc_generic result;
@@ -119,7 +107,6 @@ int main(int argc, const char * argv[]) {
     type_cast();
     method_override();
     test_stdlib();
-    test_LinkedList();
     test_MCMap();
     test_MCString();
     test_MCClock();

@@ -35,7 +35,6 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/Users/sunyuli/Dev/monkc3/monkc3/app/cmake_install.cmake")
-  include("/Users/sunyuli/Dev/monkc3/monkc3/stdlib/cmake_install.cmake")
   include("/Users/sunyuli/Dev/monkc3/monkc3/runtime/cmake_install.cmake")
 
 endif()

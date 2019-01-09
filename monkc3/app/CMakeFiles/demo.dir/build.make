@@ -110,8 +110,6 @@ app/demo: app/CMakeFiles/demo.dir/Fish.c.o
 app/demo: app/CMakeFiles/demo.dir/main.c.o
 app/demo: app/CMakeFiles/demo.dir/build.make
 app/demo: runtime/libmonkc-runtime.a
-app/demo: stdlib/libmonkc-stdlib.a
-app/demo: runtime/libmonkc-runtime.a
 app/demo: app/CMakeFiles/demo.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/sunyuli/Dev/monkc3/monkc3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable demo"
 	cd /Users/sunyuli/Dev/monkc3/monkc3/app && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/demo.dir/link.txt --verbose=$(VERBOSE)

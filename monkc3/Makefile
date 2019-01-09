@@ -124,19 +124,6 @@ demo/fast:
 .PHONY : demo/fast
 
 #=============================================================================
-# Target rules for targets named monkc-stdlib
-
-# Build rule for target.
-monkc-stdlib: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 monkc-stdlib
-.PHONY : monkc-stdlib
-
-# fast build rule for target.
-monkc-stdlib/fast:
-	$(MAKE) -f stdlib/CMakeFiles/monkc-stdlib.dir/build.make stdlib/CMakeFiles/monkc-stdlib.dir/build
-.PHONY : monkc-stdlib/fast
-
-#=============================================================================
 # Target rules for targets named monkc-runtime
 
 # Build rule for target.
@@ -158,7 +145,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... demo"
-	@echo "... monkc-stdlib"
 	@echo "... monkc-runtime"
 .PHONY : help
 

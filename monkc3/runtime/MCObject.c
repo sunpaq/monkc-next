@@ -62,7 +62,6 @@ bool MCObject_class(obj it, const char* name) {
         if (c) {
             it->claz = c;
             it->claz->super = root;
-            it->claz->appendInstance(it->claz, it);
             return true;
         }
     }

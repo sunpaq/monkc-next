@@ -41,15 +41,6 @@ mc_generic gen_f(float f);
 mc_generic gen_d(double d);
 mc_generic gen_p(void* p);
 
-static inline int MCGenericCompare(mc_generic A, mc_generic B) {
-    if (A.f > B.f) {
-        return 1;
-    }
-    else if (A.f < B.f) {
-        return -1;
-    }
-    //A == B
-    return 0;
-}
+int MCGenericCompare(mc_generic A, mc_generic B);
 
 #endif /* MCType_h */

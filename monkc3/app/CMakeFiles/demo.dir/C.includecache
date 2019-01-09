@@ -6,19 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/Users/sunyuli/Dev/monkc3/monkc3/app/Cell.c
-Cell.h
-/Users/sunyuli/Dev/monkc3/monkc3/app/Cell.h
-
 /Users/sunyuli/Dev/monkc3/monkc3/app/Cell.h
 stdio.h
 -
 MCObject.h
 /Users/sunyuli/Dev/monkc3/monkc3/app/MCObject.h
-
-/Users/sunyuli/Dev/monkc3/monkc3/app/Fish.c
-Fish.h
-/Users/sunyuli/Dev/monkc3/monkc3/app/Fish.h
 
 /Users/sunyuli/Dev/monkc3/monkc3/app/Fish.h
 Cell.h
@@ -27,8 +19,6 @@ Cell.h
 /Users/sunyuli/Dev/monkc3/monkc3/app/main.c
 MCHashTable.h
 /Users/sunyuli/Dev/monkc3/monkc3/app/MCHashTable.h
-Fish.h
-/Users/sunyuli/Dev/monkc3/monkc3/app/Fish.h
 MCArray.h
 /Users/sunyuli/Dev/monkc3/monkc3/app/MCArray.h
 MCLinkedList.h
@@ -39,6 +29,12 @@ MCString.h
 /Users/sunyuli/Dev/monkc3/monkc3/app/MCString.h
 MCClock.h
 /Users/sunyuli/Dev/monkc3/monkc3/app/MCClock.h
+Fish.h
+/Users/sunyuli/Dev/monkc3/monkc3/app/Fish.h
+
+runtime/MCArray.h
+MCObject.h
+runtime/MCObject.h
 
 runtime/MCClass.h
 stdio.h
@@ -53,10 +49,16 @@ MCType.h
 runtime/MCType.h
 MCMem.h
 runtime/MCMem.h
-MCLinkedList.h
-runtime/MCLinkedList.h
 MCHashTable.h
 runtime/MCHashTable.h
+
+runtime/MCClock.h
+time.h
+-
+limits.h
+-
+MCObject.h
+runtime/MCObject.h
 
 runtime/MCFunction.h
 MCType.h
@@ -67,14 +69,16 @@ MCObject.h
 runtime/MCObject.h
 
 runtime/MCLinkedList.h
-stdio.h
--
-MCFunction.h
-runtime/MCFunction.h
-MCClass.h
-runtime/MCClass.h
+MCObject.h
+runtime/MCObject.h
 MCType.h
 runtime/MCType.h
+
+runtime/MCMap.h
+MCObject.h
+runtime/MCObject.h
+MCHashTable.h
+runtime/MCHashTable.h
 
 runtime/MCMem.h
 MCType.h
@@ -83,6 +87,16 @@ runtime/MCType.h
 runtime/MCObject.h
 MCClass.h
 runtime/MCClass.h
+MCFunction.h
+runtime/MCFunction.h
+
+runtime/MCString.h
+string.h
+-
+stdbool.h
+-
+MCObject.h
+runtime/MCObject.h
 
 runtime/MCType.h
 stdio.h
@@ -93,30 +107,4 @@ stdbool.h
 -
 
 runtime/monkc.h
-
-stdlib/MCArray.h
-MCObject.h
-stdlib/MCObject.h
-
-stdlib/MCClock.h
-time.h
--
-limits.h
--
-MCObject.h
-stdlib/MCObject.h
-
-stdlib/MCMap.h
-MCObject.h
-stdlib/MCObject.h
-MCHashTable.h
-stdlib/MCHashTable.h
-
-stdlib/MCString.h
-string.h
--
-stdbool.h
--
-MCObject.h
-stdlib/MCObject.h
 

@@ -10,6 +10,7 @@
 #define MCObject_h
 
 #include "MCClass.h"
+#include "MCFunction.h"
 
 struct MCObject {
     struct MCClass* claz;

@@ -3,9 +3,6 @@
 /Users/sunyuli/Dev/monkc3/monkc3/app/CMakeFiles/rebuild_cache.dir
 /Users/sunyuli/Dev/monkc3/monkc3/app/CMakeFiles/edit_cache.dir
 /Users/sunyuli/Dev/monkc3/monkc3/app/CMakeFiles/demo.dir
-/Users/sunyuli/Dev/monkc3/monkc3/stdlib/CMakeFiles/rebuild_cache.dir
-/Users/sunyuli/Dev/monkc3/monkc3/stdlib/CMakeFiles/edit_cache.dir
-/Users/sunyuli/Dev/monkc3/monkc3/stdlib/CMakeFiles/monkc-stdlib.dir
 /Users/sunyuli/Dev/monkc3/monkc3/runtime/CMakeFiles/rebuild_cache.dir
 /Users/sunyuli/Dev/monkc3/monkc3/runtime/CMakeFiles/edit_cache.dir
 /Users/sunyuli/Dev/monkc3/monkc3/runtime/CMakeFiles/monkc-runtime.dir

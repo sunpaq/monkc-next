@@ -30,13 +30,6 @@ struct MCClass* MCClass_load(const char* name) {
     return null;
 }
 
-void MCClass_gc(const char* name) {
-    struct MCClass* cla = global_classes_table->get(global_classes_table, name).p;
-    if (cla) {
-        cla->clearInstances(cla);
-    }
-}
-
 fun(setFunction, void), const char* key, MCFunction value) as(MCClass)
     printf("%s setFunction(%s)\n", it->name, key);
     it->methodtable->put(it->methodtable, key, gen_p(value));
@@ -66,37 +59,16 @@ fun(getFunctionDouble, MCFunctionDouble), const char* key) as(MCClass)
     return null;
 }
 
-fun(appendInstance, void), void* instance) as(MCClass)
-    struct MCItem item;
-    item.data = gen_p(instance);
-    item.next = null;
-    if (it->instances) {
-        it->instances->append(it->instances, item);
-    }
-}
-
-fun(clearInstances, void)) as(MCClass)
-    if (it->instances) {
-        it->instances->clear(it->instances);
-    }
-}
-
 constructor(MCClass), const char* name) {
     as(MCClass)
         strncpy(it->name, name, strlen(name));
         it->name[strlen(name)] = '\0';
-
-        void* mem = mc_alloc(sizeof(MCLinkedList));
-
         it->super = null;
-        it->instances = MCLinkedList(mem);
         it->methodtable = MCHashTable(alloc(MCHashTable));
 
         funadd(setFunction);
         funadd(getFunction);
         funadd(getFunctionDouble);
-        funadd(appendInstance);
-        funadd(clearInstances);
     }
     return any;
 }

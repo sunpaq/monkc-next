@@ -7,7 +7,6 @@ app/CMakeFiles/demo.dir/Cell.c.o
  runtime/MCClass.h
  runtime/MCFunction.h
  runtime/MCHashTable.h
- runtime/MCLinkedList.h
  runtime/MCMem.h
  runtime/MCObject.h
  runtime/MCType.h
@@ -19,7 +18,6 @@ app/CMakeFiles/demo.dir/Fish.c.o
  runtime/MCClass.h
  runtime/MCFunction.h
  runtime/MCHashTable.h
- runtime/MCLinkedList.h
  runtime/MCMem.h
  runtime/MCObject.h
  runtime/MCType.h
@@ -28,15 +26,15 @@ app/CMakeFiles/demo.dir/main.c.o
  /Users/sunyuli/Dev/monkc3/monkc3/app/Cell.h
  /Users/sunyuli/Dev/monkc3/monkc3/app/Fish.h
  /Users/sunyuli/Dev/monkc3/monkc3/app/main.c
+ runtime/MCArray.h
  runtime/MCClass.h
+ runtime/MCClock.h
  runtime/MCFunction.h
  runtime/MCHashTable.h
  runtime/MCLinkedList.h
+ runtime/MCMap.h
  runtime/MCMem.h
  runtime/MCObject.h
+ runtime/MCString.h
  runtime/MCType.h
  runtime/monkc.h
- stdlib/MCArray.h
- stdlib/MCClock.h
- stdlib/MCMap.h
- stdlib/MCString.h

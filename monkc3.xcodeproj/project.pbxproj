@@ -7,18 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FD006B042143E22A004A7C1B /* MCLock.c in Sources */ = {isa = PBXBuildFile; fileRef = FD006B032143E22A004A7C1B /* MCLock.c */; };
-		FD006B072143F763004A7C1B /* MCMem.c in Sources */ = {isa = PBXBuildFile; fileRef = FD006B062143F763004A7C1B /* MCMem.c */; };
-		FD006B0A2143F816004A7C1B /* MCType.c in Sources */ = {isa = PBXBuildFile; fileRef = FD006B092143F816004A7C1B /* MCType.c */; };
-		FD006B0D2143FAFC004A7C1B /* MCLinkedList.c in Sources */ = {isa = PBXBuildFile; fileRef = FD006B0C2143FAFC004A7C1B /* MCLinkedList.c */; };
-		FD62BC55219FDE110091D020 /* MCHashTable.c in Sources */ = {isa = PBXBuildFile; fileRef = FD62BC54219FDE110091D020 /* MCHashTable.c */; };
-		FDAD62A821B6D44B004CE65A /* MCArray.c in Sources */ = {isa = PBXBuildFile; fileRef = FDAD62A721B6D44B004CE65A /* MCArray.c */; };
-		FDD61514214395FF0058CAAA /* MCObject.c in Sources */ = {isa = PBXBuildFile; fileRef = FDD61513214395FF0058CAAA /* MCObject.c */; };
-		FDD615172143973C0058CAAA /* MCClass.c in Sources */ = {isa = PBXBuildFile; fileRef = FDD615162143973C0058CAAA /* MCClass.c */; };
-		FDD6151A214398650058CAAA /* MCFunction.c in Sources */ = {isa = PBXBuildFile; fileRef = FDD61519214398650058CAAA /* MCFunction.c */; };
-		FDE5E5FE2143863E0076D526 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = FDE5E5FD2143863E0076D526 /* main.c */; };
-		FDE5E609214386830076D526 /* Fish.c in Sources */ = {isa = PBXBuildFile; fileRef = FDE5E608214386830076D526 /* Fish.c */; };
-		FDE5E60C21438E410076D526 /* Cell.c in Sources */ = {isa = PBXBuildFile; fileRef = FDE5E60B21438E410076D526 /* Cell.c */; };
+		FD1E89FA21E650480091EB74 /* Fish.c in Sources */ = {isa = PBXBuildFile; fileRef = FD1E893B21E650480091EB74 /* Fish.c */; };
+		FD1E89FB21E650480091EB74 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = FD1E893C21E650480091EB74 /* main.c */; };
+		FD1E89FC21E650480091EB74 /* Cell.c in Sources */ = {isa = PBXBuildFile; fileRef = FD1E893D21E650480091EB74 /* Cell.c */; };
+		FD1E8A0621E650480091EB74 /* MCException.c in Sources */ = {isa = PBXBuildFile; fileRef = FD1E897921E650480091EB74 /* MCException.c */; };
+		FD1E8A0721E650480091EB74 /* MCBits.c in Sources */ = {isa = PBXBuildFile; fileRef = FD1E897A21E650480091EB74 /* MCBits.c */; };
+		FD1E8A0821E650480091EB74 /* MCSocket.c in Sources */ = {isa = PBXBuildFile; fileRef = FD1E897B21E650480091EB74 /* MCSocket.c */; };
+		FD1E8A0921E650480091EB74 /* MCSet.c in Sources */ = {isa = PBXBuildFile; fileRef = FD1E897D21E650480091EB74 /* MCSet.c */; };
+		FD1E8A0A21E650480091EB74 /* MCGraph.c in Sources */ = {isa = PBXBuildFile; fileRef = FD1E897E21E650480091EB74 /* MCGraph.c */; };
+		FD1E8A0B21E650480091EB74 /* MCString.c in Sources */ = {isa = PBXBuildFile; fileRef = FD1E897F21E650480091EB74 /* MCString.c */; };
+		FD1E8A0C21E650480091EB74 /* MCArrayList.c in Sources */ = {isa = PBXBuildFile; fileRef = FD1E898021E650480091EB74 /* MCArrayList.c */; };
+		FD1E8A0D21E650480091EB74 /* MCSort.c in Sources */ = {isa = PBXBuildFile; fileRef = FD1E898221E650480091EB74 /* MCSort.c */; };
+		FD1E8A0E21E650480091EB74 /* MCMem.c in Sources */ = {isa = PBXBuildFile; fileRef = FD1E898621E650480091EB74 /* MCMem.c */; };
+		FD1E8A0F21E650480091EB74 /* MCIO.c in Sources */ = {isa = PBXBuildFile; fileRef = FD1E898721E650480091EB74 /* MCIO.c */; };
+		FD1E8A2E21E650480091EB74 /* MCHeap.c in Sources */ = {isa = PBXBuildFile; fileRef = FD1E89B721E650480091EB74 /* MCHeap.c */; };
+		FD1E8A2F21E650480091EB74 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = FD1E89B821E650480091EB74 /* Makefile */; };
+		FD1E8A3021E650480091EB74 /* MCMath.c in Sources */ = {isa = PBXBuildFile; fileRef = FD1E89BA21E650480091EB74 /* MCMath.c */; };
+		FD1E8A3121E650480091EB74 /* MCContext.c in Sources */ = {isa = PBXBuildFile; fileRef = FD1E89BB21E650480091EB74 /* MCContext.c */; };
+		FD1E8A3221E650480091EB74 /* MCObject.c in Sources */ = {isa = PBXBuildFile; fileRef = FD1E89BD21E650480091EB74 /* MCObject.c */; };
+		FD1E8A3321E650480091EB74 /* MCBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = FD1E89C021E650480091EB74 /* MCBuffer.c */; };
+		FD1E8A3421E650480091EB74 /* MCUnitTest.c in Sources */ = {isa = PBXBuildFile; fileRef = FD1E89C221E650480091EB74 /* MCUnitTest.c */; };
+		FD1E8A3521E650480091EB74 /* MCLog.c in Sources */ = {isa = PBXBuildFile; fileRef = FD1E89C321E650480091EB74 /* MCLog.c */; };
+		FD1E8A3621E650480091EB74 /* MCThread.c in Sources */ = {isa = PBXBuildFile; fileRef = FD1E89C421E650480091EB74 /* MCThread.c */; };
+		FD1E8A3721E650480091EB74 /* MCClock.c in Sources */ = {isa = PBXBuildFile; fileRef = FD1E89C721E650480091EB74 /* MCClock.c */; };
+		FD1E8A3821E650480091EB74 /* MCTree.c in Sources */ = {isa = PBXBuildFile; fileRef = FD1E89CB21E650480091EB74 /* MCTree.c */; };
+		FD1E8A3A21E650480091EB74 /* MCProcess.c in Sources */ = {isa = PBXBuildFile; fileRef = FD1E89D121E650480091EB74 /* MCProcess.c */; };
+		FD1E8A3B21E650480091EB74 /* MCLock.c in Sources */ = {isa = PBXBuildFile; fileRef = FD1E89D321E650480091EB74 /* MCLock.c */; };
+		FD1E8A3C21E650480091EB74 /* MCGeometry.c in Sources */ = {isa = PBXBuildFile; fileRef = FD1E89D521E650480091EB74 /* MCGeometry.c */; };
+		FD1E8A3D21E650480091EB74 /* MCArray.c in Sources */ = {isa = PBXBuildFile; fileRef = FD1E89D621E650480091EB74 /* MCArray.c */; };
+		FD1E8A3E21E650480091EB74 /* MCLinkedList.c in Sources */ = {isa = PBXBuildFile; fileRef = FD1E89D821E650480091EB74 /* MCLinkedList.c */; };
+		FD1E8A3F21E650480091EB74 /* MCFunction.c in Sources */ = {isa = PBXBuildFile; fileRef = FD1E89DA21E650480091EB74 /* MCFunction.c */; };
+		FD1E8A4021E650480091EB74 /* MCClass.c in Sources */ = {isa = PBXBuildFile; fileRef = FD1E89DD21E650480091EB74 /* MCClass.c */; };
+		FD1E8A4121E650480091EB74 /* MCMap.c in Sources */ = {isa = PBXBuildFile; fileRef = FD1E89DE21E650480091EB74 /* MCMap.c */; };
+		FD1E8A4221E650480091EB74 /* MCHashTable.c in Sources */ = {isa = PBXBuildFile; fileRef = FD1E89DF21E650480091EB74 /* MCHashTable.c */; };
+		FD1E8A4321E650480091EB74 /* MCType.c in Sources */ = {isa = PBXBuildFile; fileRef = FD1E89E821E650480091EB74 /* MCType.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,32 +56,77 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		FD006B022143E22A004A7C1B /* MCLock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCLock.h; sourceTree = "<group>"; };
-		FD006B032143E22A004A7C1B /* MCLock.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = MCLock.c; sourceTree = "<group>"; };
-		FD006B052143F763004A7C1B /* MCMem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCMem.h; sourceTree = "<group>"; };
-		FD006B062143F763004A7C1B /* MCMem.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = MCMem.c; sourceTree = "<group>"; };
-		FD006B082143F816004A7C1B /* MCType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCType.h; sourceTree = "<group>"; };
-		FD006B092143F816004A7C1B /* MCType.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = MCType.c; sourceTree = "<group>"; };
-		FD006B0B2143FAFC004A7C1B /* MCLinkedList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCLinkedList.h; sourceTree = "<group>"; };
-		FD006B0C2143FAFC004A7C1B /* MCLinkedList.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = MCLinkedList.c; sourceTree = "<group>"; };
-		FD006B0E21440423004A7C1B /* monkc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = monkc.h; sourceTree = "<group>"; };
-		FD62BC53219FDE110091D020 /* MCHashTable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCHashTable.h; sourceTree = "<group>"; };
-		FD62BC54219FDE110091D020 /* MCHashTable.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = MCHashTable.c; sourceTree = "<group>"; };
-		FDAD62A521B6D44B004CE65A /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
-		FDAD62A621B6D44B004CE65A /* MCArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCArray.h; sourceTree = "<group>"; };
-		FDAD62A721B6D44B004CE65A /* MCArray.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MCArray.c; sourceTree = "<group>"; };
-		FDD61512214395FF0058CAAA /* MCObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCObject.h; sourceTree = "<group>"; };
-		FDD61513214395FF0058CAAA /* MCObject.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = MCObject.c; sourceTree = "<group>"; };
-		FDD615152143973C0058CAAA /* MCClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCClass.h; sourceTree = "<group>"; };
-		FDD615162143973C0058CAAA /* MCClass.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = MCClass.c; sourceTree = "<group>"; };
-		FDD61518214398650058CAAA /* MCFunction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCFunction.h; sourceTree = "<group>"; };
-		FDD61519214398650058CAAA /* MCFunction.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = MCFunction.c; sourceTree = "<group>"; };
+		FD1E893921E650480091EB74 /* Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cell.h; sourceTree = "<group>"; };
+		FD1E893B21E650480091EB74 /* Fish.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Fish.c; sourceTree = "<group>"; };
+		FD1E893C21E650480091EB74 /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		FD1E893D21E650480091EB74 /* Cell.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Cell.c; sourceTree = "<group>"; };
+		FD1E893E21E650480091EB74 /* Fish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fish.h; sourceTree = "<group>"; };
+		FD1E897921E650480091EB74 /* MCException.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MCException.c; sourceTree = "<group>"; };
+		FD1E897A21E650480091EB74 /* MCBits.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MCBits.c; sourceTree = "<group>"; };
+		FD1E897B21E650480091EB74 /* MCSocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MCSocket.c; sourceTree = "<group>"; };
+		FD1E897C21E650480091EB74 /* MCTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCTree.h; sourceTree = "<group>"; };
+		FD1E897D21E650480091EB74 /* MCSet.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MCSet.c; sourceTree = "<group>"; };
+		FD1E897E21E650480091EB74 /* MCGraph.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MCGraph.c; sourceTree = "<group>"; };
+		FD1E897F21E650480091EB74 /* MCString.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MCString.c; sourceTree = "<group>"; };
+		FD1E898021E650480091EB74 /* MCArrayList.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MCArrayList.c; sourceTree = "<group>"; };
+		FD1E898121E650480091EB74 /* MCClock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCClock.h; sourceTree = "<group>"; };
+		FD1E898221E650480091EB74 /* MCSort.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MCSort.c; sourceTree = "<group>"; };
+		FD1E898321E650480091EB74 /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
+		FD1E898421E650480091EB74 /* MCLock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCLock.h; sourceTree = "<group>"; };
+		FD1E898521E650480091EB74 /* MCProcess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCProcess.h; sourceTree = "<group>"; };
+		FD1E898621E650480091EB74 /* MCMem.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MCMem.c; sourceTree = "<group>"; };
+		FD1E898721E650480091EB74 /* MCIO.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MCIO.c; sourceTree = "<group>"; };
+		FD1E89B421E650480091EB74 /* MCFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCFunction.h; sourceTree = "<group>"; };
+		FD1E89B521E650480091EB74 /* MCMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCMap.h; sourceTree = "<group>"; };
+		FD1E89B621E650480091EB74 /* MCClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCClass.h; sourceTree = "<group>"; };
+		FD1E89B721E650480091EB74 /* MCHeap.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MCHeap.c; sourceTree = "<group>"; };
+		FD1E89B821E650480091EB74 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		FD1E89B921E650480091EB74 /* MCLinkedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCLinkedList.h; sourceTree = "<group>"; };
+		FD1E89BA21E650480091EB74 /* MCMath.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MCMath.c; sourceTree = "<group>"; };
+		FD1E89BB21E650480091EB74 /* MCContext.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MCContext.c; sourceTree = "<group>"; };
+		FD1E89BC21E650480091EB74 /* MCArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCArray.h; sourceTree = "<group>"; };
+		FD1E89BD21E650480091EB74 /* MCObject.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MCObject.c; sourceTree = "<group>"; };
+		FD1E89BE21E650480091EB74 /* MCGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCGeometry.h; sourceTree = "<group>"; };
+		FD1E89BF21E650480091EB74 /* cmake_install.cmake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cmake_install.cmake; sourceTree = "<group>"; };
+		FD1E89C021E650480091EB74 /* MCBuffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MCBuffer.c; sourceTree = "<group>"; };
+		FD1E89C121E650480091EB74 /* MCType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCType.h; sourceTree = "<group>"; };
+		FD1E89C221E650480091EB74 /* MCUnitTest.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MCUnitTest.c; sourceTree = "<group>"; };
+		FD1E89C321E650480091EB74 /* MCLog.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MCLog.c; sourceTree = "<group>"; };
+		FD1E89C421E650480091EB74 /* MCThread.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MCThread.c; sourceTree = "<group>"; };
+		FD1E89C521E650480091EB74 /* MCHashTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCHashTable.h; sourceTree = "<group>"; };
+		FD1E89C621E650480091EB74 /* MCString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCString.h; sourceTree = "<group>"; };
+		FD1E89C721E650480091EB74 /* MCClock.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MCClock.c; sourceTree = "<group>"; };
+		FD1E89C821E650480091EB74 /* MCArrayList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCArrayList.h; sourceTree = "<group>"; };
+		FD1E89C921E650480091EB74 /* MCGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCGraph.h; sourceTree = "<group>"; };
+		FD1E89CA21E650480091EB74 /* MCSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCSet.h; sourceTree = "<group>"; };
+		FD1E89CB21E650480091EB74 /* MCTree.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MCTree.c; sourceTree = "<group>"; };
+		FD1E89CC21E650480091EB74 /* MCSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCSocket.h; sourceTree = "<group>"; };
+		FD1E89CD21E650480091EB74 /* MCBits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCBits.h; sourceTree = "<group>"; };
+		FD1E89CE21E650480091EB74 /* MCException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCException.h; sourceTree = "<group>"; };
+		FD1E89CF21E650480091EB74 /* MCMem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCMem.h; sourceTree = "<group>"; };
+		FD1E89D121E650480091EB74 /* MCProcess.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MCProcess.c; sourceTree = "<group>"; };
+		FD1E89D221E650480091EB74 /* MCSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCSort.h; sourceTree = "<group>"; };
+		FD1E89D321E650480091EB74 /* MCLock.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MCLock.c; sourceTree = "<group>"; };
+		FD1E89D421E650480091EB74 /* MCObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCObject.h; sourceTree = "<group>"; };
+		FD1E89D521E650480091EB74 /* MCGeometry.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MCGeometry.c; sourceTree = "<group>"; };
+		FD1E89D621E650480091EB74 /* MCArray.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MCArray.c; sourceTree = "<group>"; };
+		FD1E89D721E650480091EB74 /* MCContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCContext.h; sourceTree = "<group>"; };
+		FD1E89D821E650480091EB74 /* MCLinkedList.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MCLinkedList.c; sourceTree = "<group>"; };
+		FD1E89D921E650480091EB74 /* MCMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCMath.h; sourceTree = "<group>"; };
+		FD1E89DA21E650480091EB74 /* MCFunction.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MCFunction.c; sourceTree = "<group>"; };
+		FD1E89DB21E650480091EB74 /* MCIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCIO.h; sourceTree = "<group>"; };
+		FD1E89DC21E650480091EB74 /* MCHeap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCHeap.h; sourceTree = "<group>"; };
+		FD1E89DD21E650480091EB74 /* MCClass.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MCClass.c; sourceTree = "<group>"; };
+		FD1E89DE21E650480091EB74 /* MCMap.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MCMap.c; sourceTree = "<group>"; };
+		FD1E89DF21E650480091EB74 /* MCHashTable.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MCHashTable.c; sourceTree = "<group>"; };
+		FD1E89E021E650480091EB74 /* MCJNI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCJNI.h; sourceTree = "<group>"; };
+		FD1E89E421E650480091EB74 /* MCThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCThread.h; sourceTree = "<group>"; };
+		FD1E89E521E650480091EB74 /* MCLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCLog.h; sourceTree = "<group>"; };
+		FD1E89E621E650480091EB74 /* monkc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = monkc.h; sourceTree = "<group>"; };
+		FD1E89E721E650480091EB74 /* MCUnitTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCUnitTest.h; sourceTree = "<group>"; };
+		FD1E89E821E650480091EB74 /* MCType.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MCType.c; sourceTree = "<group>"; };
+		FD1E89E921E650480091EB74 /* MCBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCBuffer.h; sourceTree = "<group>"; };
 		FDE5E5FA2143863E0076D526 /* monkc3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = monkc3; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDE5E5FD2143863E0076D526 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
-		FDE5E607214386830076D526 /* Fish.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Fish.h; sourceTree = "<group>"; };
-		FDE5E608214386830076D526 /* Fish.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Fish.c; sourceTree = "<group>"; };
-		FDE5E60A21438E410076D526 /* Cell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cell.h; sourceTree = "<group>"; };
-		FDE5E60B21438E410076D526 /* Cell.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Cell.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,57 +140,103 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FD62BC51219FDCFA0091D020 /* app */ = {
+		FD1E891D21E650470091EB74 /* monkc3 */ = {
 			isa = PBXGroup;
 			children = (
-				FDE5E60B21438E410076D526 /* Cell.c */,
-				FDE5E5FD2143863E0076D526 /* main.c */,
-				FDE5E607214386830076D526 /* Fish.h */,
-				FDE5E608214386830076D526 /* Fish.c */,
-				FDE5E60A21438E410076D526 /* Cell.h */,
+				FD1E892221E650470091EB74 /* app */,
+				FD1E897821E650480091EB74 /* runtime */,
+			);
+			path = monkc3;
+			sourceTree = "<group>";
+		};
+		FD1E892221E650470091EB74 /* app */ = {
+			isa = PBXGroup;
+			children = (
+				FD1E893921E650480091EB74 /* Cell.h */,
+				FD1E893B21E650480091EB74 /* Fish.c */,
+				FD1E893C21E650480091EB74 /* main.c */,
+				FD1E893D21E650480091EB74 /* Cell.c */,
+				FD1E893E21E650480091EB74 /* Fish.h */,
 			);
 			path = app;
 			sourceTree = "<group>";
 		};
-		FD62BC52219FDD1E0091D020 /* runtime */ = {
+		FD1E897821E650480091EB74 /* runtime */ = {
 			isa = PBXGroup;
 			children = (
-				FDD61512214395FF0058CAAA /* MCObject.h */,
-				FDD61513214395FF0058CAAA /* MCObject.c */,
-				FDD615152143973C0058CAAA /* MCClass.h */,
-				FDD615162143973C0058CAAA /* MCClass.c */,
-				FDD61518214398650058CAAA /* MCFunction.h */,
-				FDD61519214398650058CAAA /* MCFunction.c */,
-				FD006B022143E22A004A7C1B /* MCLock.h */,
-				FD006B032143E22A004A7C1B /* MCLock.c */,
-				FD006B052143F763004A7C1B /* MCMem.h */,
-				FD006B062143F763004A7C1B /* MCMem.c */,
-				FD006B082143F816004A7C1B /* MCType.h */,
-				FD006B092143F816004A7C1B /* MCType.c */,
-				FD006B0B2143FAFC004A7C1B /* MCLinkedList.h */,
-				FD006B0C2143FAFC004A7C1B /* MCLinkedList.c */,
-				FD006B0E21440423004A7C1B /* monkc.h */,
-				FD62BC53219FDE110091D020 /* MCHashTable.h */,
-				FD62BC54219FDE110091D020 /* MCHashTable.c */,
+				FD1E897921E650480091EB74 /* MCException.c */,
+				FD1E897A21E650480091EB74 /* MCBits.c */,
+				FD1E897B21E650480091EB74 /* MCSocket.c */,
+				FD1E897C21E650480091EB74 /* MCTree.h */,
+				FD1E897D21E650480091EB74 /* MCSet.c */,
+				FD1E897E21E650480091EB74 /* MCGraph.c */,
+				FD1E897F21E650480091EB74 /* MCString.c */,
+				FD1E898021E650480091EB74 /* MCArrayList.c */,
+				FD1E898121E650480091EB74 /* MCClock.h */,
+				FD1E898221E650480091EB74 /* MCSort.c */,
+				FD1E898321E650480091EB74 /* CMakeLists.txt */,
+				FD1E898421E650480091EB74 /* MCLock.h */,
+				FD1E898521E650480091EB74 /* MCProcess.h */,
+				FD1E898621E650480091EB74 /* MCMem.c */,
+				FD1E898721E650480091EB74 /* MCIO.c */,
+				FD1E89B421E650480091EB74 /* MCFunction.h */,
+				FD1E89B521E650480091EB74 /* MCMap.h */,
+				FD1E89B621E650480091EB74 /* MCClass.h */,
+				FD1E89B721E650480091EB74 /* MCHeap.c */,
+				FD1E89B821E650480091EB74 /* Makefile */,
+				FD1E89B921E650480091EB74 /* MCLinkedList.h */,
+				FD1E89BA21E650480091EB74 /* MCMath.c */,
+				FD1E89BB21E650480091EB74 /* MCContext.c */,
+				FD1E89BC21E650480091EB74 /* MCArray.h */,
+				FD1E89BD21E650480091EB74 /* MCObject.c */,
+				FD1E89BE21E650480091EB74 /* MCGeometry.h */,
+				FD1E89BF21E650480091EB74 /* cmake_install.cmake */,
+				FD1E89C021E650480091EB74 /* MCBuffer.c */,
+				FD1E89C121E650480091EB74 /* MCType.h */,
+				FD1E89C221E650480091EB74 /* MCUnitTest.c */,
+				FD1E89C321E650480091EB74 /* MCLog.c */,
+				FD1E89C421E650480091EB74 /* MCThread.c */,
+				FD1E89C521E650480091EB74 /* MCHashTable.h */,
+				FD1E89C621E650480091EB74 /* MCString.h */,
+				FD1E89C721E650480091EB74 /* MCClock.c */,
+				FD1E89C821E650480091EB74 /* MCArrayList.h */,
+				FD1E89C921E650480091EB74 /* MCGraph.h */,
+				FD1E89CA21E650480091EB74 /* MCSet.h */,
+				FD1E89CB21E650480091EB74 /* MCTree.c */,
+				FD1E89CC21E650480091EB74 /* MCSocket.h */,
+				FD1E89CD21E650480091EB74 /* MCBits.h */,
+				FD1E89CE21E650480091EB74 /* MCException.h */,
+				FD1E89CF21E650480091EB74 /* MCMem.h */,
+				FD1E89D121E650480091EB74 /* MCProcess.c */,
+				FD1E89D221E650480091EB74 /* MCSort.h */,
+				FD1E89D321E650480091EB74 /* MCLock.c */,
+				FD1E89D421E650480091EB74 /* MCObject.h */,
+				FD1E89D521E650480091EB74 /* MCGeometry.c */,
+				FD1E89D621E650480091EB74 /* MCArray.c */,
+				FD1E89D721E650480091EB74 /* MCContext.h */,
+				FD1E89D821E650480091EB74 /* MCLinkedList.c */,
+				FD1E89D921E650480091EB74 /* MCMath.h */,
+				FD1E89DA21E650480091EB74 /* MCFunction.c */,
+				FD1E89DB21E650480091EB74 /* MCIO.h */,
+				FD1E89DC21E650480091EB74 /* MCHeap.h */,
+				FD1E89DD21E650480091EB74 /* MCClass.c */,
+				FD1E89DE21E650480091EB74 /* MCMap.c */,
+				FD1E89DF21E650480091EB74 /* MCHashTable.c */,
+				FD1E89E021E650480091EB74 /* MCJNI.h */,
+				FD1E89E421E650480091EB74 /* MCThread.h */,
+				FD1E89E521E650480091EB74 /* MCLog.h */,
+				FD1E89E621E650480091EB74 /* monkc.h */,
+				FD1E89E721E650480091EB74 /* MCUnitTest.h */,
+				FD1E89E821E650480091EB74 /* MCType.c */,
+				FD1E89E921E650480091EB74 /* MCBuffer.h */,
 			);
 			path = runtime;
 			sourceTree = "<group>";
 		};
-		FDAD62A421B6D44B004CE65A /* stdlib */ = {
-			isa = PBXGroup;
-			children = (
-				FDAD62A521B6D44B004CE65A /* CMakeLists.txt */,
-				FDAD62A621B6D44B004CE65A /* MCArray.h */,
-				FDAD62A721B6D44B004CE65A /* MCArray.c */,
-			);
-			name = stdlib;
-			path = monkc3/stdlib;
-			sourceTree = SOURCE_ROOT;
-		};
 		FDE5E5F12143863E0076D526 = {
 			isa = PBXGroup;
 			children = (
-				FDE5E5FC2143863E0076D526 /* monkc3 */,
+				FD1E891D21E650470091EB74 /* monkc3 */,
 				FDE5E5FB2143863E0076D526 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -134,16 +247,6 @@
 				FDE5E5FA2143863E0076D526 /* monkc3 */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		FDE5E5FC2143863E0076D526 /* monkc3 */ = {
-			isa = PBXGroup;
-			children = (
-				FD62BC52219FDD1E0091D020 /* runtime */,
-				FDAD62A421B6D44B004CE65A /* stdlib */,
-				FD62BC51219FDCFA0091D020 /* app */,
-			);
-			path = monkc3;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,18 +305,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDD615172143973C0058CAAA /* MCClass.c in Sources */,
-				FD62BC55219FDE110091D020 /* MCHashTable.c in Sources */,
-				FDE5E609214386830076D526 /* Fish.c in Sources */,
-				FD006B042143E22A004A7C1B /* MCLock.c in Sources */,
-				FDD6151A214398650058CAAA /* MCFunction.c in Sources */,
-				FDAD62A821B6D44B004CE65A /* MCArray.c in Sources */,
-				FDE5E5FE2143863E0076D526 /* main.c in Sources */,
-				FD006B0A2143F816004A7C1B /* MCType.c in Sources */,
-				FDD61514214395FF0058CAAA /* MCObject.c in Sources */,
-				FDE5E60C21438E410076D526 /* Cell.c in Sources */,
-				FD006B0D2143FAFC004A7C1B /* MCLinkedList.c in Sources */,
-				FD006B072143F763004A7C1B /* MCMem.c in Sources */,
+				FD1E8A0F21E650480091EB74 /* MCIO.c in Sources */,
+				FD1E8A0621E650480091EB74 /* MCException.c in Sources */,
+				FD1E8A3621E650480091EB74 /* MCThread.c in Sources */,
+				FD1E8A3421E650480091EB74 /* MCUnitTest.c in Sources */,
+				FD1E8A3D21E650480091EB74 /* MCArray.c in Sources */,
+				FD1E8A3821E650480091EB74 /* MCTree.c in Sources */,
+				FD1E8A0821E650480091EB74 /* MCSocket.c in Sources */,
+				FD1E8A3221E650480091EB74 /* MCObject.c in Sources */,
+				FD1E8A4221E650480091EB74 /* MCHashTable.c in Sources */,
+				FD1E8A3B21E650480091EB74 /* MCLock.c in Sources */,
+				FD1E8A4021E650480091EB74 /* MCClass.c in Sources */,
+				FD1E8A0721E650480091EB74 /* MCBits.c in Sources */,
+				FD1E8A3321E650480091EB74 /* MCBuffer.c in Sources */,
+				FD1E8A4121E650480091EB74 /* MCMap.c in Sources */,
+				FD1E8A0C21E650480091EB74 /* MCArrayList.c in Sources */,
+				FD1E8A3121E650480091EB74 /* MCContext.c in Sources */,
+				FD1E8A3F21E650480091EB74 /* MCFunction.c in Sources */,
+				FD1E8A3021E650480091EB74 /* MCMath.c in Sources */,
+				FD1E8A3521E650480091EB74 /* MCLog.c in Sources */,
+				FD1E89FA21E650480091EB74 /* Fish.c in Sources */,
+				FD1E8A3C21E650480091EB74 /* MCGeometry.c in Sources */,
+				FD1E8A3E21E650480091EB74 /* MCLinkedList.c in Sources */,
+				FD1E8A0E21E650480091EB74 /* MCMem.c in Sources */,
+				FD1E8A2F21E650480091EB74 /* Makefile in Sources */,
+				FD1E8A3721E650480091EB74 /* MCClock.c in Sources */,
+				FD1E8A2E21E650480091EB74 /* MCHeap.c in Sources */,
+				FD1E8A0A21E650480091EB74 /* MCGraph.c in Sources */,
+				FD1E8A0D21E650480091EB74 /* MCSort.c in Sources */,
+				FD1E89FB21E650480091EB74 /* main.c in Sources */,
+				FD1E8A4321E650480091EB74 /* MCType.c in Sources */,
+				FD1E8A0B21E650480091EB74 /* MCString.c in Sources */,
+				FD1E8A0921E650480091EB74 /* MCSet.c in Sources */,
+				FD1E8A3A21E650480091EB74 /* MCProcess.c in Sources */,
+				FD1E89FC21E650480091EB74 /* Cell.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,7 +382,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = ansi;
+				GCC_C_LANGUAGE_STANDARD = c89;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_INPUT_FILETYPE = sourcecode.c.c;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -316,7 +441,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = ansi;
+				GCC_C_LANGUAGE_STANDARD = c89;
 				GCC_INPUT_FILETYPE = sourcecode.c.c;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -338,8 +463,12 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R7BTEXA73U;
-				GCC_C_LANGUAGE_STANDARD = ansi;
+				GCC_C_LANGUAGE_STANDARD = c89;
 				GCC_INPUT_FILETYPE = sourcecode.c.c;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/monkc3/runtime",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -351,8 +480,12 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R7BTEXA73U;
-				GCC_C_LANGUAGE_STANDARD = ansi;
+				GCC_C_LANGUAGE_STANDARD = c89;
 				GCC_INPUT_FILETYPE = sourcecode.c.c;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/monkc3/runtime",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

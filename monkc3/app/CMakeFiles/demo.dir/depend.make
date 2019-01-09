@@ -6,7 +6,6 @@ app/CMakeFiles/demo.dir/Cell.c.o: app/Cell.h
 app/CMakeFiles/demo.dir/Cell.c.o: runtime/MCClass.h
 app/CMakeFiles/demo.dir/Cell.c.o: runtime/MCFunction.h
 app/CMakeFiles/demo.dir/Cell.c.o: runtime/MCHashTable.h
-app/CMakeFiles/demo.dir/Cell.c.o: runtime/MCLinkedList.h
 app/CMakeFiles/demo.dir/Cell.c.o: runtime/MCMem.h
 app/CMakeFiles/demo.dir/Cell.c.o: runtime/MCObject.h
 app/CMakeFiles/demo.dir/Cell.c.o: runtime/MCType.h
@@ -18,7 +17,6 @@ app/CMakeFiles/demo.dir/Fish.c.o: app/Fish.h
 app/CMakeFiles/demo.dir/Fish.c.o: runtime/MCClass.h
 app/CMakeFiles/demo.dir/Fish.c.o: runtime/MCFunction.h
 app/CMakeFiles/demo.dir/Fish.c.o: runtime/MCHashTable.h
-app/CMakeFiles/demo.dir/Fish.c.o: runtime/MCLinkedList.h
 app/CMakeFiles/demo.dir/Fish.c.o: runtime/MCMem.h
 app/CMakeFiles/demo.dir/Fish.c.o: runtime/MCObject.h
 app/CMakeFiles/demo.dir/Fish.c.o: runtime/MCType.h
@@ -27,16 +25,16 @@ app/CMakeFiles/demo.dir/Fish.c.o: runtime/monkc.h
 app/CMakeFiles/demo.dir/main.c.o: app/Cell.h
 app/CMakeFiles/demo.dir/main.c.o: app/Fish.h
 app/CMakeFiles/demo.dir/main.c.o: app/main.c
+app/CMakeFiles/demo.dir/main.c.o: runtime/MCArray.h
 app/CMakeFiles/demo.dir/main.c.o: runtime/MCClass.h
+app/CMakeFiles/demo.dir/main.c.o: runtime/MCClock.h
 app/CMakeFiles/demo.dir/main.c.o: runtime/MCFunction.h
 app/CMakeFiles/demo.dir/main.c.o: runtime/MCHashTable.h
 app/CMakeFiles/demo.dir/main.c.o: runtime/MCLinkedList.h
+app/CMakeFiles/demo.dir/main.c.o: runtime/MCMap.h
 app/CMakeFiles/demo.dir/main.c.o: runtime/MCMem.h
 app/CMakeFiles/demo.dir/main.c.o: runtime/MCObject.h
+app/CMakeFiles/demo.dir/main.c.o: runtime/MCString.h
 app/CMakeFiles/demo.dir/main.c.o: runtime/MCType.h
 app/CMakeFiles/demo.dir/main.c.o: runtime/monkc.h
-app/CMakeFiles/demo.dir/main.c.o: stdlib/MCArray.h
-app/CMakeFiles/demo.dir/main.c.o: stdlib/MCClock.h
-app/CMakeFiles/demo.dir/main.c.o: stdlib/MCMap.h
-app/CMakeFiles/demo.dir/main.c.o: stdlib/MCString.h
 

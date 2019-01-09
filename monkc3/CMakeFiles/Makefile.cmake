@@ -34,7 +34,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeLists.txt"
   "app/CMakeLists.txt"
   "runtime/CMakeLists.txt"
-  "stdlib/CMakeLists.txt"
   )
 
 # The corresponding makefile is:
@@ -47,13 +46,11 @@ set(CMAKE_MAKEFILE_OUTPUTS
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "app/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "stdlib/CMakeFiles/CMakeDirectoryInformation.cmake"
   "runtime/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "app/CMakeFiles/demo.dir/DependInfo.cmake"
-  "stdlib/CMakeFiles/monkc-stdlib.dir/DependInfo.cmake"
   "runtime/CMakeFiles/monkc-runtime.dir/DependInfo.cmake"
   )

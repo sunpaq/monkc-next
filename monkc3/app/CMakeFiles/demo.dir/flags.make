@@ -6,5 +6,5 @@ C_FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacO
 
 C_DEFINES = 
 
-C_INCLUDES = -I/Users/sunyuli/Dev/monkc3/monkc3/runtime -I/Users/sunyuli/Dev/monkc3/monkc3/stdlib 
+C_INCLUDES = -I/Users/sunyuli/Dev/monkc3/monkc3/runtime 
 
