@@ -2,6 +2,10 @@
 #include "MCLog.h"
 #include "MCType.h"
 
+#ifndef LINE_MAX
+#define LINE_MAX 2048
+#endif
+
 static int LOG_LEVEL = MC_DEBUG;
 extern void MCLogTypeSet(MCLogType type)
 {

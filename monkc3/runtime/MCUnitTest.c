@@ -1,3 +1,5 @@
+#ifndef WIN32
+
 #include "MCUnitTest.h"
 #include "MCLog.h"
 #include "MCHashTable.h"
@@ -273,4 +275,5 @@ constructor(MCUnitTestRunner)) {
 	return any;
 }
 
+#endif
 

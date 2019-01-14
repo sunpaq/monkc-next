@@ -1,3 +1,5 @@
+#ifndef WIN32
+
 #ifndef MCSOCKET_H
 #define MCSOCKET_H
 
@@ -188,3 +190,5 @@ alias(MCSocket);
  << UNIX Network Programming >>
  
  */
+
+#endif

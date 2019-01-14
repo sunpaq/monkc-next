@@ -37,7 +37,8 @@ unsigned MCBitsSetBitNum(MCBits bits) {
 
 MCBits MCBitsXORFindOddInPairs(const MCBits* pairs, size_t count) {
     MCBits xor = 0;
-    for (int i=0; i<count; i++) {
+    int i;
+    for (i=0; i<count; i++) {
         xor = xor^pairs[i];
     }
     return xor;

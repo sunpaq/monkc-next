@@ -1,3 +1,5 @@
+#ifndef WIN32
+
 #ifndef MCIO_H
 #define MCIO_H
 
@@ -679,3 +681,5 @@ newlibc
 //FD_ISSET()
 
 */
+
+#endif

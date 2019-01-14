@@ -1,3 +1,5 @@
+#ifndef WIN32
+
 #include "MCIO.h"
 
 #include <limits.h>
@@ -467,6 +469,8 @@ char* MCProcess_getCurrentWorkingDir(MCCharBuffer* buff)
 {
 	return getcwd(buff->data, buff->size);
 }
+
+#endif
 
 
 

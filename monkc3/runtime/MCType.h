@@ -12,6 +12,8 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>
+#include <stdint.h>
+#include <limits.h>
 
 #define null NULL
 #define NUL '\0'

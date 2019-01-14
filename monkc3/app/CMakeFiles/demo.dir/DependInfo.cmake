@@ -4,11 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/Users/sunyuli/Dev/monkc3/monkc3/app/Cell.c" "/Users/sunyuli/Dev/monkc3/monkc3/app/CMakeFiles/demo.dir/Cell.c.o"
-  "/Users/sunyuli/Dev/monkc3/monkc3/app/Fish.c" "/Users/sunyuli/Dev/monkc3/monkc3/app/CMakeFiles/demo.dir/Fish.c.o"
-  "/Users/sunyuli/Dev/monkc3/monkc3/app/main.c" "/Users/sunyuli/Dev/monkc3/monkc3/app/CMakeFiles/demo.dir/main.c.o"
+  "C:/Users/SunYuLi/Develop/monkc-next/monkc3/app/Cell.c" "C:/Users/SunYuLi/Develop/monkc-next/monkc3/app/CMakeFiles/demo.dir/Cell.c.obj"
+  "C:/Users/SunYuLi/Develop/monkc-next/monkc3/app/Fish.c" "C:/Users/SunYuLi/Develop/monkc-next/monkc3/app/CMakeFiles/demo.dir/Fish.c.obj"
+  "C:/Users/SunYuLi/Develop/monkc-next/monkc3/app/main.c" "C:/Users/SunYuLi/Develop/monkc-next/monkc3/app/CMakeFiles/demo.dir/main.c.obj"
   )
-set(CMAKE_C_COMPILER_ID "AppleClang")
+set(CMAKE_C_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
@@ -17,7 +17,7 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/Users/sunyuli/Dev/monkc3/monkc3/runtime/CMakeFiles/monkc-runtime.dir/DependInfo.cmake"
+  "C:/Users/SunYuLi/Develop/monkc-next/monkc3/runtime/CMakeFiles/monkc-runtime.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

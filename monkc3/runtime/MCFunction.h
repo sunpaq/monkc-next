@@ -29,7 +29,7 @@ claz->setFunction(claz, #name, (MCFunction)name);it->name = name
 #define ff_double(it, name)\
 ((obj)it)->claz->getFunctionDouble(((obj)it)->claz, #name)(it
 
-typedef int64_t (*MCFunction)(void*, ...);
-typedef double (*MCFunctionDouble)(void*, ...);
+typedef int (*MCFunction)(void* any, ...);
+typedef double (*MCFunctionDouble)(void* any, ...);
 
 #endif /* Function_h */

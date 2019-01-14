@@ -1,3 +1,5 @@
+#ifndef WIN32
+
 #include <assert.h>
 #include "MCContext.h"
 #include "MCException.h"
@@ -84,5 +86,7 @@ structure(MCUnitTestRunner, MCObject)
 };
 
 constructor(MCUnitTestRunner));
+
+#endif
 
 #endif

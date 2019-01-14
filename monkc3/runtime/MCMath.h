@@ -253,7 +253,8 @@ static MCQuaternion MCQuaternionArrayGProduct(MCQuaternion p, MCQuaternion* qarr
         return p;
     }
     MCQuaternion q = p;
-    for (int i=0; i<count; i++) {
+    int i;
+    for (i=0; i<count; i++) {
         q = MCQuaternionGProduct(q, qarray[i]);
     }
     return q;

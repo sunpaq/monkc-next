@@ -1,8 +1,8 @@
-# Install script for directory: /Users/sunyuli/Dev/monkc3/monkc3
+# Install script for directory: C:/Users/SunYuLi/Develop/monkc-next/monkc3
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/usr/local")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/monkc-demo")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,8 +34,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/Users/sunyuli/Dev/monkc3/monkc3/app/cmake_install.cmake")
-  include("/Users/sunyuli/Dev/monkc3/monkc3/runtime/cmake_install.cmake")
+  include("C:/Users/SunYuLi/Develop/monkc-next/monkc3/app/cmake_install.cmake")
+  include("C:/Users/SunYuLi/Develop/monkc-next/monkc3/runtime/cmake_install.cmake")
 
 endif()
 
@@ -47,5 +47,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/sunyuli/Dev/monkc3/monkc3/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/SunYuLi/Develop/monkc-next/monkc3/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -1,3 +1,5 @@
+#ifndef WIN32
+
 #include "MCSocket.h"
 #include "MCLog.h"
 
@@ -144,3 +146,4 @@ constructor(MCSocket), MCSocketType socket_type, char* ip, char* port) {
 }
 
 
+#endif

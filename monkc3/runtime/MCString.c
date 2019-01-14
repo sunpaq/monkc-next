@@ -366,7 +366,8 @@ const char* MCString_compressToCharCount(const char* source, char* buff)
             if(source[i] != last) {
                 if (count > 1) {
                     sprintf(digits, "%ld", count);
-                    for (int d=0; d<strlen(digits); d++)
+                    int d;
+                    for (d=0; d<strlen(digits); d++)
                         buff[cur++] = digits[d];
                     count = 0;
                 }

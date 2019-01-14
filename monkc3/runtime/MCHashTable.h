@@ -4,7 +4,7 @@
 
 #include "MCObject.h"
 
-typedef u_int32_t    MCHash;
+typedef uint32_t    MCHash;
 #define MCHashMax    UINT32_MAX
 #define MAX_KEY_CHARS 256
 #define MAX_ITEM_CACHE 10

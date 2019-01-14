@@ -1,3 +1,5 @@
+#ifndef WIN32
+
 #include "MCContext.h"
 #include <setjmp.h>
 #include <string.h>
@@ -44,3 +46,5 @@ _longjmp: did not restore signal
 longjmp will return the PC
 to the line above setjmp, and setjmp will return the value longjmp have passed
 */
+
+#endif

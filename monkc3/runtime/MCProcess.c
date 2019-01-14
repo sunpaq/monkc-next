@@ -1,3 +1,5 @@
+#ifndef WIN32
+
 #include "MCProcess.h"
 
 fun(printIDs, void)) as(MCProcess)
@@ -97,3 +99,5 @@ constructor(MCProcess)) {
     }
     return any;
 }
+
+#endif

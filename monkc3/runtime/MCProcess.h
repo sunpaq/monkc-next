@@ -1,3 +1,5 @@
+#ifndef WIN32
+
 #include "MCContext.h"
 #include <sys/types.h>
 #include <sys/wait.h>
@@ -113,3 +115,5 @@ can avoid child became zombie process(parent did not handle his death)
 [grandfather, x, child] child became orphan, will management by init(pid=1) process
 
 */
+
+#endif

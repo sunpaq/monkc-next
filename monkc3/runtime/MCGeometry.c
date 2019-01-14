@@ -42,7 +42,8 @@ MCPolygon* MCPolygonInit(MCPolygon* poly, MCVector3 vertexes[], size_t count)
     poly->isConvex = false;
     
     mc_generic generic[MCPolygonMaxV] = {0};
-    for (size_t i=0; i<count; i++) {
+    size_t i;
+    for (i=0; i<count; i++) {
         MCVector3 v = vertexes[i];
         poly->vertexData[i] = v;
         generic[i].mcsizet = i;
@@ -127,7 +128,8 @@ int MCPolygonResolveConvex(MCPolygon* poly, MCTriangle* result)
     size_t count = poly->count;
     
     MCVector3 start = poly->vertexData[0];
-    for (int i=1; i<count; i++) {
+    int i;
+    for (i=1; i<count; i++) {
         MCVector3 middle = poly->vertexData[i+1];
         MCVector3 end    = poly->vertexData[i+2];
         result[resulti++] = MCTriangleMake(start, middle, end);

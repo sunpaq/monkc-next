@@ -1,3 +1,5 @@
+#ifndef WIN32
+
 #include "MCException.h"
 #include "MCLog.h"
 
@@ -77,3 +79,6 @@ void set_exception_data(char* key, obj e)
 	}//auto release the old one
 	_exception_store[val] = e;
 }
+
+
+#endif
