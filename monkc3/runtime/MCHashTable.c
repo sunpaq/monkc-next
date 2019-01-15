@@ -135,7 +135,7 @@ fun(putItem, struct MCHashItem*), struct MCHashItem* item) as(MCHashTable)
         //slot empty
         if (!it->items[i]) {
             it->items[i] = item;
-            printf("add item[%d] = %s\n", i, item->key);
+            //printf("add item[%d] = %s\n", i, item->key);
             return null;
         } else {
             struct MCHashItem* old = it->items[i];

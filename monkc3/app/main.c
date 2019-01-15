@@ -2,6 +2,7 @@
 #include "MCArray.h"
 #include "MCLinkedList.h"
 #include "MCMap.h"
+#include "MCTree.h"
 #include "MCString.h"
 #include "MCClock.h"
 #include "Fish.h"
@@ -26,7 +27,7 @@ void static_call() {
         printf("age=%d\n", it->getAge(it));
         it->printName(it);
     }
-    ((obj)f)->release(f);
+    Release(f);
 }
 
 void dynamic_call() {
@@ -34,7 +35,7 @@ void dynamic_call() {
     int age = (int)ff(f, getAge));
     ff(f, printName));
     printf("age=%d\n", age);
-    ((obj)f)->release(f);
+    Release(f);
 }
 
 void type_cast() {
@@ -43,7 +44,7 @@ void type_cast() {
     f0->info(f0, buff);
     printf("%s\n", buff);
     cast(f0, Fish)->printName(f0);
-    ((obj)f0)->release(f0);
+    Release(f0);
 
     def(f3, Fish) = Fish(alloc(Fish), "maguro");
     f3->printName(f3);
@@ -51,8 +52,8 @@ void type_cast() {
     Fish_t* f4 = Fish(alloc(Fish), "hokei");
     f4->printName(f4);
 
-    f3->release(f3);
-    f4->release(f4);
+    Release(f3);
+    Release(f4);
     f3 = null;
     f4 = null;
 }
@@ -61,7 +62,7 @@ void method_override() {
     Fish_t* f = Fish(alloc(Fish), "shark");
     ff(f, cellfunc));
     ff(f, printName));
-    f->release(f);
+    Release(f);
 }
 
 void test_stdlib() {
@@ -72,7 +73,7 @@ void test_stdlib() {
     array->addItem(array, gen_f(0.4));
     array->addItem(array, gen_f(0.5));
     array->printAll(array, "/");
-    array->release(array);
+    Release(array);
 }
 
 void test_MCMap() {
@@ -81,7 +82,15 @@ void test_MCMap() {
     map->setValueForKey(map, gen_i(100), "age");
     map->getValueForKey(map, &result, "age");
     printf("age is = %d\n", result.i);
-    map->release(map);
+    Release(map);
+}
+
+void test_MCTrie() {
+    struct MCTrie* trie = MCTrie(alloc(MCTrie));
+    trie->insertValueByKey(trie, gen_i(314), "thepai");
+    mc_generic pai = trie->valueOfKey(trie, "thepai");
+    printf("the pai is = %d\n", pai.i);
+    Release(trie);
 }
 
 void test_MCString() {
@@ -108,6 +117,7 @@ int main(int argc, const char * argv[]) {
     method_override();
     test_stdlib();
     test_MCMap();
+    test_MCTrie();
     test_MCString();
     test_MCClock();
 

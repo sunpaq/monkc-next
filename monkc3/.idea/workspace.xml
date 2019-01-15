@@ -13,83 +13,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8566132c-cd12-480e-a2d7-67d4990821b1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.12.3/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.12.3/CMakeCXXCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.12.3/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.12.3/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.12.3/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.12.3/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.12.3/CompilerIdC/a.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.12.3/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.12.3/CompilerIdCXX/a.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.13.2/CMakeCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/3.13.2/CMakeCCompiler.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.13.2/CMakeCXXCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/3.13.2/CMakeCXXCompiler.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.13.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/3.13.2/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.13.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/3.13.2/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.13.2/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/3.13.2/CMakeSystem.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.13.2/CompilerIdC/a.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.13.2/CompilerIdCXX/a.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.8.2/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.8.2/CMakeCXXCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.8.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.8.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.8.2/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.8.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.8.2/CompilerIdC/a.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.8.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.8.2/CompilerIdCXX/a.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/clion-environment.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/feature_tests.bin" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/feature_tests.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/feature_tests.c" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/feature_tests.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/feature_tests.cxx" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/feature_tests.cxx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/app/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/CMakeFiles/demo.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/app/CMakeFiles/demo.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/CMakeFiles/demo.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/app/CMakeFiles/demo.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/CMakeFiles/demo.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/app/CMakeFiles/demo.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/CMakeFiles/demo.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/app/CMakeFiles/demo.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/CMakeFiles/demo.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/CMakeFiles/demo.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/app/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/app/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/monkc-demo.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/monkc-demo.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/CMakeFiles/monkc-runtime.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/CMakeFiles/monkc-runtime.dir/C.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/CMakeFiles/monkc-runtime.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/CMakeFiles/monkc-runtime.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/CMakeFiles/monkc-runtime.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/CMakeFiles/monkc-runtime.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/CMakeFiles/monkc-runtime.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/CMakeFiles/monkc-runtime.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/CMakeFiles/monkc-runtime.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/CMakeFiles/monkc-runtime.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/CMakeFiles/monkc-runtime.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/CMakeFiles/monkc-runtime.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/CMakeFiles/monkc-runtime.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/CMakeFiles/monkc-runtime.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/CMakeFiles/monkc-runtime.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/CMakeFiles/monkc-runtime.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/MCBits.c" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/MCBits.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/MCException.c" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/MCException.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/MCException.h" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/MCException.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/MCFunction.h" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/MCFunction.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/MCGeometry.c" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/MCGeometry.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/MCHashTable.h" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/MCHashTable.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/MCIO.c" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/MCIO.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/MCIO.h" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/MCIO.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/MCLog.c" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/MCLog.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/MCMath.h" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/MCMath.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/MCProcess.c" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/MCProcess.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/MCProcess.h" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/MCProcess.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/MCSocket.c" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/MCSocket.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/MCSocket.h" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/MCSocket.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/MCString.c" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/MCString.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/MCType.h" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/MCType.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/MCUnitTest.c" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/MCUnitTest.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/MCUnitTest.h" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/MCUnitTest.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/CMakeFiles/demo.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/app/CMakeFiles/demo.dir/C.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/CMakeFiles/demo.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/app/CMakeFiles/demo.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/CMakeFiles/demo.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/app/CMakeFiles/demo.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/MCHashTable.c" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/MCHashTable.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/MCMem.h" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/MCMem.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/MCObject.h" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/MCObject.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/runtime/libmonkc-runtime.a" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/libmonkc-runtime.a" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -107,42 +37,21 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/runtime/MCSocket.c">
+        <entry file="file://$PROJECT_DIR$/runtime/MCMem.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2736">
-              <caret line="144" column="13" lean-forward="true" selection-start-line="144" selection-start-column="13" selection-end-line="144" selection-end-column="13" />
+            <state relative-caret-position="228">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/runtime/MCSocket.h">
+        <entry file="file://$PROJECT_DIR$/runtime/MCObject.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/runtime/MCException.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="931">
-              <caret line="49" column="6" selection-start-line="49" selection-start-column="6" selection-end-line="49" selection-end-column="6" />
+            <state relative-caret-position="179">
+              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
               <folding>
-                <element signature="e#15#1222#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/runtime/MCException.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1558">
-              <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" />
-              <folding>
-                <element signature="e#15#1741#0" expanded="true" />
+                <element signature="e#162#182#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -161,31 +70,48 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/runtime/MCUnitTest.c">
+        <entry file="file://$PROJECT_DIR$/runtime/MCType.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5244">
-              <caret line="276" lean-forward="true" selection-start-line="276" selection-end-line="276" />
+            <state relative-caret-position="27">
+              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
               <folding>
-                <element signature="e#15#6324#0" expanded="true" />
+                <element signature="e#158#176#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/runtime/MCType.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-543" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/runtime/MCTree.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1056" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/runtime/MCTree.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-171">
+              <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
+              <folding>
+                <element signature="e#126#145#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/runtime/MCArray.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/main.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="74">
-              <caret line="74" selection-start-line="74" selection-end-line="74" />
+            <state relative-caret-position="1729">
+              <caret line="91" column="39" lean-forward="true" selection-start-line="91" selection-start-column="39" selection-end-line="91" selection-end-column="39" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
               </folding>
@@ -194,10 +120,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/runtime/MCIO.h">
+        <entry file="file://$PROJECT_DIR$/runtime/MCHashTable.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="152">
+              <caret line="137" column="14" selection-start-line="137" selection-start-column="14" selection-end-line="137" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/runtime/MCHashTable.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-418">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
@@ -229,11 +164,9 @@
         <option value="$PROJECT_DIR$/runtime/MCMem.c" />
         <option value="$PROJECT_DIR$/stdlib/MCGraph.h" />
         <option value="$PROJECT_DIR$/stdlib/MCTree.h" />
-        <option value="$PROJECT_DIR$/runtime/MCObject.h" />
         <option value="$PROJECT_DIR$/stdlib/MCUnitTest.h" />
         <option value="$PROJECT_DIR$/stdlib/MCUnitTest.c" />
         <option value="$PROJECT_DIR$/runtime/MCObject.c" />
-        <option value="$PROJECT_DIR$/runtime/MCMem.h" />
         <option value="$PROJECT_DIR$/app/Fish.h" />
         <option value="$PROJECT_DIR$/app/Cell.h" />
         <option value="$PROJECT_DIR$/app/Cell.c" />
@@ -241,9 +174,7 @@
         <option value="$PROJECT_DIR$/stdlib/MCArray.h" />
         <option value="$PROJECT_DIR$/stdlib/MCArray.c" />
         <option value="$PROJECT_DIR$/stdlib/MCMap.h" />
-        <option value="$PROJECT_DIR$/app/main.c" />
         <option value="$PROJECT_DIR$/runtime/MCLinkedList.c" />
-        <option value="$PROJECT_DIR$/runtime/MCHashTable.c" />
         <option value="$PROJECT_DIR$/stdlib/MCMap.c" />
         <option value="$PROJECT_DIR$/runtime/MCClass.c" />
         <option value="$PROJECT_DIR$/runtime/MCClass.h" />
@@ -267,6 +198,10 @@
         <option value="$PROJECT_DIR$/runtime/MCUnitTest.c" />
         <option value="$PROJECT_DIR$/runtime/MCIO.h" />
         <option value="$PROJECT_DIR$/runtime/MCSocket.h" />
+        <option value="$PROJECT_DIR$/runtime/MCMem.h" />
+        <option value="$PROJECT_DIR$/runtime/MCObject.h" />
+        <option value="$PROJECT_DIR$/runtime/MCHashTable.c" />
+        <option value="$PROJECT_DIR$/app/main.c" />
       </list>
     </option>
   </component>
@@ -288,6 +223,11 @@
             <path>
               <item name="monkc-demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="monkc3" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="monkc-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="monkc3" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="monkc-demo" type="b2602c69:ProjectViewProjectNode" />
@@ -365,12 +305,20 @@
       <workItem from="1546778954471" duration="303000" />
       <workItem from="1547048043531" duration="1018000" />
       <workItem from="1547448878385" duration="416000" />
-      <workItem from="1547450634297" duration="3283000" />
+      <workItem from="1547450634297" duration="6359000" />
     </task>
+    <task id="LOCAL-00001" summary="update for windows">
+      <created>1547456423880</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1547456423881</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85590000" />
+    <option name="totallyTimeSpent" value="88666000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -383,22 +331,23 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15885022" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32882273" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32459018" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.44918033" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.5508197" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32882273" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.5032787" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.24492557" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.37540984" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.2442623" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="11" weight="0.32882273" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.32786885" />
       <window_info anchor="bottom" id="CMake" order="12" weight="0.32882273" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -431,36 +380,11 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update for windows" />
+    <option name="LAST_COMMIT_MESSAGE" value="update for windows" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/stdlib/MCString.c" />
-    <entry file="file://$PROJECT_DIR$/stdlib/MCThread.c" />
-    <entry file="file://$PROJECT_DIR$/runtime/MCFunction.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
-          <folding>
-            <element signature="e#125#144#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/runtime/MCObject.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="e#123#144#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/runtime/MCMem.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="2" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Cell.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -547,32 +471,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/runtime/MCHashTable.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/runtime/MCBits.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="143">
           <caret line="43" column="15" selection-start-line="43" selection-start-column="15" selection-end-line="43" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/runtime/monkc.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-19" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/runtime/MCObject.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <element signature="e#162#182#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -583,34 +485,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/runtime/MCHashTable.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-714">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/runtime/MCMath.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="262" column="57" selection-start-line="262" selection-start-column="57" selection-end-line="262" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/runtime/MCGeometry.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="122">
           <caret line="131" column="9" selection-start-line="131" selection-start-column="9" selection-end-line="131" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/runtime/MCType.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-31">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="e#158#176#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -678,16 +556,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/runtime/MCUnitTest.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1710">
-          <caret line="90" lean-forward="true" selection-start-line="90" selection-end-line="90" />
-          <folding>
-            <element signature="e#15#2256#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/runtime/MCException.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1558">
@@ -722,20 +590,112 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/main.c">
+    <entry file="file://$PROJECT_DIR$/runtime/MCArray.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="74" selection-start-line="74" selection-end-line="74" />
+        <state relative-caret-position="-1382">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runtime/monkc.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-256" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runtime/MCMem.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
           <folding>
-            <element signature="e#0#24#0" expanded="true" />
+            <element signature="e#122#141#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/runtime/MCArray.c">
+    <entry file="file://$PROJECT_DIR$/runtime/MCMath.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
+        <state relative-caret-position="681">
+          <caret line="262" column="57" selection-start-line="262" selection-start-column="57" selection-end-line="262" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runtime/MCMem.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runtime/MCObject.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+          <folding>
+            <element signature="e#162#182#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runtime/MCUnitTest.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1710">
+          <caret line="90" lean-forward="true" selection-start-line="90" selection-end-line="90" />
+          <folding>
+            <element signature="e#15#2256#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runtime/MCType.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+          <folding>
+            <element signature="e#158#176#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runtime/MCType.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-543" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runtime/MCTree.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-171">
+          <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
+          <folding>
+            <element signature="e#126#145#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runtime/MCTree.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1056" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runtime/MCHashTable.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-418">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runtime/MCHashTable.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="137" column="14" selection-start-line="137" selection-start-column="14" selection-end-line="137" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/main.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1729">
+          <caret line="91" column="39" lean-forward="true" selection-start-line="91" selection-start-column="39" selection-end-line="91" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
