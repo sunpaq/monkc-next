@@ -10,6 +10,7 @@ server[%s:%s] started\n\
 please open another terminal and connet this Server by:\n\
 ------------------------\n\
 telnet %s %s\n\
+or [curl %s:%s]\n\
 ------------------------\n\
 ";
 
@@ -21,7 +22,7 @@ Good Old C language with OOP\n\
 ";
 
 static void workerThread(struct SimpleServer* server) {
-    printf(template, server->ip, server->port, server->ip, server->port);
+    printf(template, server->ip, server->port, server->ip, server->port, server->ip, server->port);
     server->socket->listeningStart(server->socket);
 
     struct MCSocketClientInfo* clientInfo;
