@@ -95,6 +95,9 @@ fun(acceptARequest, struct MCSocketClientInfo*)) as(MCSocket)
 	if (it->isServer!=1)return null;
 	struct MCSocketClientInfo* clientinfo = MCSocketClientInfo(alloc(MCSocketClientInfo));
 	clientinfo->returnSfd = accept(it->sfd, &clientinfo->address, &clientinfo->address_len);
+	if (clientinfo->returnSfd > 0) {
+		it->currentClient = clientinfo;
+	}
 	return clientinfo;
 }
 
@@ -118,6 +121,12 @@ fun(sendTo, void)) {
     //sendto(int, const void *, size_t, int, const struct sockaddr *, socklen_t)
 }
 
+fun(sendStringMsg, void), const char* msg) as(MCSocket)
+	if (it->currentClient) {
+		write(it->currentClient->returnSfd, msg, strlen(msg));
+	}
+}
+
 fun(sendMsg, void)) {
     //sendmsg(int, const struct msghdr *, int)
 }
@@ -139,6 +148,7 @@ constructor(MCSocket), MCSocketType socket_type, char* ip, char* port) {
 		funbind(receiveMsg);
 		funbind(sendInfo);
 		funbind(sendTo);
+		funbind(sendStringMsg);
 		funbind(sendMsg);
 		funbind(release);
 	}

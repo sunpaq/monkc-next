@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/SunYuLi/Develop/monkc-next/monkc3/app
+# Install script for directory: /Users/sunyuli/Dev/monkc3/monkc3/app
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/monkc-demo")
+  set(CMAKE_INSTALL_PREFIX "/usr/local")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

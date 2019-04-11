@@ -1,11 +1,13 @@
 #include "MCHashTable.h"
 #include "MCArray.h"
+#include "MCSocket.h"
 #include "MCLinkedList.h"
 #include "MCMap.h"
 #include "MCTree.h"
 #include "MCString.h"
 #include "MCClock.h"
 #include "Fish.h"
+#include "SimpleServer.h"
 
 void test_hashtable() {
     struct MCHashTable* table = MCHashTable(alloc(MCHashTable));
@@ -109,6 +111,11 @@ void test_MCClock() {
     c->printCurrentGMTTime(c);
 }
 
+void test_SimpleServer() {
+    struct SimpleServer* server = SimpleServer(alloc(SimpleServer), "127.0.0.1", "8080");
+    server->start(server);
+}
+
 int main(int argc, const char * argv[]) {
     test_hashtable();
     static_call();
@@ -120,6 +127,7 @@ int main(int argc, const char * argv[]) {
     test_MCTrie();
     test_MCString();
     test_MCClock();
+    test_SimpleServer();
 
     return 0;
 }

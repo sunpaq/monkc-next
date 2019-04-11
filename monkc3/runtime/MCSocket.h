@@ -38,6 +38,7 @@ structure(MCSocket, MCObject)
 	int sfd;
 	int isServer;
 	struct addrinfo peeraddrinfo;
+	struct MCSocketClientInfo* currentClient;
 
 	fundef(listeningStart, int));
 	fundef(acceptARequest, struct MCSocketClientInfo*));
@@ -46,6 +47,7 @@ structure(MCSocket, MCObject)
 	fundef(receiveMsg, void));
 	fundef(sendInfo, void));
 	fundef(sendTo, void));
+	fundef(sendStringMsg, void), const char* msg);
 	fundef(sendMsg, void));
 	fundef(release, void));
 };
