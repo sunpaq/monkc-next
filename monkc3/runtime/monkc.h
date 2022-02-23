@@ -27,4 +27,8 @@ mc_alloc(sizeof(struct cls))
 #define let(any, cls)\
 { struct cls* it = (struct cls*)any;
 
+#define self (*it)
+
+#define end }
+
 #endif /* monkc_h */

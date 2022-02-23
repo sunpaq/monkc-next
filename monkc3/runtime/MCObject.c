@@ -12,7 +12,7 @@
 
 fun(retain, void)) as(MCObject)
     if (!it) return;
-    it->ref_count++;
+    self.ref_count++;
 }
 
 fun(release, void)) as(MCObject)

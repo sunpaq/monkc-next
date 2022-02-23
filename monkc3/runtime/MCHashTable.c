@@ -181,13 +181,13 @@ fun(get, mc_generic), const char* key)
 constructor(MCHashTable))
 {
     as(MCHashTable)
-        it->lock = 0;
-        it->cache_count = 0;
-        it->count = MIN_HASHTABLE_SIZE;
+        self.lock = 0;
+        self.cache_count = 0;
+        self.count = MIN_HASHTABLE_SIZE;
         //set all the slot to nil
         int i;
         for(i=0; i<it->count; i++) {
-            it->items[i] = null;
+            self.items[i] = null;
         }
         //add functions
         funadd(putItem);
