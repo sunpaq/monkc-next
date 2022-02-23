@@ -18,8 +18,10 @@ end
 
 build.command 'all' do
 	libs.each { |lib|
+		lib.set_std("c11")
 		lib.info.compile.archive_lib
 	}
+	$app.set_std("c11")
 	$app.info.compile.archive_exe.done
 end
 

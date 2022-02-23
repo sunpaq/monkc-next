@@ -10,9 +10,7 @@
 #include <pthread.h>
 
 static void lock(struct MCLock* it) {
-    while (pthread_mutex_trylock(&it->mutex)) {
-        //wait lock
-    }
+    pthread_mutex_lock(&it->mutex);
 }
 
 static void unlock(struct MCLock* it) {

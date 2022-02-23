@@ -7,32 +7,21 @@
 //
 
 #include <stdlib.h>
-
 #include "MCMem.h"
-#include "MCLock.h"
 
-static struct MCLock global;
+//malloc is thread safe since C11
+//we can remove the pthread lock here
 
 void* mc_alloc(size_t size) {
     if (size < sizeof(int)) {
         return null;
     }
-    if (!global.initialized) {
-        MCLock(&global);
-    }
-    global.lock(&global);
     void* obj = malloc(size);
-    global.unlock(&global);
     return obj;
 }
 
 void mc_free(void* any) {
     if (any) {
-        if (!global.initialized) {
-            MCLock(&global);
-        }
-        global.lock(&global);
         free(any);
-        global.unlock(&global);
     }
 }
