@@ -85,9 +85,9 @@ fun(release, void)) as(MCHashItem)
     if (it->doesAutoReleaseObject && it->value.mcobject) {
         it->value.mcobject->release(it->value.mcobject);
     }
-}
+end
 
-constructor(MCHashItem), const char* key, mc_generic value) {
+constructor(MCHashItem), const char* key, mc_generic value) as(MCObject)
     MCObject(any);
     as(MCHashItem)
         it->next = null;
@@ -97,9 +97,9 @@ constructor(MCHashItem), const char* key, mc_generic value) {
         it->hash = MCHashTable_hash(key);
         copykey(it->key, key, MAX_KEY_CHARS);
         funadd(release);
-    }
+    end
     return any;
-}
+end
 
 //MCHashTable
 
@@ -124,7 +124,7 @@ fun(getItem, struct MCHashItem*), const char* key) as(MCHashTable)
 
     //not find
     return null;
-}
+end
 
 fun(putItem, struct MCHashItem*), struct MCHashItem* item) as(MCHashTable)
     MCHash hashval = item->hash;
@@ -157,7 +157,7 @@ fun(putItem, struct MCHashItem*), struct MCHashItem* item) as(MCHashTable)
 
     //table is full
     return null;
-}
+end
 
 fun(put, mc_generic), const char* key, mc_generic value)
 {
@@ -178,22 +178,19 @@ fun(get, mc_generic), const char* key)
     return gen_p(null);
 }
 
-constructor(MCHashTable))
-{
-    as(MCHashTable)
-        self.lock = 0;
-        self.cache_count = 0;
-        self.count = MIN_HASHTABLE_SIZE;
-        //set all the slot to nil
-        int i;
-        for(i=0; i<it->count; i++) {
-            self.items[i] = null;
-        }
-        //add functions
-        funadd(putItem);
-        funadd(getItem);
-        funadd(put);
-        funadd(get);
+constructor(MCHashTable)) as(MCHashTable)
+    self.lock = 0;
+    self.cache_count = 0;
+    self.count = MIN_HASHTABLE_SIZE;
+    //set all the slot to nil
+    int i;
+    for(i=0; i<it->count; i++) {
+        self.items[i] = null;
     }
+    //add functions
+    funadd(putItem);
+    funadd(getItem);
+    funadd(put);
+    funadd(get);
     return any;
-}
+end

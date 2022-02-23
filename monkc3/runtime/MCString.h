@@ -22,7 +22,7 @@ structure(MCString, MCObject)
     fundef(copyCompressedString, struct MCString*));
     fundef(copyExtractedString, struct MCString*));
     fundef(release, void));
-};
+end;
 
 constructor(MCString), const char* cstring);
 
@@ -74,6 +74,3 @@ static bool MCStringEqual(const char* A, const char* B) {
 //#define PATH_MAX 2048
 
 #endif
-
-
-

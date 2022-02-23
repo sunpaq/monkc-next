@@ -22,7 +22,7 @@ structure(MCArray, MCObject)
     fundef(itemAt, mc_generic*), size_t index);
     fundef(printAll, void), const char* delimiter);
     fundef(release, void));
-};
+end;
 
 constructor(MCArray), size_t maxcount);
 

@@ -131,8 +131,8 @@ int MCPolygonResolveConvex(MCPolygon* poly, MCTriangle* result)
     int i;
     for (i=1; i<count; i++) {
         MCVector3 middle = poly->vertexData[i+1];
-        MCVector3 end    = poly->vertexData[i+2];
-        result[resulti++] = MCTriangleMake(start, middle, end);
+        MCVector3 endv   = poly->vertexData[i+2];
+        result[resulti++] = MCTriangleMake(start, middle, endv);
     }
     
     return resulti;

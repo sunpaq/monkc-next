@@ -503,7 +503,7 @@ fun(add, void), const char* str) as(MCString)
         it->size = it->size + MCStringBlock;
     }
     strncat(it->buff, str, strlen(str));
-}
+end
 
 fun(print, void), bool withNewline) as(MCString)
     if (withNewline) {
@@ -511,12 +511,12 @@ fun(print, void), bool withNewline) as(MCString)
     } else {
         runtime_log("%s", it->buff);
     }
-}
+end
 
 fun(toCString, const char*), char const buff[]) as(MCString)
 	strcpy((char*)buff, it->buff);
 	return buff;
-}
+end
 
 fun(equalTo, int), MCString_t* stringToComp) as(MCString)
 	int res;
@@ -525,7 +525,7 @@ fun(equalTo, int), MCString_t* stringToComp) as(MCString)
 		return 1;
 	else
 		return 0;
-}
+end
 
 fun(getOneChar, char))
 {
@@ -548,36 +548,36 @@ fun(startWith, bool), const char* str) as(MCString)
             return false;
         }
     }
-}
+end
 
 fun(toDoubleValue, double), char** endptr) as(MCString)
     runtime_log("MCString toDoubleValue called\n");
     return strtod(it->buff, endptr);
-}
+end
 
 fun(copyCompressedString, MCString_t*)) as(MCString)
     MCString_t* string = MCString(alloc(MCString), it->buff);
     MCString_compressToCharCount(it->buff, string->buff);
     return string;
-}
+end
 
 fun(copyExtractedString, MCString_t*)) as(MCString)
     MCString_t* string = MCString(alloc(MCString), it->buff);
     MCString_extractFromCharCount(it->buff, string->buff);
     return string;
-}
+end
 
 fun(release, void)) as(MCString)
     runtime_log("MCString bye");
     free(it->buff);
-}
+end
 
-constructor(MCString), const char* str) {
-    MCObject(any);
+constructor(MCString), const char* str) as(MCObject)
+    MCObject(it);
     as(MCString)
-        it->buff = null;
-        it->size = 0;
-        it->length = 0;
+        self.buff = null;
+        self.size = 0;
+        self.length = 0;
 
         if (str != null) {
             size_t len = strlen(str);
@@ -590,7 +590,7 @@ constructor(MCString), const char* str) {
             it->length = len;
             it->size = len + 1;
         }
-    };
+    end
     dynamic(MCString)
         funbind(add);
         funbind(print);
@@ -603,6 +603,6 @@ constructor(MCString), const char* str) {
         funbind(copyCompressedString);
         funbind(copyExtractedString);
         funbind(release);
-    };
-    return any;
+    end
+    return it;
 }

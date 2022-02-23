@@ -15,7 +15,7 @@ fun(bye, void)) as(MCGraph)
     if (it->edgeSet) {
         free(it->edgeSet);
     }
-}
+end
 
 fun(isAdjacent, bool), MCGraphVertex x, MCGraphVertex y)
 {
@@ -43,28 +43,26 @@ fun(copyNeighborsOf, struct MCArray*), MCGraphVertex x)
 //To-Do
 fun(addEdge, struct MCGraph*), MCGraphEdge e) as(MCGraph)
     return it;
-}
+end
 
 fun(removeEdge, struct MCGraph*), MCGraphEdge e) as(MCGraph)
     return it;
-}
+end
 
-constructor(MCGraph)) {
+constructor(MCGraph)) as(MCObject)
     MCObject(any);
     as(MCGraph)
-        it->vertexCount = 0;
-        it->edgeCount = 0;
-        it->vertexSet = null;
-        it->edgeSet = null;
-    }
+        self.vertexCount = 0;
+        self.edgeCount = 0;
+        self.vertexSet = null;
+        self.edgeSet = null;
+    end
     dynamic(MCGraph)
         funbind(bye);
         funbind(isAdjacent);
         funbind(copyNeighborsOf);
         funbind(addEdge);
         funbind(removeEdge);
-    }
+    end
     return any;
-}
-
-
+end

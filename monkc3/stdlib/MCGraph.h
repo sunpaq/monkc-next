@@ -50,7 +50,7 @@ structure(MCGraph, MCObject)
     fundef(copyNeighborsOf, struct MCArray*), MCGraphVertex x);
     fundef(addEdge, struct MCGraph*), MCGraphEdge e);
     fundef(removeEdge, struct MCGraph*), MCGraphEdge e);
-};
+end;
 
 constructor(MCGraph));
 

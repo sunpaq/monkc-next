@@ -35,73 +35,71 @@ static void delete_item(struct MCArray* obj, size_t index)
 }
 
 fun(addItem, void), mc_generic item) as(MCArray)
-    if (it->indexLast >= it->maxcount) {
+    if (self.indexLast >= self.maxcount) {
         expand_array(it);
     }
     insert_item(it, item);
-}
+end
 
 fun(addTo, void), mc_generic item, size_t index) as(MCArray)
-    if(index >= it->maxcount){
+    if(index >= self.maxcount){
         expand_array(it);
     }
     insert_item(it, item);
-}
+end
 
 fun(removeLast, void)) as(MCArray)
     delete_item(it, it->indexLast);
-}
+end
 
 fun(removeItem, void), mc_generic* item) as(MCArray)
     size_t i;
-    for (i=0; i<it->maxcount; i++) {
-        if (&it->buff[i] == item) {
+    for (i=0; i<self.maxcount; i++) {
+        if (&self.buff[i] == item) {
             delete_item(it, i);
         }
     }
-}
+end
 
 fun(removeAt, void), size_t index) as(MCArray)
     delete_item(it, index);
-}
+end
 
 fun(clear, void)) as(MCArray)
-    it->release(it);
-    it->buff = (mc_generic*)malloc(sizeof(mc_generic) * 100);
-}
+    self.release(it);
+    self.buff = (mc_generic*)malloc(sizeof(mc_generic) * 100);
+end
 
 fun(itemAt, mc_generic*), size_t index) as(MCArray)
-    return &it->buff[index];
-}
+    return &self.buff[index];
+end
 
 fun(printAll, void), const char* delimiter) as(MCArray)
     size_t i;
-    for (i=0; i<it->count; i++) {
-        printf("%.2f%s", it->buff[i].f, delimiter);
+    for (i=0; i<self.count; i++) {
+        printf("%.2f%s", self.buff[i].f, delimiter);
     }
     printf("\n");
-}
+end
 
-fun(release, void)) {
-    as(MCObject)
-        it->release(it);
-    }
+fun(release, void)) as(MCObject)
+    self.release(it);
     as(MCArray)
-        if (it->buff) {
-            free(it->buff);
+        if (self.buff) {
+            free(self.buff);
         }
-    }
-}
+    end
+end
 
-constructor(MCArray), size_t maxcount) {
+constructor(MCArray), size_t maxcount) as(MCObject)
     MCObject(any);
     as(MCArray)
-        it->maxcount = maxcount;
-        it->count = 0;
-        it->indexLast = 0;
-        it->buff = (mc_generic*)malloc(sizeof(mc_generic) * 100);
+        self.maxcount = maxcount;
+        self.count = 0;
+        self.indexLast = 0;
+        self.buff = (mc_generic*)malloc(sizeof(mc_generic) * 100);
         funadd(release);
-    }
+    end
     dynamic(MCArray)
         funbind(addItem);
         funbind(addTo);
@@ -111,6 +109,6 @@ constructor(MCArray), size_t maxcount) {
         funbind(clear);
         funbind(itemAt);
         funbind(printAll);
-    }
+    end
     return any;
-}
+end
