@@ -159,12 +159,12 @@ fun(duplicateFdTo, int), int fd) as(MCFile)
 }
 
 fun(printAttribute, void)) as(MCFile)
-    printf("uid:%d gid:%d size:%lld st_mode:%o lmtime:%s",
-           it->attribute.st_uid,
-           it->attribute.st_gid,
-           it->attribute.st_size,
-           it->attribute.st_mode,
-           ctime(&it->attribute.st_mtime));
+    printf("uid:%d gid:%d size:%jd st_mode:%o lmtime:%s",
+        it->attribute.st_uid,
+        it->attribute.st_gid,
+        (intmax_t)it->attribute.st_size,
+        it->attribute.st_mode,
+        ctime(&it->attribute.st_mtime));
 }
 
 fun(checkPermissionUseRealIDOfProcess, int), int mode) as(MCFile)

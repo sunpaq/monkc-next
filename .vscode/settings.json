@@ -4,6 +4,7 @@
         "mcobject.h": "c",
         "mcfunction.h": "c",
         "mctype.h": "c",
-        "limits.h": "c"
+        "limits.h": "c",
+        "iosfwd": "c"
     }
 }
