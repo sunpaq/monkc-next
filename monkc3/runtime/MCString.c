@@ -149,7 +149,7 @@ const char* MCString_percentDecode(const char* str, char *buff)
     }
     char* iter = (char*)str; int b = 0;
     while (*iter != NUL) {
-        //debug_log("MCString_percentDecode: %s\n", iter);
+        //runtime_log("MCString_percentDecode: %s\n", iter);
         if (*iter == '%') {
             iter++;
             if (*iter == '2') {
@@ -507,9 +507,9 @@ fun(add, void), const char* str) as(MCString)
 
 fun(print, void), bool withNewline) as(MCString)
     if (withNewline) {
-        debug_log("%s\n", it->buff);
+        runtime_log("%s\n", it->buff);
     } else {
-        debug_log("%s", it->buff);
+        runtime_log("%s", it->buff);
     }
 }
 
@@ -551,7 +551,7 @@ fun(startWith, bool), const char* str) as(MCString)
 }
 
 fun(toDoubleValue, double), char** endptr) as(MCString)
-    debug_log("MCString toDoubleValue called\n");
+    runtime_log("MCString toDoubleValue called\n");
     return strtod(it->buff, endptr);
 }
 
@@ -568,7 +568,7 @@ fun(copyExtractedString, MCString_t*)) as(MCString)
 }
 
 fun(release, void)) as(MCString)
-    debug_log("MCString bye");
+    runtime_log("MCString bye");
     free(it->buff);
 }
 

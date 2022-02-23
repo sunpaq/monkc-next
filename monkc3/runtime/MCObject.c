@@ -8,6 +8,7 @@
 
 #include "MCObject.h"
 #include "MCMem.h"
+#include "MCLog.h"
 
 fun(retain, void)) as(MCObject)
     if (!it) return;
@@ -21,7 +22,7 @@ fun(release, void)) as(MCObject)
     }
     if (it->ref_count <= 0) {
         //call clean
-        printf("free object %p\n", it);
+        runtime_log("free object %p\n", it);
         mc_free(it);
     }
 }
@@ -54,7 +55,7 @@ fun(responseTo, void*), const char* name) as(MCObject)
 
 bool MCObject_class(obj it, const char* name) {
     if (it->claz && strncmp(name, it->claz->name, strlen(name)) == 0) {
-        printf("class %s already loaded\n", name);
+        runtime_log("class %s already loaded\n", name);
         return false;
     } else {
         val root = it->claz;

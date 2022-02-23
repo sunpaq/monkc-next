@@ -10,6 +10,7 @@
 #include "MCFunction.h"
 #include "MCHashTable.h"
 #include "MCMem.h"
+#include "MCLog.h"
 
 static struct MCHashTable* global_classes_table = null;
 
@@ -24,14 +25,14 @@ struct MCClass* MCClass_load(const char* name) {
     if (any) {
         struct MCClass* cla = MCClass(any, name);
         global_classes_table->put(global_classes_table, name, gen_p(cla));
-        printf("class %s loaded\n", name);
+        runtime_log("class %s loaded\n", name);
         return cla;
     }
     return null;
 }
 
 fun(setFunction, void), const char* key, MCFunction value) as(MCClass)
-    printf("%s setFunction(%s)\n", it->name, key);
+    runtime_log("%s setFunction(%s)\n", it->name, key);
     it->methodtable->put(it->methodtable, key, gen_p(value));
 }
 

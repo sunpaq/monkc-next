@@ -40,6 +40,7 @@
 		FD1E8A4121E650480091EB74 /* MCMap.c in Sources */ = {isa = PBXBuildFile; fileRef = FD1E89DE21E650480091EB74 /* MCMap.c */; };
 		FD1E8A4221E650480091EB74 /* MCHashTable.c in Sources */ = {isa = PBXBuildFile; fileRef = FD1E89DF21E650480091EB74 /* MCHashTable.c */; };
 		FD1E8A4321E650480091EB74 /* MCType.c in Sources */ = {isa = PBXBuildFile; fileRef = FD1E89E821E650480091EB74 /* MCType.c */; };
+		FD9FDD0F27C6386E003336F0 /* testcase.c in Sources */ = {isa = PBXBuildFile; fileRef = FD9FDD0E27C6386E003336F0 /* testcase.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -122,6 +123,8 @@
 		FD1E89E721E650480091EB74 /* MCUnitTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCUnitTest.h; sourceTree = "<group>"; };
 		FD1E89E821E650480091EB74 /* MCType.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MCType.c; sourceTree = "<group>"; };
 		FD1E89E921E650480091EB74 /* MCBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCBuffer.h; sourceTree = "<group>"; };
+		FD9FDD0D27C6386E003336F0 /* testcase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testcase.h; sourceTree = "<group>"; };
+		FD9FDD0E27C6386E003336F0 /* testcase.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = testcase.c; sourceTree = "<group>"; };
 		FDE5E5FA2143863E0076D526 /* monkc3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = monkc3; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -140,6 +143,8 @@
 			isa = PBXGroup;
 			children = (
 				FD1E892221E650470091EB74 /* app */,
+				FD9FDD0B27C62BD2003336F0 /* platform */,
+				FD9FDD0C27C62D6B003336F0 /* stdlib */,
 				FD1E897821E650480091EB74 /* runtime */,
 			);
 			path = monkc3;
@@ -149,10 +154,12 @@
 			isa = PBXGroup;
 			children = (
 				FD1E893921E650480091EB74 /* Cell.h */,
-				FD1E893B21E650480091EB74 /* Fish.c */,
-				FD1E893C21E650480091EB74 /* main.c */,
 				FD1E893D21E650480091EB74 /* Cell.c */,
 				FD1E893E21E650480091EB74 /* Fish.h */,
+				FD1E893B21E650480091EB74 /* Fish.c */,
+				FD9FDD0D27C6386E003336F0 /* testcase.h */,
+				FD9FDD0E27C6386E003336F0 /* testcase.c */,
+				FD1E893C21E650480091EB74 /* main.c */,
 			);
 			path = app;
 			sourceTree = "<group>";
@@ -160,70 +167,84 @@
 		FD1E897821E650480091EB74 /* runtime */ = {
 			isa = PBXGroup;
 			children = (
-				FD1E897921E650480091EB74 /* MCException.c */,
-				FD1E897A21E650480091EB74 /* MCBits.c */,
-				FD1E897B21E650480091EB74 /* MCSocket.c */,
-				FD1E897C21E650480091EB74 /* MCTree.h */,
-				FD1E897D21E650480091EB74 /* MCSet.c */,
-				FD1E897E21E650480091EB74 /* MCGraph.c */,
-				FD1E897F21E650480091EB74 /* MCString.c */,
-				FD1E898021E650480091EB74 /* MCArrayList.c */,
-				FD1E898121E650480091EB74 /* MCClock.h */,
-				FD1E898221E650480091EB74 /* MCSort.c */,
-				FD1E898421E650480091EB74 /* MCLock.h */,
-				FD1E898521E650480091EB74 /* MCProcess.h */,
-				FD1E898621E650480091EB74 /* MCMem.c */,
-				FD1E898721E650480091EB74 /* MCIO.c */,
-				FD1E89B421E650480091EB74 /* MCFunction.h */,
-				FD1E89B521E650480091EB74 /* MCMap.h */,
-				FD1E89B621E650480091EB74 /* MCClass.h */,
-				FD1E89B721E650480091EB74 /* MCHeap.c */,
-				FD1E89B921E650480091EB74 /* MCLinkedList.h */,
-				FD1E89BA21E650480091EB74 /* MCMath.c */,
-				FD1E89BB21E650480091EB74 /* MCContext.c */,
-				FD1E89BC21E650480091EB74 /* MCArray.h */,
-				FD1E89BD21E650480091EB74 /* MCObject.c */,
-				FD1E89BE21E650480091EB74 /* MCGeometry.h */,
-				FD1E89C021E650480091EB74 /* MCBuffer.c */,
-				FD1E89C121E650480091EB74 /* MCType.h */,
-				FD1E89C221E650480091EB74 /* MCUnitTest.c */,
-				FD1E89C321E650480091EB74 /* MCLog.c */,
-				FD1E89C421E650480091EB74 /* MCThread.c */,
-				FD1E89C521E650480091EB74 /* MCHashTable.h */,
-				FD1E89C621E650480091EB74 /* MCString.h */,
-				FD1E89C721E650480091EB74 /* MCClock.c */,
-				FD1E89C821E650480091EB74 /* MCArrayList.h */,
-				FD1E89C921E650480091EB74 /* MCGraph.h */,
-				FD1E89CA21E650480091EB74 /* MCSet.h */,
-				FD1E89CB21E650480091EB74 /* MCTree.c */,
-				FD1E89CC21E650480091EB74 /* MCSocket.h */,
-				FD1E89CD21E650480091EB74 /* MCBits.h */,
-				FD1E89CE21E650480091EB74 /* MCException.h */,
-				FD1E89CF21E650480091EB74 /* MCMem.h */,
-				FD1E89D121E650480091EB74 /* MCProcess.c */,
-				FD1E89D221E650480091EB74 /* MCSort.h */,
-				FD1E89D321E650480091EB74 /* MCLock.c */,
-				FD1E89D421E650480091EB74 /* MCObject.h */,
-				FD1E89D521E650480091EB74 /* MCGeometry.c */,
-				FD1E89D621E650480091EB74 /* MCArray.c */,
-				FD1E89D721E650480091EB74 /* MCContext.h */,
-				FD1E89D821E650480091EB74 /* MCLinkedList.c */,
-				FD1E89D921E650480091EB74 /* MCMath.h */,
-				FD1E89DA21E650480091EB74 /* MCFunction.c */,
-				FD1E89DB21E650480091EB74 /* MCIO.h */,
-				FD1E89DC21E650480091EB74 /* MCHeap.h */,
-				FD1E89DD21E650480091EB74 /* MCClass.c */,
-				FD1E89DE21E650480091EB74 /* MCMap.c */,
-				FD1E89DF21E650480091EB74 /* MCHashTable.c */,
-				FD1E89E021E650480091EB74 /* MCJNI.h */,
-				FD1E89E421E650480091EB74 /* MCThread.h */,
-				FD1E89E521E650480091EB74 /* MCLog.h */,
 				FD1E89E621E650480091EB74 /* monkc.h */,
-				FD1E89E721E650480091EB74 /* MCUnitTest.h */,
+				FD1E89B621E650480091EB74 /* MCClass.h */,
+				FD1E89DD21E650480091EB74 /* MCClass.c */,
+				FD1E89D421E650480091EB74 /* MCObject.h */,
+				FD1E89BD21E650480091EB74 /* MCObject.c */,
+				FD1E89C121E650480091EB74 /* MCType.h */,
 				FD1E89E821E650480091EB74 /* MCType.c */,
-				FD1E89E921E650480091EB74 /* MCBuffer.h */,
+				FD1E89B421E650480091EB74 /* MCFunction.h */,
+				FD1E89DA21E650480091EB74 /* MCFunction.c */,
+				FD1E89CF21E650480091EB74 /* MCMem.h */,
+				FD1E898621E650480091EB74 /* MCMem.c */,
+				FD1E898421E650480091EB74 /* MCLock.h */,
+				FD1E89D321E650480091EB74 /* MCLock.c */,
+				FD1E89C521E650480091EB74 /* MCHashTable.h */,
+				FD1E89DF21E650480091EB74 /* MCHashTable.c */,
+				FD1E89E521E650480091EB74 /* MCLog.h */,
+				FD1E89C321E650480091EB74 /* MCLog.c */,
+				FD1E89C621E650480091EB74 /* MCString.h */,
+				FD1E897F21E650480091EB74 /* MCString.c */,
 			);
 			path = runtime;
+			sourceTree = "<group>";
+		};
+		FD9FDD0B27C62BD2003336F0 /* platform */ = {
+			isa = PBXGroup;
+			children = (
+				FD1E89CE21E650480091EB74 /* MCException.h */,
+				FD1E897921E650480091EB74 /* MCException.c */,
+				FD1E89CC21E650480091EB74 /* MCSocket.h */,
+				FD1E897B21E650480091EB74 /* MCSocket.c */,
+				FD1E898121E650480091EB74 /* MCClock.h */,
+				FD1E89C721E650480091EB74 /* MCClock.c */,
+				FD1E898521E650480091EB74 /* MCProcess.h */,
+				FD1E89D121E650480091EB74 /* MCProcess.c */,
+				FD1E89E421E650480091EB74 /* MCThread.h */,
+				FD1E89C421E650480091EB74 /* MCThread.c */,
+				FD1E89DB21E650480091EB74 /* MCIO.h */,
+				FD1E898721E650480091EB74 /* MCIO.c */,
+				FD1E89E721E650480091EB74 /* MCUnitTest.h */,
+				FD1E89C221E650480091EB74 /* MCUnitTest.c */,
+				FD1E89D721E650480091EB74 /* MCContext.h */,
+				FD1E89BB21E650480091EB74 /* MCContext.c */,
+				FD1E89E921E650480091EB74 /* MCBuffer.h */,
+				FD1E89C021E650480091EB74 /* MCBuffer.c */,
+				FD1E89E021E650480091EB74 /* MCJNI.h */,
+			);
+			path = platform;
+			sourceTree = "<group>";
+		};
+		FD9FDD0C27C62D6B003336F0 /* stdlib */ = {
+			isa = PBXGroup;
+			children = (
+				FD1E89BC21E650480091EB74 /* MCArray.h */,
+				FD1E89D621E650480091EB74 /* MCArray.c */,
+				FD1E89C821E650480091EB74 /* MCArrayList.h */,
+				FD1E898021E650480091EB74 /* MCArrayList.c */,
+				FD1E89B521E650480091EB74 /* MCMap.h */,
+				FD1E89DE21E650480091EB74 /* MCMap.c */,
+				FD1E89B921E650480091EB74 /* MCLinkedList.h */,
+				FD1E89D821E650480091EB74 /* MCLinkedList.c */,
+				FD1E89D921E650480091EB74 /* MCMath.h */,
+				FD1E89BA21E650480091EB74 /* MCMath.c */,
+				FD1E89CD21E650480091EB74 /* MCBits.h */,
+				FD1E897A21E650480091EB74 /* MCBits.c */,
+				FD1E897C21E650480091EB74 /* MCTree.h */,
+				FD1E89CB21E650480091EB74 /* MCTree.c */,
+				FD1E89CA21E650480091EB74 /* MCSet.h */,
+				FD1E897D21E650480091EB74 /* MCSet.c */,
+				FD1E89C921E650480091EB74 /* MCGraph.h */,
+				FD1E897E21E650480091EB74 /* MCGraph.c */,
+				FD1E89D221E650480091EB74 /* MCSort.h */,
+				FD1E898221E650480091EB74 /* MCSort.c */,
+				FD1E89DC21E650480091EB74 /* MCHeap.h */,
+				FD1E89B721E650480091EB74 /* MCHeap.c */,
+				FD1E89BE21E650480091EB74 /* MCGeometry.h */,
+				FD1E89D521E650480091EB74 /* MCGeometry.c */,
+			);
+			path = stdlib;
 			sourceTree = "<group>";
 		};
 		FDE5E5F12143863E0076D526 = {
@@ -317,6 +338,7 @@
 				FD1E8A3F21E650480091EB74 /* MCFunction.c in Sources */,
 				FD1E8A3021E650480091EB74 /* MCMath.c in Sources */,
 				FD1E8A3521E650480091EB74 /* MCLog.c in Sources */,
+				FD9FDD0F27C6386E003336F0 /* testcase.c in Sources */,
 				FD1E89FA21E650480091EB74 /* Fish.c in Sources */,
 				FD1E8A3C21E650480091EB74 /* MCGeometry.c in Sources */,
 				FD1E8A3E21E650480091EB74 /* MCLinkedList.c in Sources */,
@@ -453,8 +475,8 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = NO;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = R7BTEXA73U;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 37V5UJ9JX2;
 				GCC_C_LANGUAGE_STANDARD = c89;
 				GCC_INPUT_FILETYPE = sourcecode.c.c;
 				GCC_WARN_UNUSED_FUNCTION = NO;
@@ -463,6 +485,7 @@
 					"$(PROJECT_DIR)/monkc3/runtime",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -471,8 +494,8 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = NO;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = R7BTEXA73U;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 37V5UJ9JX2;
 				GCC_C_LANGUAGE_STANDARD = c89;
 				GCC_INPUT_FILETYPE = sourcecode.c.c;
 				GCC_WARN_UNUSED_FUNCTION = NO;
@@ -481,6 +504,7 @@
 					"$(PROJECT_DIR)/monkc3/runtime",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};

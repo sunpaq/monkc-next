@@ -7,19 +7,25 @@
 ## How to Build the demo
 
 1. via Xcode
-2. via CLion
-3. via cmake
+2. via mcbuild (https://github.com/sunpaq/mcbuild)
 
-```
-cd proj/root/path
-cmake ./monkc3
-make
-```
+#### requires
 
-run the demo
-```
-./app/demo
-```
+	clang/gcc
+	git
+	ruby
+
+#### install build tool
+
+	sudo gem install colored
+	sudo gem install mcbuild
+
+#### build & run
+
+	./build.rb all
+	./build.rb run
+	
+	please use "build-linux.rb" on linux
 
 ## Structure as first class
 

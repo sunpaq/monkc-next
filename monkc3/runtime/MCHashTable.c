@@ -7,6 +7,7 @@
 //
 
 #include "MCHashTable.h"
+#include "MCLog.h"
 
 //copy form << The C Programming language >>
 //BKDR Hash Function
@@ -143,12 +144,12 @@ fun(putItem, struct MCHashItem*), struct MCHashItem* item) as(MCHashTable)
             if (old->tombstone) {
                 free(old);
                 it->items[i] = item;
-                printf("add item[%d] = %s\n", i, item->key);
+                runtime_log("add item[%d] = %s\n", i, item->key);
                 return null;
             }
             //already have
             if (strcmp(item->key, old->key) == 0) {
-                printf("skip add item[%d] = %s\n", i, item->key);
+                runtime_log("skip add item[%d] = %s\n", i, item->key);
                 return old;
             }
         }
@@ -157,8 +158,6 @@ fun(putItem, struct MCHashItem*), struct MCHashItem* item) as(MCHashTable)
     //table is full
     return null;
 }
-
-
 
 fun(put, mc_generic), const char* key, mc_generic value)
 {
@@ -198,8 +197,3 @@ constructor(MCHashTable))
     }
     return any;
 }
-
-
-
-
-
