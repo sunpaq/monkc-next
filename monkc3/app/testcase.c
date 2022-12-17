@@ -69,6 +69,10 @@ void test_MCString(void) {
     } else {
         printf("can not convert %s\n", errorMessage);
     }
+
+    struct MCString base;
+    MCString_t* randstr = MCString(&base, "randomstring");
+    printf("random string: %s\n", randstr->randomString(randstr, 20));
 }
 
 void test_MCClock(void) {
@@ -79,6 +83,8 @@ void test_MCClock(void) {
 }
 
 void test_all(void) {
+    MCStringSeedRandom();
+
     test_hashtable();
     test_stdlib();
     test_MCMap();
