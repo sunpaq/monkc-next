@@ -569,7 +569,7 @@ fun(copyExtractedString, MCString_t*)) as(MCString)
 end
 
 fun(randomString, const char*), size_t len) as(MCString)
-    size_t length = min(len, it->length);
+    size_t length = len < it->length ? len : it->length;
     const char alphanum[] = 
         "0123456789"
         "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
