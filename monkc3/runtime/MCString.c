@@ -1,8 +1,8 @@
 #include "MCString.h"
 #include "MCLog.h"
 
+#include <stdlib.h>
 #include <limits.h>
-
 #ifndef LINE_MAX
 #define LINE_MAX 2048
 #endif
@@ -472,7 +472,7 @@ MCString_t* MCString_newForHttp(char* cstr, int isHttps)
 	return res;
 }
 
-static char get_one_char()
+static char get_one_char(void)
 {
     char cf = NUL;
     while(!isNewLine(&cf)) {
@@ -569,12 +569,13 @@ fun(copyExtractedString, MCString_t*)) as(MCString)
 end
 
 fun(randomString, const char*), size_t len) as(MCString)
-    size_t length = min(len, it->length);
-    const char alphanum[] = 
+    size_t length = len < it->length ? len : it->length;
+    const char alphanum[] =
         "0123456789"
         "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
         "abcdefghijklmnopqrstuvwxyz";
-    for (int i = 0; i < length; ++i) {
+    int i;
+    for (i = 0; i < length; ++i) {
         it->buff[i] = alphanum[rand() % (sizeof(alphanum) - 1)];
     }
     it->buff[length] = NUL;
