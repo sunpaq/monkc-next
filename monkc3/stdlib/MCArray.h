@@ -1,7 +1,3 @@
-//
-// Created by 孙御礼 on 2018-12-04.
-//
-
 #ifndef MONKC_DEMO_MCARRAY_H
 #define MONKC_DEMO_MCARRAY_H
 

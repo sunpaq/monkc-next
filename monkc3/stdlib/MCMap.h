@@ -1,11 +1,3 @@
-//
-//  MCMap.h
-//  Pods
-//
-//  Created by YuliSun on 01/06/2017.
-//
-//
-
 #ifndef MCMap_h
 #define MCMap_h
 

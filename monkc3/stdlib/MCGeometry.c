@@ -1,11 +1,3 @@
-//
-//  MCGeometry.c
-//  Sapindus
-//
-//  Created by YuliSun on 8/4/16.
-//  Copyright © 2016 oreisoft. All rights reserved.
-//
-
 #include <stdio.h>
 #include "MCGeometry.h"
 #include "MCArrayList.h"
@@ -233,5 +225,3 @@ void MCPolygonDumpVertexData(MCPolygon* poly)
     printf("}");
     printf("total %zu vertexes\n", poly->count);
 }
-
-

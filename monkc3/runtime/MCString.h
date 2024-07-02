@@ -3,6 +3,7 @@
 
 #include <string.h>
 #include <stdbool.h>
+#include <time.h>
 #include "MCObject.h"
 
 structure(MCString, MCObject)
@@ -21,6 +22,7 @@ structure(MCString, MCObject)
     fundef(toDoubleValue, double), char** endptr);
     fundef(copyCompressedString, struct MCString*));
     fundef(copyExtractedString, struct MCString*));
+    fundef(randomString, const char*), size_t len);
     fundef(release, void));
 end;
 
@@ -68,6 +70,10 @@ static bool MCStringEqual(const char* A, const char* B) {
     }else{
         return false;
     }
+}
+
+static void MCStringSeedRandom(void) {
+    srand((uint32_t)time(NULL));
 }
 
 //#define NUL '\0'

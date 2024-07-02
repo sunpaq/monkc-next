@@ -117,7 +117,7 @@ static MCQuaternion MCQuaternionFromVec3(MCVector3 v)
     return (MCQuaternion){v.x, v.y, v.z, 0.0f};
 }
 
-static MCQuaternion MCQuaternionZero()
+static MCQuaternion MCQuaternionZero(void)
 {
     return (MCQuaternion){0,0,0,0};
 }
@@ -500,7 +500,5 @@ unsigned MCMath_factorialOf(unsigned N);
 unsigned MCMath_KpermutationsOfN(unsigned K, unsigned N);
 //Combination
 unsigned MCMath_KcombinationsOfN(unsigned K, unsigned N);
-
-
 
 #endif

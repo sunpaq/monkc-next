@@ -1,11 +1,3 @@
-//
-//  MCGraph.c
-//  Sapindus
-//
-//  Created by YuliSun on 18/11/2016.
-//  Copyright © 2016 oreisoft. All rights reserved.
-//
-
 #include "MCGraph.h"
 
 fun(bye, void)) as(MCGraph)
@@ -50,7 +42,7 @@ fun(removeEdge, struct MCGraph*), MCGraphEdge e) as(MCGraph)
 end
 
 constructor(MCGraph)) as(MCObject)
-    MCObject(any);
+    MCObject(it);
     as(MCGraph)
         self.vertexCount = 0;
         self.edgeCount = 0;

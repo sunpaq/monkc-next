@@ -1,7 +1,3 @@
-//
-// Created by 孙御礼 on 2018-12-04.
-//
-
 #include "MCArray.h"
 
 static void expand_array(struct MCArray* obj)
@@ -91,8 +87,8 @@ fun(release, void)) as(MCObject)
     end
 end
 
-constructor(MCArray), size_t maxcount) as(MCObject)
-    MCObject(any);
+constructor(MCArray), size_t maxcount) as(MCArray)
+    MCObject(it);
     as(MCArray)
         self.maxcount = maxcount;
         self.count = 0;

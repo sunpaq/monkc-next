@@ -1,11 +1,3 @@
-//
-//  Object.h
-//  monkc3
-//
-//  Created by 孙御礼 on 9/8/30 H.
-//  Copyright © 30 Heisei oreisoft. All rights reserved.
-//
-
 #ifndef MCObject_h
 #define MCObject_h
 

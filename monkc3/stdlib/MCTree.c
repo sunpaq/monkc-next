@@ -1,11 +1,3 @@
-//
-//  MCTree.c
-//  Sapindus
-//
-//  Created by YuliSun on 05/12/2016.
-//  Copyright © 2016 oreisoft. All rights reserved.
-//
-
 #include "MCTree.h"
 #include "MCArray.h"
 
@@ -221,5 +213,3 @@ constructor(MCTrie)) {
     };
     return any;
 }
-
-

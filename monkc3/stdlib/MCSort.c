@@ -1,11 +1,3 @@
-//
-//  MCSort.c
-//  Sapindus
-//
-//  Created by Sun YuLi on 2016/11/5.
-//  Copyright © 2016年 oreisoft. All rights reserved.
-//
-
 #include "MCSort.h"
 
 fun(bye, void)) as(MCSort)
@@ -72,6 +64,3 @@ constructor(MCSort), mc_generic* array, size_t length) {
     }
     return any;
 }
-
-
-

@@ -1,11 +1,3 @@
-//
-//  MCSort.h
-//  Sapindus
-//
-//  Created by Sun YuLi on 2016/11/5.
-//  Copyright © 2016年 oreisoft. All rights reserved.
-//
-
 #ifndef MCSort_h
 #define MCSort_h
 

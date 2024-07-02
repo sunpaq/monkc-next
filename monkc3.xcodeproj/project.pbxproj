@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -31,7 +31,6 @@
 		FD1E8A3721E650480091EB74 /* MCClock.c in Sources */ = {isa = PBXBuildFile; fileRef = FD1E89C721E650480091EB74 /* MCClock.c */; };
 		FD1E8A3821E650480091EB74 /* MCTree.c in Sources */ = {isa = PBXBuildFile; fileRef = FD1E89CB21E650480091EB74 /* MCTree.c */; };
 		FD1E8A3A21E650480091EB74 /* MCProcess.c in Sources */ = {isa = PBXBuildFile; fileRef = FD1E89D121E650480091EB74 /* MCProcess.c */; };
-		FD1E8A3B21E650480091EB74 /* MCLock.c in Sources */ = {isa = PBXBuildFile; fileRef = FD1E89D321E650480091EB74 /* MCLock.c */; };
 		FD1E8A3C21E650480091EB74 /* MCGeometry.c in Sources */ = {isa = PBXBuildFile; fileRef = FD1E89D521E650480091EB74 /* MCGeometry.c */; };
 		FD1E8A3D21E650480091EB74 /* MCArray.c in Sources */ = {isa = PBXBuildFile; fileRef = FD1E89D621E650480091EB74 /* MCArray.c */; };
 		FD1E8A3E21E650480091EB74 /* MCLinkedList.c in Sources */ = {isa = PBXBuildFile; fileRef = FD1E89D821E650480091EB74 /* MCLinkedList.c */; };
@@ -71,7 +70,6 @@
 		FD1E898021E650480091EB74 /* MCArrayList.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MCArrayList.c; sourceTree = "<group>"; };
 		FD1E898121E650480091EB74 /* MCClock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCClock.h; sourceTree = "<group>"; };
 		FD1E898221E650480091EB74 /* MCSort.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MCSort.c; sourceTree = "<group>"; };
-		FD1E898421E650480091EB74 /* MCLock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCLock.h; sourceTree = "<group>"; };
 		FD1E898521E650480091EB74 /* MCProcess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCProcess.h; sourceTree = "<group>"; };
 		FD1E898621E650480091EB74 /* MCMem.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MCMem.c; sourceTree = "<group>"; };
 		FD1E898721E650480091EB74 /* MCIO.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MCIO.c; sourceTree = "<group>"; };
@@ -103,7 +101,6 @@
 		FD1E89CF21E650480091EB74 /* MCMem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCMem.h; sourceTree = "<group>"; };
 		FD1E89D121E650480091EB74 /* MCProcess.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MCProcess.c; sourceTree = "<group>"; };
 		FD1E89D221E650480091EB74 /* MCSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCSort.h; sourceTree = "<group>"; };
-		FD1E89D321E650480091EB74 /* MCLock.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MCLock.c; sourceTree = "<group>"; };
 		FD1E89D421E650480091EB74 /* MCObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCObject.h; sourceTree = "<group>"; };
 		FD1E89D521E650480091EB74 /* MCGeometry.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MCGeometry.c; sourceTree = "<group>"; };
 		FD1E89D621E650480091EB74 /* MCArray.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MCArray.c; sourceTree = "<group>"; };
@@ -178,8 +175,6 @@
 				FD1E89DA21E650480091EB74 /* MCFunction.c */,
 				FD1E89CF21E650480091EB74 /* MCMem.h */,
 				FD1E898621E650480091EB74 /* MCMem.c */,
-				FD1E898421E650480091EB74 /* MCLock.h */,
-				FD1E89D321E650480091EB74 /* MCLock.c */,
 				FD1E89C521E650480091EB74 /* MCHashTable.h */,
 				FD1E89DF21E650480091EB74 /* MCHashTable.c */,
 				FD1E89E521E650480091EB74 /* MCLog.h */,
@@ -289,7 +284,8 @@
 		FDE5E5F22143863E0076D526 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0940;
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1540;
 				ORGANIZATIONNAME = oreisoft;
 				TargetAttributes = {
 					FDE5E5F92143863E0076D526 = {
@@ -303,6 +299,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = FDE5E5F12143863E0076D526;
 			productRefGroup = FDE5E5FB2143863E0076D526 /* Products */;
@@ -328,7 +325,6 @@
 				FD1E8A0821E650480091EB74 /* MCSocket.c in Sources */,
 				FD1E8A3221E650480091EB74 /* MCObject.c in Sources */,
 				FD1E8A4221E650480091EB74 /* MCHashTable.c in Sources */,
-				FD1E8A3B21E650480091EB74 /* MCLock.c in Sources */,
 				FD1E8A4021E650480091EB74 /* MCClass.c in Sources */,
 				FD1E8A0721E650480091EB74 /* MCBits.c in Sources */,
 				FD1E8A3321E650480091EB74 /* MCBuffer.c in Sources */,
@@ -385,6 +381,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -393,9 +390,11 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = c89;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_INPUT_FILETYPE = sourcecode.c.c;
@@ -444,6 +443,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -452,9 +452,11 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = c89;
 				GCC_INPUT_FILETYPE = sourcecode.c.c;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -475,8 +477,11 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = NO;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Manual;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 37V5UJ9JX2;
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				GCC_C_LANGUAGE_STANDARD = c89;
 				GCC_INPUT_FILETYPE = sourcecode.c.c;
 				GCC_WARN_UNUSED_FUNCTION = NO;
@@ -484,6 +489,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/monkc3/runtime",
 				);
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
@@ -494,8 +500,11 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = NO;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Manual;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 37V5UJ9JX2;
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				GCC_C_LANGUAGE_STANDARD = c89;
 				GCC_INPUT_FILETYPE = sourcecode.c.c;
 				GCC_WARN_UNUSED_FUNCTION = NO;
@@ -503,6 +512,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/monkc3/runtime",
 				);
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};

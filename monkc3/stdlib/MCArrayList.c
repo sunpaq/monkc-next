@@ -1,11 +1,3 @@
-//
-//  MCArrayLinkedList.c
-//  Sapindus
-//
-//  Created by YuliSun on 8/4/16.
-//  Copyright © 2016 oreisoft. All rights reserved.
-//
-
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -109,4 +101,3 @@ MCArrayList* MCArrayListAdd(MCArrayList* list, mc_generic data)
     }
     return list;
 }
-

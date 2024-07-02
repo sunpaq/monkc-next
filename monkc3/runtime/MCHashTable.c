@@ -1,11 +1,3 @@
-//
-//  MCHashTable.c
-//  monkc3
-//
-//  Created by 孙御礼 on 11/17/30 H.
-//  Copyright © 30 Heisei oreisoft. All rights reserved.
-//
-
 #include "MCHashTable.h"
 #include "MCLog.h"
 
@@ -88,7 +80,7 @@ fun(release, void)) as(MCHashItem)
 end
 
 constructor(MCHashItem), const char* key, mc_generic value) as(MCObject)
-    MCObject(any);
+    MCObject(it);
     as(MCHashItem)
         it->next = null;
         it->value = value;
