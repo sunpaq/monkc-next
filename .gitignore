@@ -1,3 +1,4 @@
+*.xcuserstate
 *.a
 *.o
 *.xcframework
