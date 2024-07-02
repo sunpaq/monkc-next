@@ -1,11 +1,3 @@
-//
-//  MCHeap.h
-//  Sapindus
-//
-//  Created by YuliSun on 17/11/2016.
-//  Copyright © 2016 oreisoft. All rights reserved.
-//
-
 #ifndef MCHeap_h
 #define MCHeap_h
 

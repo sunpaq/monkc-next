@@ -1,4 +1,3 @@
-
 #include "MCLog.h"
 #include "MCType.h"
 
@@ -117,4 +116,3 @@ void runtime_logt(const char* tag, const char* fmt, ...)
         va_end(ap);
     }
 }
-

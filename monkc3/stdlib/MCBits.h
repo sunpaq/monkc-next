@@ -1,11 +1,3 @@
-//
-//  MCBits.h
-//  Sapindus
-//
-//  Created by Sun YuLi on 2016/12/4.
-//  Copyright © 2016年 oreisoft. All rights reserved.
-//
-
 #ifndef MCBits_h
 #define MCBits_h
 

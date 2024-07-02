@@ -16,7 +16,7 @@
 
 #pragma mark - MCFile unbuffered IO
 
-void MCFile_flushAllCacheToDisk()
+void MCFile_flushAllCacheToDisk(void)
 {
 	sync();
 }
@@ -471,10 +471,3 @@ char* MCProcess_getCurrentWorkingDir(MCCharBuffer* buff)
 }
 
 #endif
-
-
-
-
-
-
-

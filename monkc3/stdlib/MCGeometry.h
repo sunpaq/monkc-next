@@ -1,11 +1,3 @@
-//
-//  MCGeometry.h
-//  Sapindus
-//
-//  Created by YuliSun on 8/4/16.
-//  Copyright © 2016 oreisoft. All rights reserved.
-//
-
 #ifndef MCGeometry_h
 #define MCGeometry_h
 
@@ -186,4 +178,3 @@ size_t MCPolygonResolveConcave(MCPolygon* poly, MCTriangle* triangleResult, size
 void MCPolygonDumpVertexData(MCPolygon* poly);
 
 #endif /* MCGeometry_h */
-
