@@ -1,11 +1,3 @@
-//
-//  MCLinkedList.h
-//  Sapindus
-//
-//  Created by Sun YuLi on 16/6/1.
-//  Copyright © 2016年 oreisoft. All rights reserved.
-//
-
 #ifndef MCLinkedList_h
 #define MCLinkedList_h
 

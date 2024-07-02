@@ -1,11 +1,3 @@
-//
-//  testcase.c
-//  monkc3
-//
-//  Created by 孙御礼 on 2022/02/23.
-//  Copyright © 2022 oreisoft. All rights reserved.
-//
-
 #include "testcase.h"
 #include "MCHashTable.h"
 #include "MCArray.h"

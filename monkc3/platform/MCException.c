@@ -10,7 +10,7 @@ volatile int exception_type = __exception_try_not_called;
 static int _exception_list[MAX_EXCEPTION_NUM];
 static obj _exception_store[MAX_EXCEPTION_NUM];
 
-void clean_exception_context()
+void clean_exception_context(void)
 {
 	//void *memset(void *s, int c, size_t n);
 	memset(((void*)&exception_env), 0, sizeof(jmp_buf));

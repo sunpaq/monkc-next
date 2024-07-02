@@ -1,7 +1,3 @@
-//
-// Created by 孙御礼 on 2018-12-29.
-//
-
 #ifndef MCLOG_H
 #define MCLOG_H
 

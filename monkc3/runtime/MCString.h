@@ -72,7 +72,7 @@ static bool MCStringEqual(const char* A, const char* B) {
     }
 }
 
-static void MCStringSeedRandom() {
+static void MCStringSeedRandom(void) {
     srand((uint32_t)time(NULL));
 }
 

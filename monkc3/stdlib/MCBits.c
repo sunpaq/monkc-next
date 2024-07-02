@@ -1,11 +1,3 @@
-//
-//  MCBits.c
-//  Sapindus
-//
-//  Created by Sun YuLi on 2016/12/4.
-//  Copyright © 2016年 oreisoft. All rights reserved.
-//
-
 #include "MCBits.h"
 
 MCBits MCBitsMask(unsigned bitIndex)

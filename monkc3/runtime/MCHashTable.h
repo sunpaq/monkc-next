@@ -1,4 +1,3 @@
-
 #ifndef MCHashTable_h
 #define MCHashTable_h
 

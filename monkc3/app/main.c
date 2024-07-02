@@ -1,4 +1,3 @@
-
 #include "Fish.h"
 #include "testcase.h"
 

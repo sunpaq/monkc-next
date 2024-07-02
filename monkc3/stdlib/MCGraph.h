@@ -1,11 +1,3 @@
-//
-//  MCGraph.h
-//  Sapindus
-//
-//  Created by YuliSun on 18/11/2016.
-//  Copyright © 2016 oreisoft. All rights reserved.
-//
-
 /*
  dense  graph (near the max number of edges)
  sparse graph (few edges)
@@ -55,4 +47,3 @@ end;
 constructor(MCGraph));
 
 #endif /* MCGraph_h */
-

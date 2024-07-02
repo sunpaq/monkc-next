@@ -17,7 +17,7 @@ bool isNewLine(const char* s)
 	return false;
 }
 
-static char get_one_char()
+static char get_one_char(void)
 {
     char cf = '\0';
     while(!isNewLine(&cf)) {
@@ -163,5 +163,3 @@ constructor(MCContext), int argc, char** argv) {
 	}
 	return any;
 }
-
-

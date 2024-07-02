@@ -1,11 +1,3 @@
-//
-//  MCType.h
-//  monkc3
-//
-//  Created by 孙御礼 on 9/8/30 H.
-//  Copyright © 30 Heisei oreisoft. All rights reserved.
-//
-
 #ifndef MCType_h
 #define MCType_h
 

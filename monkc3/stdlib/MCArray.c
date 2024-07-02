@@ -1,7 +1,3 @@
-//
-// Created by 孙御礼 on 2018-12-04.
-//
-
 #include "MCArray.h"
 
 static void expand_array(struct MCArray* obj)

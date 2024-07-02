@@ -1,11 +1,3 @@
-//
-//  MCHeap.c
-//  Sapindus
-//
-//  Created by YuliSun on 17/11/2016.
-//  Copyright © 2016 oreisoft. All rights reserved.
-//
-
 #include "MCHeap.h"
 
 static size_t leftChildIndex(size_t i) {

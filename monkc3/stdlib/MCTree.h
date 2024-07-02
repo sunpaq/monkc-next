@@ -1,11 +1,3 @@
-//
-//  MCTree.h
-//  Sapindus
-//
-//  Created by YuliSun on 05/12/2016.
-//  Copyright © 2016 oreisoft. All rights reserved.
-//
-
 #ifndef MCTree_h
 #define MCTree_h
 

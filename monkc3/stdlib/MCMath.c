@@ -2,7 +2,7 @@
 #include "MCBits.h"
 #include "MCLog.h"
 
-void MCMath_bye()
+void MCMath_bye(void)
 {
 	debug_log("%s\n", "MCMath bye bye");
 }
@@ -131,5 +131,3 @@ unsigned MCMath_KcombinationsOfN(unsigned K, unsigned N)
     //C(n,k) = P(n,k) / k! = n! / k! * (n-k)!
     return MCMath_KpermutationsOfN(K, N) / MCMath_factorialOf(K);
 }
-
-
