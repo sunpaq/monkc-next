@@ -2,10 +2,8 @@
 #define MCString_h
 
 #include <string.h>
-#include <stdint.h>
 #include <stdbool.h>
 #include <time.h>
-#include <math.h>
 #include "MCObject.h"
 
 structure(MCString, MCObject)

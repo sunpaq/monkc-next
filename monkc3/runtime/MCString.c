@@ -570,7 +570,7 @@ end
 
 fun(randomString, const char*), size_t len) as(MCString)
     size_t length = len < it->length ? len : it->length;
-    const char alphanum[] =
+    const char alphanum[] = 
         "0123456789"
         "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
         "abcdefghijklmnopqrstuvwxyz";
