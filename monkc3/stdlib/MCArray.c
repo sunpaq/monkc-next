@@ -91,8 +91,8 @@ fun(release, void)) as(MCObject)
     end
 end
 
-constructor(MCArray), size_t maxcount) as(MCObject)
-    MCObject(any);
+constructor(MCArray), size_t maxcount) as(MCArray)
+    MCObject(it);
     as(MCArray)
         self.maxcount = maxcount;
         self.count = 0;
