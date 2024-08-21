@@ -11,7 +11,7 @@ structure(Cell, MCObject)
     fundef(getAge, int));
     fundef(printName, void));
     fundef(release, void));
-};
+end;
 
 constructor(Cell), int age);
 

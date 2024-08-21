@@ -21,6 +21,7 @@ mc_alloc(sizeof(struct cls))
 
 #define self (*it)
 
+#define is {
 #define end }
 
 #endif /* monkc_h */
