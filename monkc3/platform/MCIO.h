@@ -24,30 +24,30 @@
 /* MCFile */
 
 structure(MCFile, MCObject)
-	int fd;
-	char* pathname;
-	void* buffer;
-	struct stat attribute;
+    int fd;
+    char* pathname;
+    void* buffer;
+    struct stat attribute;
 
-	fundef(initWithPathName, struct MCFile*), char* pathname, int oflag);
-	fundef(initWithPathNameDefaultFlag, struct MCFile*), char* pathname);
+    fundef(initWithPathName, struct MCFile*), char* pathname, int oflag end_;
+    fundef(initWithPathNameDefaultFlag, struct MCFile*), char* pathname end_;
 
-	fundef(readAllFromBegin, ssize_t), off_t offset);
-	fundef(readFromBegin, ssize_t), off_t offset, size_t nbytes);
-	fundef(readAtLastPosition, size_t), off_t offset, size_t nbytes);
-	fundef(readFromEnd, size_t), off_t offset, size_t nbytes);
-	fundef(writeToBegin, size_t), off_t offset, void* buf, size_t nbytes);
-	fundef(writeToLastTime, size_t), off_t offset, void* buf, size_t nbytes);
-	fundef(writeToEnd, size_t), off_t offset, void* buf, size_t nbytes);
+    fundef(readAllFromBegin, ssize_t), off_t offset end_;
+    fundef(readFromBegin, ssize_t), off_t offset, size_t nbytes end_;
+    fundef(readAtLastPosition, size_t), off_t offset, size_t nbytes end_;
+    fundef(readFromEnd, size_t), off_t offset, size_t nbytes end_;
+    fundef(writeToBegin, size_t), off_t offset, void* buf, size_t nbytes end_;
+    fundef(writeToLastTime, size_t), off_t offset, void* buf, size_t nbytes end_;
+    fundef(writeToEnd, size_t), off_t offset, void* buf, size_t nbytes end_;
 
-	fundef(duplicateFd, int));
-	fundef(duplicateFdTo, int), int fd);
-	fundef(printAttribute, void));
-	fundef(closeFile, void));
-	fundef(checkPermissionUseRealIDOfProcess, int), int mode);
-};
+    fundef(duplicateFd, int) end_;
+    fundef(duplicateFdTo, int), int fd end_;
+    fundef(printAttribute, void) end_;
+    fundef(closeFile, void) end_;
+    fundef(checkPermissionUseRealIDOfProcess, int), int mode end_;
+end;
 
-constructor(MCFile));
+constructor(MCFile) end_;
 
 alias(MCFile);
 
@@ -144,36 +144,36 @@ static MCStreamType MakeMCStreamType(const unsigned btype, const char* fomode) {
 //default is a wide-char fully-buffered stream
 
 structure(MCStream, MCObject)
-	FILE* fileObject;
-	char* buffer;
+    FILE* fileObject;
+    char* buffer;
 
-	fundef(initWithPath, struct MCStream*), MCStreamType type, const char* path);
-	fundef(initWithPathDefaultType, struct MCStream*), const char* path);
+    fundef(initWithPath, struct MCStream*), MCStreamType type, const char* path end_;
+    fundef(initWithPathDefaultType, struct MCStream*), const char* path end_;
 
-	fundef(bye, void));
-	fundef(getFileDescriptor, int));
+    fundef(bye, void) end_;
+    fundef(getFileDescriptor, int) end_;
 
-	fundef(getChar, int));
-	fundef(putChar, int), int charCode);
-	fundef(pushbackChar, int), int charCodeToBePushBack);
+    fundef(getChar, int) end_;
+    fundef(putChar, int), int charCode end_;
+    fundef(pushbackChar, int), int charCodeToBePushBack end_;
 
-	fundef(getCString, char*), MCCharBuffer* recvBuffer);
-	fundef(putCString, char*), MCCharBuffer* sendBuffer);
-	fundef(getMCString, struct MCString*));
-	fundef(putMCString, int), struct MCString* str);
+    fundef(getCString, char*), MCCharBuffer* recvBuffer end_;
+    fundef(putCString, char*), MCCharBuffer* sendBuffer end_;
+    fundef(getMCString, struct MCString*) end_;
+    fundef(putMCString, int), struct MCString* str end_;
 
-	fundef(getBianryObject, size_t), void* recvBuffer,  size_t objectSize, size_t numberOfObjs);
-	fundef(putBianryObject, size_t), void* sendBuffer,  size_t objectSize, size_t numberOfObjs);
+    fundef(getBianryObject, size_t), void* recvBuffer,  size_t objectSize, size_t numberOfObjs end_;
+    fundef(putBianryObject, size_t), void* sendBuffer,  size_t objectSize, size_t numberOfObjs end_;
 
-	fundef(tellOffset, off_t));
-	fundef(seekFromBegin, int), off_t offset);
-	fundef(seekFromCurrent, int), off_t offset);
-	fundef(seekFromEnd, int), off_t offset);
-	fundef(tellSize, long));
-	fundef(dump, void));
-};
+    fundef(tellOffset, off_t) end_;
+    fundef(seekFromBegin, int), off_t offset end_;
+    fundef(seekFromCurrent, int), off_t offset end_;
+    fundef(seekFromEnd, int), off_t offset end_;
+    fundef(tellSize, long) end_;
+    fundef(dump, void) end_;
+end;
 
-constructor(MCStream));
+constructor(MCStream) end_;
 
 alias(MCStream);
 
@@ -182,75 +182,74 @@ alias(MCStream);
 /* MCByteStream */
 
 structure(MCByteStream, MCStream)
-	fundef(bye, void));
-	fundef(newWithPath, struct MCByteStream*), MCStreamType type, char* path);
-};
+    fundef(bye, void) end_;
+    fundef(newWithPath, struct MCByteStream*), MCStreamType type, char* path end_;
+end;
 
-constructor(MCByteStream));
+constructor(MCByteStream) end_;
 
 alias(MCByteStream);
 
 /* MCStdinStream */
 
 structure(MCStdinStream, MCStream)
-	fundef(bye, void));
-};
+    fundef(bye, void) end_;
+end;
 
-constructor(MCStdinStream));
+constructor(MCStdinStream) end_;
 
 alias(MCStdinStream);
 
 /* MCStdoutStream */
 
 structure(MCStdoutStream, MCStream)
-	fundef(bye, void));
-};
+    fundef(bye, void) end_;
+end;
 
-constructor(MCStdoutStream));
+constructor(MCStdoutStream) end_;
 
 alias(MCStdoutStream);
 
 /* MCStderrStream */
 
 structure(MCStderrStream, MCStream)
-	fundef(bye, void));
-};
+    fundef(bye, void) end_;
+end;
 
-constructor(MCStderrStream));
+constructor(MCStderrStream) end_;
 
 alias(MCStderrStream);
 
 /* MCSelect */
 
 typedef enum _MCSelect_fd_type{
-	MCSelect_Readfd,
-	MCSelect_Writefd,
-	MCSelect_Exceptionfd,
+    MCSelect_Readfd,
+    MCSelect_Writefd,
+    MCSelect_Exceptionfd,
 }MCSelect_fd_type;
 
 structure(MCSelect, MCObject)
-	int maxfd;
-	fd_set readfd_set;
-	fd_set writefd_set;
-	fd_set exceptionfd_set;
-	fd_set readfd_result_set;
-	fd_set writefd_result_set;
-	fd_set exceptionfd_result_set;
-	struct timeval timeout;
+    int maxfd;
+    fd_set readfd_set;
+    fd_set writefd_set;
+    fd_set exceptionfd_set;
+    fd_set readfd_result_set;
+    fd_set writefd_result_set;
+    fd_set exceptionfd_result_set;
+    struct timeval timeout;
 
-	fundef(initWithSecondAndMicrosec, void), long second, long microsecond);
-	fundef(waitForFdsetChange, int));
-	fundef(addFd, void), MCSelect_fd_type type, int fd);
-	fundef(removeFd, void), MCSelect_fd_type type, int fd);
-	fundef(isFdReady, int), MCSelect_fd_type type, int fd);
-};
+    fundef(initWithSecondAndMicrosec, void), long second, long microsecond end_;
+    fundef(waitForFdsetChange, int) end_;
+    fundef(addFd, void), MCSelect_fd_type type, int fd end_;
+    fundef(removeFd, void), MCSelect_fd_type type, int fd end_;
+    fundef(isFdReady, int), MCSelect_fd_type type, int fd end_;
+end;
 
-constructor(MCSelect));
+constructor(MCSelect) end_;
 
 alias(MCSelect);
 
 #endif
-
 
 /*
 << File I/O (Unbuffered I/O) >>: invoke a system call in kernel

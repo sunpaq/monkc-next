@@ -23,12 +23,12 @@ struct MCClass* MCClass_load(const char* name) {
     return null;
 }
 
-fun(setFunction, void), const char* key, MCFunction value) as(MCClass)
+fun(setFunction, void), const char* key, MCFunction value end_ as(MCClass)
     runtime_log("%s setFunction(%s)\n", self.name, key);
-    self.methodtable->put(it->methodtable, key, gen_p(value));
-}
+    self.methodtable->put(self.methodtable, key, gen_p(value));
+end
 
-fun(getFunction, MCFunction), const char* key) as(MCClass)
+fun(getFunction, MCFunction), const char* key end_ as(MCClass)
     struct MCClass* iter = it;
     while (iter) {
         MCFunction f = iter->methodtable->get(iter->methodtable, key).p;
@@ -38,9 +38,9 @@ fun(getFunction, MCFunction), const char* key) as(MCClass)
         iter = iter->super;
     }
     return null;
-}
+end
 
-fun(getFunctionDouble, MCFunctionDouble), const char* key) as(MCClass)
+fun(getFunctionDouble, MCFunctionDouble), const char* key end_ as(MCClass)
     struct MCClass* iter = it;
     while (iter) {
         MCFunctionDouble f = iter->methodtable->get(iter->methodtable, key).p;
@@ -50,9 +50,9 @@ fun(getFunctionDouble, MCFunctionDouble), const char* key) as(MCClass)
         iter = iter->super;
     }
     return null;
-}
+end
 
-constructor(MCClass), const char* name) {
+constructor(MCClass), const char* name end_ is
     as(MCClass)
         strncpy(self.name, name, strlen(name));
         self.name[strlen(name)] = '\0';
@@ -62,6 +62,6 @@ constructor(MCClass), const char* name) {
         funadd(setFunction);
         funadd(getFunction);
         funadd(getFunctionDouble);
-    }
+    end
     return any;
-}
+end

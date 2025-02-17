@@ -3,6 +3,9 @@
 
 #include "MCType.h"
 
+#define function(prefix, name, type)\
+type prefix##_##name(struct prefix* it
+
 #define fun(name, type)\
 static type name(void* any
 

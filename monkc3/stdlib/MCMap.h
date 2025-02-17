@@ -7,14 +7,14 @@
 structure(MCMap, MCObject)
       struct MCHashTable* table;
 
-      fundef(itemsCount, size_t));
-      fundef(setValueForKey, void), mc_generic value, const char* key);
-      fundef(getValueForKey, void), mc_generic* result, const char* key);
-      fundef(getValueByIndex, void), mc_generic* result, size_t index);
-      fundef(release, void));
-};
+      fundef(itemsCount, size_t) end_;
+      fundef(setValueForKey, void), mc_generic value, const char* key end_;
+      fundef(getValueForKey, void), mc_generic* result, const char* key end_;
+      fundef(getValueByIndex, void), mc_generic* result, size_t index end_;
+      fundef(release, void) end_;
+end;
 
-constructor(MCMap));
+constructor(MCMap) end_;
 
 alias(MCMap);
 

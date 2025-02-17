@@ -6,13 +6,13 @@
 structure(Fish, Cell)
     int age;
     char name[256];
-    fundef(initWithAge, void*), int age);
-    fundef(getAge, int));
-    fundef(printName, void));
-    fundef(release, void));
-};
+    fundef(initWithAge, void*), int age end_;
+    fundef(getAge, int) end_;
+    fundef(printName, void) end_;
+    fundef(release, void) end_;
+end;
 
-constructor(Fish), const char* name);
+constructor(Fish), const char* name end_;
 
 alias(Fish);
 

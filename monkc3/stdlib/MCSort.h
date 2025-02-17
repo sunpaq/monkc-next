@@ -7,13 +7,13 @@ structure(MCSort, MCObject)
     mc_generic* array;
     size_t length;
 
-    fundef(bye, void));
-    fundef(insertionSort, void));
-    fundef(quickSort, void));
-    fundef(printArray, void));
-};
+    fundef(bye, void) end_;
+    fundef(insertionSort, void) end_;
+    fundef(quickSort, void) end_;
+    fundef(printArray, void) end_;
+end;
 
-constructor(MCSort), mc_generic* array, size_t length);
+constructor(MCSort), mc_generic* array, size_t length end_;
 
 alias(MCSort);
 

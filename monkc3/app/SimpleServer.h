@@ -15,12 +15,12 @@ structure(SimpleServer, MCObject)
     char* ip;
     char* port;
 
-    fundef(start, void));
-    fundef(stop, void));
-    fundef(restart, void));
-    fundef(release, void));
-};
+    fundef(start, void) end_;
+    fundef(stop, void) end_;
+    fundef(restart, void) end_;
+    fundef(release, void) end_;
+end;
 
-constructor(SimpleServer), char* ip, char* port);
+constructor(SimpleServer), char* ip, char* port end_;
 
 #endif //MONKC_DEMO_SIMPLESERVER_H

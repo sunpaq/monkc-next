@@ -15,18 +15,18 @@ structure(MCHeap, MCObject)
       size_t maxcount;
       size_t maxheight;
 
-      fundef(height, size_t));
-      fundef(width, size_t));
+      fundef(height, size_t) end_;
+      fundef(width, size_t) end_;
 
-      fundef(bye, void));
-      fundef(initWithCopy, struct MCHeap*), struct MCHeap* ref);
-      fundef(insertValue, size_t), mc_generic newval);
-      fundef(copySortAscend, struct MCArray*));
-      fundef(printAll, void));
-      fundef(release, void));
-};
+      fundef(bye, void) end_;
+      fundef(initWithCopy, struct MCHeap*), struct MCHeap* ref end_;
+      fundef(insertValue, size_t), mc_generic newval end_;
+      fundef(copySortAscend, struct MCArray*) end_;
+      fundef(printAll, void) end_;
+      fundef(release, void) end_;
+end;
 
-constructor(MCHeap), size_t maxcount);
+constructor(MCHeap), size_t maxcount end_;
 
 alias(MCHeap);
 

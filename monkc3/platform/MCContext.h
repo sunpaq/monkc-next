@@ -8,20 +8,20 @@ structure(MCContext, MCObject)
     char** argv;
     char selectionChar;
 
-    fundef(bye, void));
-    fundef(dumpParas, void));
-    fundef(getPara, char*), int index);
-    fundef(isIndexedParaEqualTo, int), int index, char* para);
-    fundef(isHavePara, int), char* para);
-    fundef(showMenuAndGetSelectionChar, char), int count, ...);
-    fundef(showConfirmAndGetBOOL, int), const char* confirm);
-    fundef(getUserInputString, void), char resultString[]);
-    fundef(getEnvironmentVar, char*), const char* key);
-    fundef(setEnvironmentVar, int), const char* key, const char* value, int isOverwrite);
-    fundef(clearEnvironmentVar, int), const char* key);
-};
+    fundef(bye, void) end_;
+    fundef(dumpParas, void) end_;
+    fundef(getPara, char*), int index end_;
+    fundef(isIndexedParaEqualTo, int), int index, char* para end_;
+    fundef(isHavePara, int), char* para end_;
+    fundef(showMenuAndGetSelectionChar, char), int count, ... end_;
+    fundef(showConfirmAndGetBOOL, int), const char* confirm end_;
+    fundef(getUserInputString, void), char resultString[] end_;
+    fundef(getEnvironmentVar, char*), const char* key end_;
+    fundef(setEnvironmentVar, int), const char* key, const char* value, int isOverwrite end_;
+    fundef(clearEnvironmentVar, int), const char* key end_;
+end;
 
-constructor(MCContext), int argc, char** argv);
+constructor(MCContext), int argc, char** argv end_;
 
 alias(MCContext);
 

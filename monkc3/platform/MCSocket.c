@@ -136,7 +136,7 @@ fun(release, void)) as(MCSocket)
 }
 
 constructor(MCSocket), MCSocketType socket_type, char* ip, char* port) {
-	MCObject(any);
+	MCObject(any, "MCSocket");
 	as(MCSocket)
 		create_and_bind_socket(it, socket_type, ip, port);
 	}

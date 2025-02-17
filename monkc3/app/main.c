@@ -8,14 +8,16 @@ void static_call(void) {
         it->initWithAge(it, 33);
         printf("age=%d\n", it->getAge(it));
         it->printName(it);
-    }
+    
+        it->initWithAge(it, 33);
+    end
     Release(f);
 }
 
 void dynamic_call(void) {
     obj f = Fish(alloc(Fish), "sanma");
-    int age = (int)ff(f, getAge));
-    ff(f, printName));
+    int age = (int)ff(f, getAge)end_;
+    ff(f, printName)end_;
     printf("age=%d\n", age);
     Release(f);
 }
@@ -42,8 +44,8 @@ void type_cast(void) {
 
 void method_override(void) {
     Fish_t* f = Fish(alloc(Fish), "shark");
-    ff(f, cellfunc));
-    ff(f, printName));
+    ff(f, cellfunc)end_;
+    ff(f, printName)end_;
     Release(f);
 }
 

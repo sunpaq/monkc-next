@@ -9,15 +9,15 @@ struct MCObject {
     int ref_count;
     
     //instance
-    fundef(info, void), char* buff);
-    fundef(responseTo, void*), const char* name);
+    fundef(info, void), char* buff end_;
+    fundef(responseTo, void*), const char* name end_;
 
     //mem manage
-    fundef(retain, void));
-    fundef(release, void));
+    fundef(retain, void) end_;
+    fundef(release, void) end_;
 };
 
-constructor(MCObject));
+constructor(MCObject), const char* name end_;
 
 typedef struct MCObject* obj;
 

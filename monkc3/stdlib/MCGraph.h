@@ -37,13 +37,13 @@ structure(MCGraph, MCObject)
     MCGraphVertex* vertexSet;
     MCGraphEdge*   edgeSet;
 
-    fundef(bye, void));
-    fundef(isAdjacent, bool), MCGraphVertex x, MCGraphVertex y);
-    fundef(copyNeighborsOf, struct MCArray*), MCGraphVertex x);
-    fundef(addEdge, struct MCGraph*), MCGraphEdge e);
-    fundef(removeEdge, struct MCGraph*), MCGraphEdge e);
+    fundef(bye, void) end_;
+    fundef(isAdjacent, bool), MCGraphVertex x, MCGraphVertex y end_;
+    fundef(copyNeighborsOf, struct MCArray*), MCGraphVertex x end_;
+    fundef(addEdge, struct MCGraph*), MCGraphEdge e end_;
+    fundef(removeEdge, struct MCGraph*), MCGraphEdge e end_;
 end;
 
-constructor(MCGraph));
+constructor(MCGraph) end_;
 
 #endif /* MCGraph_h */

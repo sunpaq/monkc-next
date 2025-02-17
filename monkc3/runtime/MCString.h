@@ -12,21 +12,21 @@ structure(MCString, MCObject)
     size_t cursor;
     char* buff;
 
-    fundef(add, void), const char* str);
-    fundef(toCString, const char*), char const buff[]);
-    fundef(equalTo, int), struct MCString* stringToComp);
-    fundef(getCharsUntilEnter, void), char resultString[]);
-    fundef(getOneChar, char));
-    fundef(print, void), bool withNewline);
-    fundef(startWith, bool), const char* str);
-    fundef(toDoubleValue, double), char** endptr);
-    fundef(copyCompressedString, struct MCString*));
-    fundef(copyExtractedString, struct MCString*));
-    fundef(randomString, const char*), size_t len);
-    fundef(release, void));
+    fundef(add, void), const char* str end_;
+    fundef(toCString, const char*), char const buff[] end_;
+    fundef(equalTo, int), struct MCString* stringToComp end_;
+    fundef(getCharsUntilEnter, void), char resultString[] end_;
+    fundef(getOneChar, char) end_;
+    fundef(print, void), bool withNewline end_;
+    fundef(startWith, bool), const char* str end_;
+    fundef(toDoubleValue, double), char** endptr end_;
+    fundef(copyCompressedString, struct MCString*) end_;
+    fundef(copyExtractedString, struct MCString*) end_;
+    fundef(randomString, const char*), size_t len end_;
+    fundef(release, void) end_;
 end;
 
-constructor(MCString), const char* cstring);
+constructor(MCString), const char* cstring end_;
 
 alias(MCString);
 

@@ -78,7 +78,7 @@ fun(waitPIDChildExitGetResourceUseage, pid_t), pid_t pid, int* statusAddr, int o
 }
 
 constructor(MCProcess)) {
-    MCObject(any);
+    MCObject(any, "MCProcess");
     dynamic(MCProcess)
         funbind(printIDs);
         //returns(0 in child/child-pid in parent/-1 on error)

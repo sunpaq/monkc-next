@@ -159,7 +159,7 @@ fun(runATestMethod, void), char* methodName) as(MCUnitTestCase)
 }
 
 constructor(MCUnitTestCase)) {
-	MCObject(any);
+	MCObject(any, "MCUnitTestCase");
 	as(MCUnitTestCase)
 		it->next_case = null;
 		it->release = MCUnitTestCase_release;
@@ -202,7 +202,7 @@ fun(runTestCases, void)) as(MCUnitTestSuite)
 }
 
 constructor(MCUnitTestSuite)) {
-	MCObject(any);
+	MCObject(any, "MCUnitTestSuite");
 	as(MCUnitTestSuite)
 	    it->first_case = null;
         it->last_case_p = &(it->first_case);
@@ -230,7 +230,7 @@ fun(addFailInfo, void), char* failinfo)
 }
 
 constructor(MCUnitTestResult)) {
-	MCObject(any);
+	MCObject(any, "MCUnitTestResult");
 	dynamic(MCUnitTestResult)
 		funbind(addSuccessInfo);
 		funbind(addFailInfo);
@@ -262,7 +262,7 @@ fun(runTestSuites, void)) as(MCUnitTestRunner)
 }
 
 constructor(MCUnitTestRunner)) {
-	MCObject(any);
+	MCObject(any, "MCUnitTestRunner");
 	as(MCUnitTestRunner)
 		it->first_suite = null;
 		it->test_suite_count = 0;

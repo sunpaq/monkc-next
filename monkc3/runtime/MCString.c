@@ -494,7 +494,7 @@ static void get_chars_until_enter(char resultString[])
 
 #define MCStringBlock LINE_MAX
 
-fun(add, void), const char* str) as(MCString)
+fun(add, void), const char* str end_ as(MCString)
     if (MCStringBlock-it->size < strlen(str)+1) {
         char* newbuff = malloc(sizeof(char) * (it->size + MCStringBlock));
         strncpy(newbuff, it->buff, it->size-1);
@@ -506,7 +506,7 @@ fun(add, void), const char* str) as(MCString)
     strncat(it->buff, str, strlen(str));
 end
 
-fun(print, void), bool withNewline) as(MCString)
+fun(print, void), bool withNewline end_ as(MCString)
     if (withNewline) {
         runtime_log("%s\n", it->buff);
     } else {
@@ -514,12 +514,12 @@ fun(print, void), bool withNewline) as(MCString)
     }
 end
 
-fun(toCString, const char*), char const buff[]) as(MCString)
+fun(toCString, const char*), char const buff[] end_ as(MCString)
 	strcpy((char*)buff, it->buff);
 	return buff;
 end
 
-fun(equalTo, int), MCString_t* stringToComp) as(MCString)
+fun(equalTo, int), MCString_t* stringToComp end_ as(MCString)
 	int res;
 	res = strcmp(it->buff, stringToComp->buff);
 	if (res==0)
@@ -528,17 +528,17 @@ fun(equalTo, int), MCString_t* stringToComp) as(MCString)
 		return 0;
 end
 
-fun(getOneChar, char))
+fun(getOneChar, char) end_
 {
 	return get_one_char();
 }
 
-fun(getCharsUntilEnter, void), char resultString[])
+fun(getCharsUntilEnter, void), char resultString[] end_
 {
 	get_chars_until_enter(resultString);
 }
 
-fun(startWith, bool), const char* str) as(MCString)
+fun(startWith, bool), const char* str end_ as(MCString)
     size_t len = strlen(str);
     if (len > it->length) {
         return false;
@@ -551,24 +551,24 @@ fun(startWith, bool), const char* str) as(MCString)
     }
 end
 
-fun(toDoubleValue, double), char** endptr) as(MCString)
+fun(toDoubleValue, double), char** endptr end_ as(MCString)
     runtime_log("MCString toDoubleValue called\n");
     return strtod(it->buff, endptr);
 end
 
-fun(copyCompressedString, MCString_t*)) as(MCString)
+fun(copyCompressedString, MCString_t*) end_ as(MCString)
     MCString_t* string = MCString(alloc(MCString), it->buff);
     MCString_compressToCharCount(it->buff, string->buff);
     return string;
 end
 
-fun(copyExtractedString, MCString_t*)) as(MCString)
+fun(copyExtractedString, MCString_t*) end_ as(MCString)
     MCString_t* string = MCString(alloc(MCString), it->buff);
     MCString_extractFromCharCount(it->buff, string->buff);
     return string;
 end
 
-fun(randomString, const char*), size_t len) as(MCString)
+fun(randomString, const char*), size_t len end_ as(MCString)
     size_t length = len < it->length ? len : it->length;
     const char alphanum[] = 
         "0123456789"
@@ -582,13 +582,13 @@ fun(randomString, const char*), size_t len) as(MCString)
     return it->buff;
 end
 
-fun(release, void)) as(MCString)
+fun(release, void) end_ as(MCString)
     runtime_log("MCString bye");
     free(it->buff);
 end
 
-constructor(MCString), const char* str) as(MCObject)
-    MCObject(it);
+constructor(MCString), const char* str end_ as(MCObject)
+    MCObject(it, "MCString");
     as(MCString)
         self.buff = null;
         self.size = 0;
@@ -621,4 +621,4 @@ constructor(MCString), const char* str) as(MCObject)
         funbind(release);
     end
     return it;
-}
+end

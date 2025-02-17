@@ -28,37 +28,35 @@ struct MCRawTime {
 };
 
 structure(MCClock, MCObject)
-	struct tm RawTime;
-	char* currentTimeBuff;
-	char* currentGMTBuff;
+    struct tm RawTime;
+    char* currentTimeBuff;
+    char* currentGMTBuff;
 
-	fundef(bye, void));
-	fundef(setTimeToNow, struct MCClock*));
-	fundef(setTime, void), struct MCTime time);
-    fundef(adjustTime, void), struct MCTime time);
-    fundef(setRawTime, void), struct tm rawTime);
-    fundef(getTime, void), time_t* const result);
-    fundef(getRawTime, void), struct tm* const result);
-    fundef(getTimeByString, const char*));
+    fundef(bye, void) end_;
+    fundef(setTimeToNow, struct MCClock*) end_;
+    fundef(setTime, void), struct MCTime time end_;
+    fundef(adjustTime, void), struct MCTime time end_;
+    fundef(setRawTime, void), struct tm rawTime end_;
+    fundef(getTime, void), time_t* const result end_;
+    fundef(getRawTime, void), struct tm* const result end_;
+    fundef(getTimeByString, const char*) end_;
 
-    fundef(getCPUClocksPerSecond, void), clock_t* const result);
-    fundef(getCPUClocksSinceStart, void), clock_t* const result);
-    fundef(getCPUSecondsSinceStart, void), time_t* const result);
-    fundef(getCPUSecondsSince, void), time_t since, time_t* const result);
+    fundef(getCPUClocksPerSecond, void), clock_t* const result end_;
+    fundef(getCPUClocksSinceStart, void), clock_t* const result end_;
+    fundef(getCPUSecondsSinceStart, void), time_t* const result end_;
+    fundef(getCPUSecondsSince, void), time_t since, time_t* const result end_;
 
-    //retrun the same format as asctime: Sun Sep 16 01:03:52 1973\n\0
-    fundef(getCurrentTimeString, const char*));
-    fundef(getCurrentGMTTimeString, const char*));
-    fundef(printTime, void));
-    fundef(printCurrentTime, void));
-    fundef(printCurrentGMTTime, void));
-};
+    //return the same format as asctime: Sun Sep 16 01:03:52 1973\n\0
+    fundef(getCurrentTimeString, const char*) end_;
+    fundef(getCurrentGMTTimeString, const char*) end_;
+    fundef(printTime, void) end_;
+    fundef(printCurrentTime, void) end_;
+    fundef(printCurrentGMTTime, void) end_;
+end;
 
-constructor(MCClock));
+constructor(MCClock) end_;
 
 alias(MCClock);
-
-
 
 char* MCClock_rawtime2String(time_t* timeval);
 char* MCClock_settableTime2String(struct tm *tm);
@@ -67,28 +65,28 @@ struct tm* MCClock_rawtime2SettableTimeLocal(time_t* timeval);
 
 #define no_change 60000
 enum weekday {
-	SUN, //SUNDAY,
-	MON, //MONDAY,
-	TUE, //TUESDAY,
-	WED, //WEDNESDAY,
-	THU, //THURSDAY,
-	FRI, //FRIDAY,
-	SAT, //SATURDAY,
+    SUN, //SUNDAY,
+    MON, //MONDAY,
+    TUE, //TUESDAY,
+    WED, //WEDNESDAY,
+    THU, //THURSDAY,
+    FRI, //FRIDAY,
+    SAT, //SATURDAY,
 };
 
 enum month {
-	JAN, //JANUARY,
-	FEB, //FEBRUARY,
-	MAR, //MARCH,
-	APR, //APRIL,
-	MAY,
-	JUN, //JUNE,
-	JUL, //JULY,
-	AUG, //AUGUST,
-	SEP, //SEPTEMBER,
-	OCT, //OCTOBER,
-	NOV, //NOVEMBER,
-	DEC, //DECEMBER,
+    JAN, //JANUARY,
+    FEB, //FEBRUARY,
+    MAR, //MARCH,
+    APR, //APRIL,
+    MAY,
+    JUN, //JUNE,
+    JUL, //JULY,
+    AUG, //AUGUST,
+    SEP, //SEPTEMBER,
+    OCT, //OCTOBER,
+    NOV, //NOVEMBER,
+    DEC, //DECEMBER,
 };
 
 #endif

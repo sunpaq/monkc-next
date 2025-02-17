@@ -17,10 +17,10 @@ struct MCHashItem {
     mc_generic value;
     char key[MAX_KEY_CHARS + 1];
 
-    fundef(release, void));
+    fundef(release, void) end_;
 };
 
-constructor(MCHashItem), const char* key, mc_generic value);
+constructor(MCHashItem), const char* key, mc_generic value end_;
 
 struct MCHashTable {
     int lock;
@@ -28,17 +28,17 @@ struct MCHashTable {
     size_t count;
 
     //will return the item if already have one with same key.
-    fundef(putItem, struct MCHashItem*), struct MCHashItem* item);
-    fundef(getItem, struct MCHashItem*), const char* key);
+    fundef(putItem, struct MCHashItem*), struct MCHashItem* item end_;
+    fundef(getItem, struct MCHashItem*), const char* key end_;
 
-    fundef(put, mc_generic), const char* key, mc_generic value);
-    fundef(get, mc_generic), const char* key);
+    fundef(put, mc_generic), const char* key, mc_generic value end_;
+    fundef(get, mc_generic), const char* key end_;
 
     //struct MCHashItem* cache[MAX_ITEM_CACHE];
     struct MCHashItem* items[MIN_HASHTABLE_SIZE];
 };
 
-constructor(MCHashTable));
+constructor(MCHashTable) end_;
 
 MCHash MCHashTable_hash(const char* key);
 

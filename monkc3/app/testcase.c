@@ -15,6 +15,7 @@ void test_hashtable(void) {
     
     int i = table->get(table, "this is a key").i;
     if (i != 1024) {
+        printf("hash feature error\n");
         exit(0);
     } else {
         printf("hash feature correct\n");
@@ -30,6 +31,8 @@ void test_stdlib(void) {
     array->addItem(array, gen_f(0.4));
     array->addItem(array, gen_f(0.5));
     array->printAll(array, "/");
+    
+    array->addItem(array, gen_d(9));
     Release(array);
 }
 
@@ -75,7 +78,7 @@ void test_MCClock(void) {
 }
 
 void test_all(void) {
-    MCStringSeedRandom();
+    // MCStringSeedRandom();
 
     test_hashtable();
     test_stdlib();

@@ -12,13 +12,13 @@ structure(MCItem, MCObject)
     struct MCItem* prevItem;
     struct MCItem* nextItem;
 
-    fundef(linkNextItem, void), struct MCItem* next);
-    fundef(linkPrevItem, void), struct MCItem* prev);
-    fundef(releaseContent, void));
-    fundef(release, void));
-};
+    fundef(linkNextItem, void), struct MCItem* next end_;
+    fundef(linkPrevItem, void), struct MCItem* prev end_;
+    fundef(releaseContent, void) end_;
+    fundef(release, void) end_;
+end;
 
-constructor(MCItem), obj content);
+constructor(MCItem), obj content end_;
 
 alias(MCItem);
 
@@ -33,28 +33,28 @@ structure(MCLinkedList, MCObject)
     bool countChanged;
     unsigned countCache;
 
-    fundef(count, unsigned));
-    fundef(cycle, MCItem_t*));
-    fundef(addItem, void), MCItem_t* item);
-    fundef(delItem, void), MCItem_t* item);
-    fundef(addAndRetainObject, void), obj object);
-    fundef(pushItem, void), MCItem_t* item);
-    fundef(popItem, MCItem_t*));
-    fundef(itemAtIndex, MCItem_t*), int index);
-    fundef(addItemAtIndex, void), int index, MCItem_t* item);
-    fundef(replaceItemAtIndex, void), int index, MCItem_t* withitem);
-    fundef(insertAfterItem, void), MCItem_t* anchor, MCItem_t* item);
-    fundef(insertBeforeItem, void), MCItem_t* anchor, MCItem_t* item);
-    fundef(connectList, struct MCLinkedList*), struct MCLinkedList* otherlist);
-    fundef(release, void));
-};
+    fundef(count, unsigned) end_;
+    fundef(cycle, MCItem_t*) end_;
+    fundef(addItem, void), MCItem_t* item end_;
+    fundef(delItem, void), MCItem_t* item end_;
+    fundef(addAndRetainObject, void), obj object end_;
+    fundef(pushItem, void), MCItem_t* item end_;
+    fundef(popItem, MCItem_t*) end_;
+    fundef(itemAtIndex, MCItem_t*), int index end_;
+    fundef(addItemAtIndex, void), int index, MCItem_t* item end_;
+    fundef(replaceItemAtIndex, void), int index, MCItem_t* withitem end_;
+    fundef(insertAfterItem, void), MCItem_t* anchor, MCItem_t* item end_;
+    fundef(insertBeforeItem, void), MCItem_t* anchor, MCItem_t* item end_;
+    fundef(connectList, struct MCLinkedList*), struct MCLinkedList* otherlist end_;
+    fundef(release, void) end_;
+end;
 
-constructor(MCLinkedList));
+constructor(MCLinkedList) end_;
 
 alias(MCLinkedList);
 
 #define MCLinkedListForEach(list, code) \
-{struct MCItem* item = list->headItem;         \
+{struct MCItem* item = list->headItem;  \
 while (item != null) {                  \
     code                                \
     item = item->nextItem;              \

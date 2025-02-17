@@ -69,7 +69,7 @@ pthread_t MCThread_currentThread(void)
 }
 
 constructor(MCThread)) {
-    MCObject(any);
+    MCObject(any, "MCThread");
     as(MCThread)
         //init the vars
         pthread_once_t ponce = PTHREAD_ONCE_INIT;

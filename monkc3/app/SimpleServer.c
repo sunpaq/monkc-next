@@ -38,36 +38,34 @@ static void workerThread(struct SimpleServer* server) {
     }
 }
 
-fun(start, void)) as(SimpleServer)
+fun(start, void) end_ as(SimpleServer)
     printf("starting worker thread...\n");
     workerThread(it);
-}
+end
 
-fun(stop, void)) {
+fun(stop, void) end_ is
+end
 
-}
+fun(restart, void) end_ is
+end
 
-fun(restart, void)) {
-
-}
-
-fun(release, void)) as(SimpleServer)
+fun(release, void) end_ as(SimpleServer)
     Release(it->socket);
     Release(it->worker);
-}
+end
 
-constructor(SimpleServer), char* ip, char* port) {
-    MCObject(any);
+constructor(SimpleServer), char* ip, char* port end_ is
+    MCObject(any, "SimpleServer");
     as(SimpleServer)
         it->ip = ip;
         it->port = port;
         it->socket = MCSocket(alloc(MCSocket), MCSocket_Server_TCP, ip, port);
-    }
+    end
     dynamic(SimpleServer)
         funbind(start);
         funbind(stop);
         funbind(restart);
         funbind(release);
-    }
+    end
     return any;
-}
+end

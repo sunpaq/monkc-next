@@ -73,14 +73,14 @@ static void copykey(char* des, const char* key, size_t maxlen) {
     des[len] = '\0';
 }
 
-fun(release, void)) as(MCHashItem)
+fun(release, void) end_ as(MCHashItem)
     if (it->doesAutoReleaseObject && it->value.mcobject) {
         it->value.mcobject->release(it->value.mcobject);
     }
 end
 
-constructor(MCHashItem), const char* key, mc_generic value) as(MCObject)
-    MCObject(it);
+constructor(MCHashItem), const char* key, mc_generic value end_ as(MCObject)
+    MCObject(it, "MCHashItem");
     as(MCHashItem)
         it->next = null;
         it->value = value;
@@ -95,7 +95,7 @@ end
 
 //MCHashTable
 
-fun(getItem, struct MCHashItem*), const char* key) as(MCHashTable)
+fun(getItem, struct MCHashItem*), const char* key end_ as(MCHashTable)
     MCHash hashval = MCHashTable_hash(key);
     unsigned tsize = get_tablesize(0);
 
@@ -118,7 +118,7 @@ fun(getItem, struct MCHashItem*), const char* key) as(MCHashTable)
     return null;
 end
 
-fun(putItem, struct MCHashItem*), struct MCHashItem* item) as(MCHashTable)
+fun(putItem, struct MCHashItem*), struct MCHashItem* item end_ as(MCHashTable)
     MCHash hashval = item->hash;
     unsigned tsize = get_tablesize(0);
 
@@ -151,7 +151,7 @@ fun(putItem, struct MCHashItem*), struct MCHashItem* item) as(MCHashTable)
     return null;
 end
 
-fun(put, mc_generic), const char* key, mc_generic value)
+fun(put, mc_generic), const char* key, mc_generic value end_
 {
     val item = MCHashItem(alloc(MCHashItem), key, value);
     struct MCHashItem* old = putItem(any, item);
@@ -161,7 +161,7 @@ fun(put, mc_generic), const char* key, mc_generic value)
     return gen_p(null);
 }
 
-fun(get, mc_generic), const char* key)
+fun(get, mc_generic), const char* key end_
 {
     struct MCHashItem* item = getItem(any, key);
     if (item) {
@@ -170,7 +170,7 @@ fun(get, mc_generic), const char* key)
     return gen_p(null);
 }
 
-constructor(MCHashTable)) as(MCHashTable)
+constructor(MCHashTable) end_ as(MCHashTable)
     self.lock = 0;
     self.cache_count = 0;
     self.count = MIN_HASHTABLE_SIZE;
