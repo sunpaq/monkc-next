@@ -5,6 +5,11 @@
         "mcfunction.h": "c",
         "mctype.h": "c",
         "limits.h": "c",
-        "iosfwd": "c"
+        "iosfwd": "c",
+        "locale": "cpp",
+        "ostream": "cpp",
+        "memory": "c",
+        "typeinfo": "c",
+        "bitset": "c"
     }
 }

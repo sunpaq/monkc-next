@@ -3,17 +3,17 @@
 #include "MCSocket.h"
 #include "MCLog.h"
 
-fun(dumpInfo, void)) as(MCSocketClientInfo)
+fun(dumpInfo, void) end_ as(MCSocketClientInfo)
 	printf("accept a client: %s\n", it->address.sa_data);
-}
+end
 
-constructor(MCSocketClientInfo)) {
+constructor(MCSocketClientInfo) end_ {
 	as(MCSocketClientInfo)
 		it->returnSfd = 0;
 		it->address_len = 0;
 	}
 	return any;
-}
+end
 
 static void create_and_bind_socket(struct MCSocket* this, MCSocketType socket_type, char* ip, char* port)
 {
@@ -86,12 +86,12 @@ static void create_and_bind_socket(struct MCSocket* this, MCSocketType socket_ty
 //EBADF
 //ENOTSOCK
 //EOPNOTSUPP
-fun(listeningStart, int)) as(MCSocket)
+fun(listeningStart, int) end_ as(MCSocket)
 	if(it->isServer!=1)return -1;
 	return listen(it->sfd, MCSocket_Queue_Length);
-}
+end
 
-fun(acceptARequest, struct MCSocketClientInfo*)) as(MCSocket)
+fun(acceptARequest, struct MCSocketClientInfo*) end_ as(MCSocket)
 	if (it->isServer!=1)return null;
 	struct MCSocketClientInfo* clientinfo = MCSocketClientInfo(alloc(MCSocketClientInfo));
 	clientinfo->returnSfd = accept(it->sfd, &clientinfo->address, &clientinfo->address_len);
@@ -99,47 +99,47 @@ fun(acceptARequest, struct MCSocketClientInfo*)) as(MCSocket)
 		it->currentClient = clientinfo;
 	}
 	return clientinfo;
-}
+end
 
-fun(receive, void)) {
+fun(receive, void) end_ {
     //recv(int, void *, size_t, int)
 }
 
-fun(receiveFrom, void)) {
+fun(receiveFrom, void) end_ {
     //recvfrom(int, void *, size_t, int, struct sockaddr *restrict, socklen_t *restrict)
 }
 
-fun(receiveMsg, void)) {
+fun(receiveMsg, void) end_ {
     //recvmsg(int, struct msghdr *, int)
 }
 
-fun(sendInfo, void)) {
+fun(sendInfo, void) end_ {
     //send(int, const void *, size_t, int)
 }
 
-fun(sendTo, void)) {
+fun(sendTo, void) end_ {
     //sendto(int, const void *, size_t, int, const struct sockaddr *, socklen_t)
 }
 
-fun(sendStringMsg, void), const char* msg) as(MCSocket)
+fun(sendStringMsg, void), const char* msg end_ as(MCSocket)
 	if (it->currentClient) {
 		write(it->currentClient->returnSfd, msg, strlen(msg));
 	}
-}
+end
 
-fun(sendMsg, void)) {
+fun(sendMsg, void) end_ {
     //sendmsg(int, const struct msghdr *, int)
 }
 
-fun(release, void)) as(MCSocket)
+fun(release, void) end_ as(MCSocket)
     close(it->sfd);
 }
 
-constructor(MCSocket), MCSocketType socket_type, char* ip, char* port) {
+constructor(MCSocket), MCSocketType socket_type, char* ip, char* port end_ {
 	MCObject(any, "MCSocket");
 	as(MCSocket)
 		create_and_bind_socket(it, socket_type, ip, port);
-	}
+	end
 	dynamic(MCSocket)
 		funbind(listeningStart);
 		funbind(acceptARequest);
@@ -151,7 +151,7 @@ constructor(MCSocket), MCSocketType socket_type, char* ip, char* port) {
 		funbind(sendStringMsg);
 		funbind(sendMsg);
 		funbind(release);
-	}
+	end
 	return any;
 }
 

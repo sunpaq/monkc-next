@@ -12,11 +12,12 @@ static type name(void* any
 #define fundef(name, rtype)\
 rtype (*name)(void* any
 
-#define funadd(name)\
-it->name = name
+#define funadd(__fun_name__)\
+it->__fun_name__ = __fun_name__
 
-#define funbind(name)\
-claz->setFunction(claz, #name, (MCFunction)name);it->name = name
+#define funbind(__fun_name__)\
+it->__fun_name__ = __fun_name__;\
+claz->setFunction(claz, #__fun_name__, (MCFunction)__fun_name__)
 
 #define ff(it, name)\
 ((obj)it)->claz->getFunction(((obj)it)->claz, #name)(it

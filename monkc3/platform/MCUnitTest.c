@@ -56,7 +56,7 @@ void fail(char* message)
 
 /* Test Case */
 
-fun(initWithTestResult, struct MCUnitTestCase*), struct MCUnitTestResult* resultRef) as(MCUnitTestCase)
+fun(initWithTestResult, struct MCUnitTestCase*), struct MCUnitTestResult* resultRef end_ as(MCUnitTestCase)
 	if(resultRef!=null){
         ((obj)resultRef)->retain(resultRef);
 		it->unitTestResultRef = resultRef;
@@ -64,24 +64,24 @@ fun(initWithTestResult, struct MCUnitTestCase*), struct MCUnitTestResult* result
 		it->unitTestResultRef = null;
 	}
 	return it;
-}
+end
 
-fun(MCUnitTestCase_release, void)) as(MCUnitTestCase)
+fun(MCUnitTestCase_release, void) end_ as(MCUnitTestCase)
     as(MCObject)
        it->release(it);
-    }
+    end
 	if(it->unitTestResultRef!=null) {
         ((obj)it->unitTestResultRef)->release(it->unitTestResultRef);
     }
-}
+end
 
-fun(setUp, void))
+fun(setUp, void) end_
 {
 	//set up fixture
 	runtime_log("----MCUnitTestCase setUp\n");
 }
 
-fun(tearDown, void))
+fun(tearDown, void) end_
 {
 	//tear down fixture
 	runtime_log("----MCUnitTestCase tearDown\n");
@@ -121,12 +121,12 @@ static void runMethodByPointer(struct MCUnitTestCase* it, struct MCHashItem* ame
 		error_log("MCAssertEqualsException\n");
 	}
 	finally{
-		error_log("testcase: %s at method: [%s]\n", ((obj)it)->claz->name, amethod->key);
+		error_log("testcase: %s at method: [%s]\n", ((obj)it)->claz->class_name, amethod->key);
 	}
 	it->tearDown(it);
 }
 
-fun(runTests, void)) as(MCUnitTestCase)
+fun(runTests, void) end_ as(MCUnitTestCase)
 	runtime_log("%s\n", "MCUnitTestCase runTests");
 	unsigned i;
 	unsigned bye_key = MCHashTable_hash("bye");
@@ -150,58 +150,58 @@ fun(runTests, void)) as(MCUnitTestCase)
 			runMethodByPointer(it, amethod);
 		}
 	}
-}
+end
 
-fun(runATestMethod, void), char* methodName) as(MCUnitTestCase)
+fun(runATestMethod, void), char* methodName end_ as(MCUnitTestCase)
     struct MCHashTable* table = ((obj)it)->claz->methodtable;
 	unsigned index = MCHashTable_hash(methodName) % get_tablesize(MCHashTableLevel1);
 	runMethodByPointer(it, table->items[index]);
-}
+end
 
-constructor(MCUnitTestCase)) {
+constructor(MCUnitTestCase) end_ {
 	MCObject(any, "MCUnitTestCase");
 	as(MCUnitTestCase)
 		it->next_case = null;
 		it->release = MCUnitTestCase_release;
-	}
+	end
 	dynamic(MCUnitTestCase)
 		funbind(initWithTestResult);
 		funbind(setUp);
 		funbind(tearDown);
 		funbind(runTests);
 		funbind(runATestMethod);
-	}
+	end
 	return any;
 }
 
 /* Test Suite */
 
-fun(MCUnitTestSuite_release, void)) as(MCUnitTestSuite)
+fun(MCUnitTestSuite_release, void) end_ as(MCUnitTestSuite)
 	as(MCObject)
 		it->release(it);
-	}
+	end
 	struct MCUnitTestCase *iter, *save;
 	for(iter=it->first_case; (save=iter)!=null; )
 		iter = iter->next_case;
-}
+end
 
-fun(addTestCase, void), struct MCUnitTestCase* volatile tcase) as(MCUnitTestSuite)
+fun(addTestCase, void), struct MCUnitTestCase* volatile tcase end_ as(MCUnitTestSuite)
 	as(MCObject)
 		it->retain(tcase);
-	}
+	end
     *(it->last_case_p) = tcase;
     it->last_case_p = (struct MCUnitTestCase**)&tcase;
 	it->test_case_count++;
-}
+end
 
-fun(runTestCases, void)) as(MCUnitTestSuite)
+fun(runTestCases, void) end_ as(MCUnitTestSuite)
 	runtime_log("%s\n", "MCUnitTestSuite runTestCases");
 	struct MCUnitTestCase *iter = null;
 	for(iter=it->first_case; iter!=null; iter = iter->next_case)
 		it->runTestCases(it);
-}
+end
 
-constructor(MCUnitTestSuite)) {
+constructor(MCUnitTestSuite) end_ {
 	MCObject(any, "MCUnitTestSuite");
 	as(MCUnitTestSuite)
 	    it->first_case = null;
@@ -209,69 +209,69 @@ constructor(MCUnitTestSuite)) {
         it->test_case_count = 0;
         it->next_suite = null;
         it->release = MCUnitTestSuite_release;
-	}
+	end
 	dynamic(MCUnitTestSuite)
 		funbind(addTestCase);
 		funbind(runTestCases);
-	}
+	end
 	return any;
 }
 
 /* Test Result */
 
-fun(addSuccessInfo, void), char* succinfo)
+fun(addSuccessInfo, void), char* succinfo end_
 {
 	//
 }
 
-fun(addFailInfo, void), char* failinfo)
+fun(addFailInfo, void), char* failinfo end_
 {
 	//
 }
 
-constructor(MCUnitTestResult)) {
+constructor(MCUnitTestResult) end_ {
 	MCObject(any, "MCUnitTestResult");
 	dynamic(MCUnitTestResult)
 		funbind(addSuccessInfo);
 		funbind(addFailInfo);
-	}
+	end
 	return any;
 }
 
 /* Test Runner */
 
-fun(MCUnitTestRunner_release, void)) as(MCUnitTestRunner)
+fun(MCUnitTestRunner_release, void) end_ as(MCUnitTestRunner)
 	struct MCUnitTestSuite *iter, *save;
 	for(iter=it->first_suite; (save=iter)!=null; save->release(save))
 		iter = iter->next_suite;
-}
+end
 
-fun(addTestSuite, void), struct MCUnitTestSuite* testSuite) as(MCUnitTestRunner)
+fun(addTestSuite, void), struct MCUnitTestSuite* testSuite end_ as(MCUnitTestRunner)
 	((obj)testSuite)->retain(testSuite);
 	struct MCUnitTestSuite **iter;
 	for(iter=&(it->first_suite); (*iter)!=null; iter=&((*iter)->next_suite)){}
 	(*iter)=testSuite;
 	it->test_suite_count++;
-}
+end
 
-fun(runTestSuites, void)) as(MCUnitTestRunner)
+fun(runTestSuites, void) end_ as(MCUnitTestRunner)
 	runtime_log("%s\n", "MCUnitTestRunner runTestSuites");
 	struct MCUnitTestSuite *iter;
 	for(iter=it->first_suite; iter!=null; iter = iter->next_suite)
 		iter->runTestCases(iter);
-}
+end
 
-constructor(MCUnitTestRunner)) {
+constructor(MCUnitTestRunner) end_ {
 	MCObject(any, "MCUnitTestRunner");
 	as(MCUnitTestRunner)
 		it->first_suite = null;
 		it->test_suite_count = 0;
 		it->release = MCUnitTestRunner_release;
-	}
+	end
 	dynamic(MCUnitTestRunner)
 		funbind(addTestSuite);
 		funbind(runTestSuites);
-	}
+	end
 	return any;
 }
 

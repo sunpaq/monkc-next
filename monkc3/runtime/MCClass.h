@@ -18,7 +18,7 @@ struct MCClass {
     fundef(getFunction, MCFunction), const char* key end_;
     fundef(getFunctionDouble, MCFunctionDouble), const char* key end_;
 
-    char name[256];
+    char class_name[256];
 };
 
 constructor(MCClass), const char* name end_;

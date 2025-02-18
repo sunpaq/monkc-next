@@ -24,7 +24,7 @@ struct MCClass* MCClass_load(const char* name) {
 }
 
 fun(setFunction, void), const char* key, MCFunction value end_ as(MCClass)
-    runtime_log("%s setFunction(%s)\n", self.name, key);
+    runtime_log("%s setFunction(%s)\n", self.class_name, key);
     self.methodtable->put(self.methodtable, key, gen_p(value));
 end
 
@@ -54,8 +54,8 @@ end
 
 constructor(MCClass), const char* name end_ is
     as(MCClass)
-        strncpy(self.name, name, strlen(name));
-        self.name[strlen(name)] = '\0';
+        strncpy(self.class_name, name, strlen(name));
+        self.class_name[strlen(name)] = '\0';
         self.super = null;
         self.methodtable = MCHashTable(alloc(MCHashTable));
 

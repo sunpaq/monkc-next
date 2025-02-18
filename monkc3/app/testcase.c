@@ -6,6 +6,7 @@
 #include "MCTree.h"
 #include "MCString.h"
 #include "MCClock.h"
+#include "MCLog.h"
 
 void test_hashtable(void) {
     struct MCHashTable* table = MCHashTable(alloc(MCHashTable));
@@ -30,8 +31,7 @@ void test_stdlib(void) {
     array->addItem(array, gen_f(0.3));
     array->addItem(array, gen_f(0.4));
     array->addItem(array, gen_f(0.5));
-    array->printAll(array, "/");
-    
+    ff(array, printAll), 'c' end_;
     array->addItem(array, gen_d(9));
     Release(array);
 }
@@ -78,8 +78,8 @@ void test_MCClock(void) {
 }
 
 void test_all(void) {
-    // MCStringSeedRandom();
-
+    MCLogTypeSet(MC_ERROR_ONLY);
+    MCStringSeedRandom();
     test_hashtable();
     test_stdlib();
     test_MCMap();

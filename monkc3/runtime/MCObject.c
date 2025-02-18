@@ -23,7 +23,7 @@ fun(info, void), char* buff end_ as(MCObject)
     if (buff) {
         const char* cname = "";
         if (self.claz) {
-            cname = self.claz->name;
+            cname = self.claz->class_name;
         }
         sprintf(buff, "claz=%s\nref_count=%d\n", cname, self.ref_count);
     }
@@ -48,8 +48,16 @@ fun(responseTo, void*), const char* name end_ as(MCObject)
     return null;
 end
 
+bool MCObject_class_loaded(obj it, const char* name) {
+    if (self.claz && strncmp(name, self.claz->class_name, strlen(name)) == 0) {
+        runtime_log("class %s already loaded\n", name);
+        return true;
+    }
+    return false;
+}
+
 bool MCObject_class(obj it, const char* name) {
-    if (self.claz && strncmp(name, self.claz->name, strlen(name)) == 0) {
+    if (self.claz && strncmp(name, self.claz->class_name, strlen(name)) == 0) {
         runtime_log("class %s already loaded\n", name);
         return false;
     } else {

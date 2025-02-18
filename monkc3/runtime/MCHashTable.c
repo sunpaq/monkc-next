@@ -79,17 +79,14 @@ fun(release, void) end_ as(MCHashItem)
     }
 end
 
-constructor(MCHashItem), const char* key, mc_generic value end_ as(MCObject)
-    MCObject(it, "MCHashItem");
-    as(MCHashItem)
-        it->next = null;
-        it->value = value;
-        it->tombstone = false;
-        it->doesAutoReleaseObject = false;
-        it->hash = MCHashTable_hash(key);
-        copykey(it->key, key, MAX_KEY_CHARS);
-        funadd(release);
-    end
+constructor(MCHashItem), const char* key, mc_generic value end_ as(MCHashItem)
+    it->next = null;
+    it->value = value;
+    it->tombstone = false;
+    it->doesAutoReleaseObject = false;
+    it->hash = MCHashTable_hash(key);
+    copykey(it->key, key, MAX_KEY_CHARS);
+    funadd(release);
     return any;
 end
 

@@ -16,7 +16,7 @@ structure(MCArray, MCObject)
     fundef(removeAt, void), size_t index end_;
     fundef(clear, void) end_;
     fundef(itemAt, mc_generic*), size_t index end_;
-    fundef(printAll, void), const char* delimiter end_;
+    fundef(printAll, void), const char delimiter end_;
     fundef(release, void) end_;
 end;
 

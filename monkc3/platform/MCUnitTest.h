@@ -21,11 +21,11 @@ void fail(char* message);
 #define MCUnitTestResult_
 
 structure(MCUnitTestResult, MCObject)
-	fundef(addSuccessInfo, void), char* succinfo);
-	fundef(addFailInfo, void), char* failinfo);
-};
+    fundef(addSuccessInfo, void), char* succinfo end_;
+    fundef(addFailInfo, void), char* failinfo end_;
+end;
 
-constructor(MCUnitTestResult));
+constructor(MCUnitTestResult) end_;
 
 #endif
 
@@ -35,18 +35,18 @@ constructor(MCUnitTestResult));
 #define MCUnitTestCase_ 
 
 structure(MCUnitTestCase, MCObject)
-	struct MCUnitTestResult* unitTestResultRef;
-	struct MCUnitTestCase* next_case;
+    struct MCUnitTestResult* unitTestResultRef;
+    struct MCUnitTestCase* next_case;
 
-	fundef(initWithTestResult, struct MCUnitTestCase*), struct MCUnitTestResult* resultRef);
-	fundef(setUp, void));
-	fundef(tearDown, void));
-	fundef(runTests, void));
-	fundef(runATestMethod, void), char* methodName);
-	fundef(release, void));
-};
+    fundef(initWithTestResult, struct MCUnitTestCase*), struct MCUnitTestResult* resultRef end_;
+    fundef(setUp, void) end_;
+    fundef(tearDown, void) end_;
+    fundef(runTests, void) end_;
+    fundef(runATestMethod, void), char* methodName end_;
+    fundef(release, void) end_;
+end;
 
-constructor(MCUnitTestCase));
+constructor(MCUnitTestCase) end_;
 
 #endif
 
@@ -56,17 +56,17 @@ constructor(MCUnitTestCase));
 #define MCUnitTestSuite_
 
 structure(MCUnitTestSuite, MCObject)
-	struct MCUnitTestCase *first_case;
-	struct MCUnitTestCase **last_case_p;
-	int test_case_count;
-	struct MCUnitTestSuite* next_suite;
+    struct MCUnitTestCase *first_case;
+    struct MCUnitTestCase **last_case_p;
+    int test_case_count;
+    struct MCUnitTestSuite* next_suite;
 
-	fundef(addTestCase, void), struct MCUnitTestCase* volatile tcase);
-	fundef(runTestCases, void));
-	fundef(release, void));
+    fundef(addTestCase, void), struct MCUnitTestCase* volatile tcase end_;
+    fundef(runTestCases, void) end_;
+    fundef(release, void) end_;
 };
 
-constructor(MCUnitTestSuite));
+constructor(MCUnitTestSuite) end_;
 
 #endif
 
@@ -76,16 +76,16 @@ constructor(MCUnitTestSuite));
 #define MCUnitTestRunner_
 
 structure(MCUnitTestRunner, MCObject)
-	struct MCUnitTestResult* unitTestResult;
-	struct MCUnitTestSuite* first_suite;
-	int test_suite_count;
+    struct MCUnitTestResult* unitTestResult;
+    struct MCUnitTestSuite* first_suite;
+    int test_suite_count;
 
-	fundef(addTestSuite, void), struct MCUnitTestSuite* testSuite);
-	fundef(runTestSuites, void));
-	fundef(release, void));
-};
+    fundef(addTestSuite, void), struct MCUnitTestSuite* testSuite end_;
+    fundef(runTestSuites, void) end_;
+    fundef(release, void) end_;
+end;
 
-constructor(MCUnitTestRunner));
+constructor(MCUnitTestRunner) end_;
 
 #endif
 

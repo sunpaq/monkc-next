@@ -32,37 +32,37 @@ typedef struct MCProcessRUseage_struct {
 } MCProcessRUseage;
 
 structure(MCProcess, MCObject)
-	pid_t pid;
-	pid_t ppid;
-	uid_t uid;
-	uid_t euid;
-	gid_t gid;
-	gid_t egid;
+    pid_t pid;
+    pid_t ppid;
+    uid_t uid;
+    uid_t euid;
+    gid_t gid;
+    gid_t egid;
 
-	fundef(printIDs, void));
-	//returns(0 in child/child-pid in parent/-1 on error)
-	fundef(forkProcess, int));
+    fundef(printIDs, void) end_;
+    //returns(0 in child/child-pid in parent/-1 on error)
+    fundef(forkProcess, int) end_;
 
-	//may be not supported by OS
-	fundef(registerAtExitCallback, int), void (*func)(void));
-	fundef(exitWithStatus, void), int status);
-	fundef(waitAnyChildExit, pid_t), int* statusAddr);
+    //may be not supported by OS
+    fundef(registerAtExitCallback, int), void (*func)(void) end_;
+    fundef(exitWithStatus, void), int status end_;
+    fundef(waitAnyChildExit, pid_t), int* statusAddr end_;
 
-	fundef(waitPIDChildExit, pid_t), pid_t pid, int* statusAddr, int options);
+    fundef(waitPIDChildExit, pid_t), pid_t pid, int* statusAddr, int options end_;
 
-	fundef(isChildExitNormal, int), int status);
-	fundef(getChildExitLowOrder8Bit, int), int status);
+    fundef(isChildExitNormal, int), int status end_;
+    fundef(getChildExitLowOrder8Bit, int), int status end_;
 
-	fundef(isChildExitBySignal, int), int status);
-	fundef(getChildTerminateSignal, int), int status);
-	fundef(isCoreDumpFileGenerated, int), int status);
+    fundef(isChildExitBySignal, int), int status end_;
+    fundef(getChildTerminateSignal, int), int status end_;
+    fundef(isCoreDumpFileGenerated, int), int status end_;
 
-	fundef(isChildStopped, int), int status);
-	fundef(getChildStopSignal, int), int status);
-	fundef(waitPIDChildExitGetResourceUseage, pid_t), pid_t pid, int* statusAddr, int options, MCProcessRUseage* useage);
-};
+    fundef(isChildStopped, int), int status end_;
+    fundef(getChildStopSignal, int), int status end_;
+    fundef(waitPIDChildExitGetResourceUseage, pid_t), pid_t pid, int* statusAddr, int options, MCProcessRUseage* useage end_;
+end;
 
-constructor(MCProcess));
+constructor(MCProcess) end_;
 
 alias(MCProcess);
 
