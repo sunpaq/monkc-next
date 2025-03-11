@@ -64,7 +64,7 @@ structure(MCUnitTestSuite, MCObject)
     fundef(addTestCase, void), struct MCUnitTestCase* volatile tcase end_;
     fundef(runTestCases, void) end_;
     fundef(release, void) end_;
-};
+end;
 
 constructor(MCUnitTestSuite) end_;
 
