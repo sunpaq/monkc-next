@@ -14,15 +14,15 @@ structure(MCThread, MCObject)
 	void* functionPointer;
 	void* functionArgument;
 
-	fundef(bye, void));
-	fundef(initWithFPointerArgument, struct MCThread*), void* fp, void* farg);
-	fundef(initWithFPointer, struct MCThread*), void* fp);
-	fundef(detach, int));
-	fundef(start, int));
-	fundef(equal, int), struct MCThread* thread);
-};
+	fundef(bye, void)endfun;
+	fundef(initWithFPointerArgument, struct MCThread*), void* fp, void* farg endfun;
+	fundef(initWithFPointer, struct MCThread*), void* fp endfun;
+	fundef(detach, int)endfun;
+	fundef(start, int)endfun;
+	fundef(equal, int), struct MCThread* thread endfun;
+end;
 
-constructor(MCThread));
+constructor(MCThread)endfun;
 
 alias(MCThread);
 

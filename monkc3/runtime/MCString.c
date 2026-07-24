@@ -494,7 +494,8 @@ static void get_chars_until_enter(char resultString[])
 
 #define MCStringBlock LINE_MAX
 
-fun(add, void), const char* str) as(MCString)
+fun(add, void), const char* str endfun is
+    cast_self(MCString);
     if (MCStringBlock-it->size < strlen(str)+1) {
         char* newbuff = malloc(sizeof(char) * (it->size + MCStringBlock));
         strncpy(newbuff, it->buff, it->size-1);
@@ -506,7 +507,8 @@ fun(add, void), const char* str) as(MCString)
     strncat(it->buff, str, strlen(str));
 end
 
-fun(print, void), bool withNewline) as(MCString)
+fun(print, void), bool withNewline endfun is
+    cast_self(MCString);
     if (withNewline) {
         runtime_log("%s\n", it->buff);
     } else {
@@ -514,36 +516,37 @@ fun(print, void), bool withNewline) as(MCString)
     }
 end
 
-fun(toCString, const char*), char const buff[]) as(MCString)
-	strcpy((char*)buff, it->buff);
-	return buff;
+fun(toCString, const char*), char const buff[] endfun is
+    cast_self(MCString);
+    strcpy((char*)buff, it->buff);
+    return buff;
 end
 
-fun(equalTo, int), MCString_t* stringToComp) as(MCString)
-	int res;
-	res = strcmp(it->buff, stringToComp->buff);
-	if (res==0)
-		return 1;
-	else
-		return 0;
+fun(equalTo, int), MCString_t* stringToComp endfun is
+    cast_self(MCString);
+    int res;
+    res = strcmp(it->buff, stringToComp->buff);
+    if (res==0)
+        return 1;
+    else
+        return 0;
 end
 
-fun(getOneChar, char))
-{
-	return get_one_char();
-}
+fun(getOneChar, char) endfun is
+    return get_one_char();
+end
 
-fun(getCharsUntilEnter, void), char resultString[])
-{
-	get_chars_until_enter(resultString);
-}
+fun(getCharsUntilEnter, void), char resultString[] endfun is
+    get_chars_until_enter(resultString);
+end
 
-fun(startWith, bool), const char* str) as(MCString)
+fun(startWith, bool), const char* str endfun is
+    cast_self(MCString);
     size_t len = strlen(str);
-    if (len > it->length) {
+    if (len > self.length) {
         return false;
     }else{
-        if (strncmp(it->buff, str, len) == 0) {
+        if (strncmp(self.buff, str, len) == 0) {
             return true;
         }else{
             return false;
@@ -551,61 +554,67 @@ fun(startWith, bool), const char* str) as(MCString)
     }
 end
 
-fun(toDoubleValue, double), char** endptr) as(MCString)
+fun(toDoubleValue, double), char** endptr endfun is
+    cast_self(MCString);
     runtime_log("MCString toDoubleValue called\n");
     return strtod(it->buff, endptr);
 end
 
-fun(copyCompressedString, MCString_t*)) as(MCString)
-    MCString_t* string = MCString(alloc(MCString), it->buff);
-    MCString_compressToCharCount(it->buff, string->buff);
+fun(copyCompressedString, MCString_t*) endfun is
+    cast_self(MCString);
+    MCString_t* string = MCString(alloc(MCString), self.buff);
+    MCString_compressToCharCount(self.buff, string->buff);
     return string;
 end
 
-fun(copyExtractedString, MCString_t*)) as(MCString)
-    MCString_t* string = MCString(alloc(MCString), it->buff);
-    MCString_extractFromCharCount(it->buff, string->buff);
+fun(copyExtractedString, MCString_t*) endfun is
+    cast_self(MCString);
+    MCString_t* string = MCString(alloc(MCString), self.buff);
+    MCString_extractFromCharCount(self.buff, string->buff);
     return string;
 end
 
-fun(randomString, const char*), size_t len) as(MCString)
-    size_t length = len < it->length ? len : it->length;
-    const char alphanum[] = 
+fun(randomString, const char*), size_t len endfun is
+    cast_self(MCString);
+    size_t length = len < self.length ? len : self.length;
+    const char alphanum[] =
         "0123456789"
         "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
         "abcdefghijklmnopqrstuvwxyz";
     int i;
     for (i = 0; i < length; ++i) {
-        it->buff[i] = alphanum[rand() % (sizeof(alphanum) - 1)];
+        self.buff[i] = alphanum[rand() % (sizeof(alphanum) - 1)];
     }
-    it->buff[length] = NUL;
-    return it->buff;
+    self.buff[length] = NUL;
+    return self.buff;
 end
 
-fun(release, void)) as(MCString)
+fun(release, void) endfun is
+    cast_self(MCString);
     runtime_log("MCString bye");
-    free(it->buff);
+    free(self.buff);
 end
 
-constructor(MCString), const char* str) as(MCObject)
+constructor(MCString), const char* str endfun is
+    cast_self(MCString);
     MCObject(it);
-    as(MCString)
-        self.buff = null;
-        self.size = 0;
-        self.length = 0;
 
-        if (str != null) {
-            size_t len = strlen(str);
-            if (len <= MCStringBlock) {
-                len = MCStringBlock;
-            }
-            it->buff = malloc(len*sizeof(char));
-            strncpy(it->buff, str, len);
-            it->buff[len] = '\0';
-            it->length = len;
-            it->size = len + 1;
+    self.buff = null;
+    self.size = 0;
+    self.length = 0;
+
+    if (str != null) {
+        size_t len = strlen(str);
+        if (len <= MCStringBlock) {
+            len = MCStringBlock;
         }
-    end
+        it->buff = malloc(len*sizeof(char));
+        strncpy(it->buff, str, len);
+        it->buff[len] = '\0';
+        it->length = len;
+        it->size = len + 1;
+    }
+
     dynamic(MCString)
         funbind(add);
         funbind(print);
@@ -621,4 +630,4 @@ constructor(MCString), const char* str) as(MCObject)
         funbind(release);
     end
     return it;
-}
+end

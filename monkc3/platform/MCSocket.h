@@ -22,10 +22,10 @@ struct MCSocketClientInfo {
 	struct sockaddr address;
 	socklen_t address_len;
 
-	fundef(dumpInfo, void));
+	fundef(dumpInfo, void)endfun;
 };
 
-constructor(MCSocketClientInfo));
+constructor(MCSocketClientInfo)endfun;
 
 alias(MCSocketClientInfo);
 
@@ -40,19 +40,19 @@ structure(MCSocket, MCObject)
 	struct addrinfo peeraddrinfo;
 	struct MCSocketClientInfo* currentClient;
 
-	fundef(listeningStart, int));
-	fundef(acceptARequest, struct MCSocketClientInfo*));
-	fundef(receive, void));
-	fundef(receiveFrom, void));
-	fundef(receiveMsg, void));
-	fundef(sendInfo, void));
-	fundef(sendTo, void));
-	fundef(sendStringMsg, void), const char* msg);
-	fundef(sendMsg, void));
-	fundef(release, void));
-};
+	fundef(listeningStart, int)endfun;
+	fundef(acceptARequest, struct MCSocketClientInfo*)endfun;
+	fundef(receive, void)endfun;
+	fundef(receiveFrom, void)endfun;
+	fundef(receiveMsg, void)endfun;
+	fundef(sendInfo, void)endfun;
+	fundef(sendTo, void)endfun;
+	fundef(sendStringMsg, void), const char* msg endfun;
+	fundef(sendMsg, void)endfun;
+	fundef(release, void)endfun;
+end;
 
-constructor(MCSocket), MCSocketType socket_type, char* ip, char* port);
+constructor(MCSocket), MCSocketType socket_type, char* ip, char* port endfun;
 
 alias(MCSocket);
 

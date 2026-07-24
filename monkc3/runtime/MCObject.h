@@ -4,27 +4,26 @@
 #include "MCClass.h"
 #include "MCFunction.h"
 
-struct MCObject {
+struct MCObject is
     struct MCClass* claz;
     int ref_count;
-    
+
     //instance
-    fundef(info, void), char* buff);
-    fundef(responseTo, void*), const char* name);
+    fundef(info, void), char* buff endfun;
+    fundef(responseTo, void*), const char* name endfun;
 
     //mem manage
-    fundef(retain, void));
-    fundef(release, void));
-};
+    fundef(retain, void) endfun;
+    fundef(release, void) endfun;
+end;
 
-constructor(MCObject));
+constructor(MCObject) endfun;
 
 typedef struct MCObject* obj;
 
 bool MCObject_class(obj it, const char* name);
 
-#define dynamic(cls)\
-if (MCObject_class(any, #cls)) { struct MCClass* claz = ((obj)any)->claz; struct cls* it = (struct cls*)any;
+#define dynamic(cls) if (MCObject_class(any, #cls)) { struct MCClass* claz = ((obj)any)->claz; struct cls* it = (struct cls*)any;
 
 #define Retain(it) ((obj)it)->retain(it)
 #define Release(it) ((obj)it)->release(it)

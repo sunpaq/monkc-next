@@ -40,30 +40,30 @@ static void get_chars_until_enter(char resultString[])
 	putchar(tc);
 }
 
-fun(bye, void))
+fun(bye, void)endfun
 {
 	runtime_log("%s\n", "MCContext goodbye");
 }
 
-fun(dumpParas, void)) as(MCContext)
+fun(dumpParas, void)endfun as(MCContext)
 	int i;
 	for (i = 0; i < it->argc; ++i) {
 		runtime_log("%s\n", it->argv[i]);
-	}
+	end
 }
 
-fun(getPara, char*), int index) as(MCContext)
+fun(getPara, char*), int index endfun as(MCContext)
 	return it->argv[index];
-}
+end
 
-fun(isIndexedParaEqualTo, int), int index, char* para) as(MCContext)
+fun(isIndexedParaEqualTo, int), int index, char* para endfun as(MCContext)
 	char* para1 = it->argv[index];
 	if (para1==null)return 0;
 	if (strcmp(para1, para)==0)return 1;
 	else return 0;
-}
+end
 
-fun(isHavePara, int), char* para) as(MCContext)
+fun(isHavePara, int), char* para endfun as(MCContext)
     if(it==null)return 0;
 	int i, res;
 	for (i = 0; i < it->argc; ++i)
@@ -77,11 +77,11 @@ fun(isHavePara, int), char* para) as(MCContext)
 		if(res==0) {
 			return 1;
 		}
-	}
+	end
 	return 1;
 }
 
-fun(showMenuAndGetSelectionChar, char), int count, ...) as(MCContext)
+fun(showMenuAndGetSelectionChar, char), int count, ...endfun as(MCContext)
     va_list ap;
 	va_start(ap, count);
 	int i;
@@ -89,14 +89,14 @@ fun(showMenuAndGetSelectionChar, char), int count, ...) as(MCContext)
 	{
 		char* arg = va_arg(ap, char*);
 		printf("%d.%s\n", i+1, arg);
-	}
+	end
 	printf("%s\n", "your selection is?");
 	va_end(ap);
 	it->selectionChar = get_one_char();
 	return it->selectionChar;
 }
 
-fun(showConfirmAndGetBOOL, int), const char* confirm)
+fun(showConfirmAndGetBOOL, int), const char* confirm endfun
 {
     printf("%s (y/n)?\n", confirm);
 	char cf = get_one_char();
@@ -106,7 +106,7 @@ fun(showConfirmAndGetBOOL, int), const char* confirm)
 	return 0;
 }
 
-fun(getUserInputString, void), char resultString[])
+fun(getUserInputString, void), char resultString[]endfun
 {
 	get_chars_until_enter(resultString);
 }
@@ -119,13 +119,13 @@ int setenv(const char *name, const char *value, int rewrite);
 int unsetenv(const char *name);
 */
 
-fun(getEnvironmentVar, char*), const char* key)
+fun(getEnvironmentVar, char*), const char* key endfun
 {
 	//char *getenv(const char *name);
 	return getenv(key);
 }
 
-fun(setEnvironmentVar, int), const char* key, const char* value, int isOverwrite)
+fun(setEnvironmentVar, int), const char* key, const char* value, int isOverwrite endfun
 {
 	//int setenv(const char *name, const char *value, int rewrite);
 	if (setenv(key, value, isOverwrite)==0)
@@ -134,7 +134,7 @@ fun(setEnvironmentVar, int), const char* key, const char* value, int isOverwrite
 		return -1;
 }
 
-fun(clearEnvironmentVar, int), const char* key)
+fun(clearEnvironmentVar, int), const char* key endfun
 {
 	//int unsetenv(const char *name);
 	if (unsetenv(key)==0)
@@ -143,11 +143,11 @@ fun(clearEnvironmentVar, int), const char* key)
 		return -1;
 }
 
-constructor(MCContext), int argc, char** argv) {
+constructor(MCContext), int argc, char** argv endfun is
 	MCObject(any);
 	as(MCContext)
 		it->selectionChar = 0;
-	}
+	end
 	dynamic(MCContext)
 		funbind(bye);
 		funbind(dumpParas);

@@ -1,28 +1,28 @@
 #include "MCSort.h"
 
-fun(bye, void)) as(MCSort)
+fun(bye, void)endfun as(MCSort)
     if (it->array && it->length > 0) {
         free(it->array);
-    }
+    end
 }
 
-fun(swap, void), size_t a, size_t b) as(MCSort)
+fun(swap, void), size_t a, size_t b endfun as(MCSort)
     if (a < b) {
         mc_generic t = it->array[a];
         it->array[a] = it->array[b];
         it->array[b] = t;
-    }
+    end
 }
 
-fun(insertionSort, void)) {
+fun(insertionSort, void)endfun is
     
-}
+end
 
-fun(quicksort, void), const size_t l, const size_t r) as(MCSort)
+fun(quicksort, void), const size_t l, const size_t r endfun as(MCSort)
     if (l >= r || l > it->length || r > it->length) {
         //debug_log("quicksort exit l=%ld r=%ld\n", l, r);
         return;
-    }
+    end
     mc_generic pivot = it->array[l];
     size_t cur=l, idx;
     for (idx=l+1; idx<=r; idx++) {
@@ -35,25 +35,25 @@ fun(quicksort, void), const size_t l, const size_t r) as(MCSort)
     quicksort(it, cur+1, r);
 }
 
-fun(quickSort, void)) as(MCSort)
+fun(quickSort, void)endfun as(MCSort)
     quicksort(it, 0, it->length-1);
-}
+end
 
-fun(printArray, void)) as(MCSort)
+fun(printArray, void)endfun as(MCSort)
     size_t i;
     for (i=0; i<it->length; i++) {
         printf("element of array[%ld]=%.2f\n", i, it->array[i].f);
-    }
+    end
 }
 
-constructor(MCSort), mc_generic* array, size_t length) {
+constructor(MCSort), mc_generic* array, size_t length endfun is
     MCObject(any);
     as(MCSort)
         it->array = (mc_generic*)malloc(sizeof(mc_generic) * length);
         size_t i;
         for (i=0; i<length; i++) {
             it->array[i] = array[i];
-        }
+        end
         it->length = length;
     }
     dynamic(MCSort)

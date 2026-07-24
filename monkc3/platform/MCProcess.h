@@ -39,30 +39,30 @@ structure(MCProcess, MCObject)
 	gid_t gid;
 	gid_t egid;
 
-	fundef(printIDs, void));
+	fundef(printIDs, void)endfun;
 	//returns(0 in child/child-pid in parent/-1 on error)
-	fundef(forkProcess, int));
+	fundef(forkProcess, int)endfun;
 
 	//may be not supported by OS
-	fundef(registerAtExitCallback, int), void (*func)(void));
-	fundef(exitWithStatus, void), int status);
-	fundef(waitAnyChildExit, pid_t), int* statusAddr);
+	fundef(registerAtExitCallback, int), void (*func)(void)endfun;
+	fundef(exitWithStatus, void), int status endfun;
+	fundef(waitAnyChildExit, pid_t), int* statusAddr endfun;
 
-	fundef(waitPIDChildExit, pid_t), pid_t pid, int* statusAddr, int options);
+	fundef(waitPIDChildExit, pid_t), pid_t pid, int* statusAddr, int options endfun;
 
-	fundef(isChildExitNormal, int), int status);
-	fundef(getChildExitLowOrder8Bit, int), int status);
+	fundef(isChildExitNormal, int), int status endfun;
+	fundef(getChildExitLowOrder8Bit, int), int status endfun;
 
-	fundef(isChildExitBySignal, int), int status);
-	fundef(getChildTerminateSignal, int), int status);
-	fundef(isCoreDumpFileGenerated, int), int status);
+	fundef(isChildExitBySignal, int), int status endfun;
+	fundef(getChildTerminateSignal, int), int status endfun;
+	fundef(isCoreDumpFileGenerated, int), int status endfun;
 
-	fundef(isChildStopped, int), int status);
-	fundef(getChildStopSignal, int), int status);
-	fundef(waitPIDChildExitGetResourceUseage, pid_t), pid_t pid, int* statusAddr, int options, MCProcessRUseage* useage);
-};
+	fundef(isChildStopped, int), int status endfun;
+	fundef(getChildStopSignal, int), int status endfun;
+	fundef(waitPIDChildExitGetResourceUseage, pid_t), pid_t pid, int* statusAddr, int options, MCProcessRUseage* useage endfun;
+end;
 
-constructor(MCProcess));
+constructor(MCProcess)endfun;
 
 alias(MCProcess);
 

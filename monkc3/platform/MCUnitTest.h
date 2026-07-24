@@ -21,11 +21,11 @@ void fail(char* message);
 #define MCUnitTestResult_
 
 structure(MCUnitTestResult, MCObject)
-	fundef(addSuccessInfo, void), char* succinfo);
-	fundef(addFailInfo, void), char* failinfo);
-};
+	fundef(addSuccessInfo, void), char* succinfo endfun;
+	fundef(addFailInfo, void), char* failinfo endfun;
+end;
 
-constructor(MCUnitTestResult));
+constructor(MCUnitTestResult)endfun;
 
 #endif
 
@@ -38,15 +38,15 @@ structure(MCUnitTestCase, MCObject)
 	struct MCUnitTestResult* unitTestResultRef;
 	struct MCUnitTestCase* next_case;
 
-	fundef(initWithTestResult, struct MCUnitTestCase*), struct MCUnitTestResult* resultRef);
-	fundef(setUp, void));
-	fundef(tearDown, void));
-	fundef(runTests, void));
-	fundef(runATestMethod, void), char* methodName);
-	fundef(release, void));
-};
+	fundef(initWithTestResult, struct MCUnitTestCase*), struct MCUnitTestResult* resultRef endfun;
+	fundef(setUp, void)endfun;
+	fundef(tearDown, void)endfun;
+	fundef(runTests, void)endfun;
+	fundef(runATestMethod, void), char* methodName endfun;
+	fundef(release, void)endfun;
+end;
 
-constructor(MCUnitTestCase));
+constructor(MCUnitTestCase)endfun;
 
 #endif
 
@@ -61,12 +61,12 @@ structure(MCUnitTestSuite, MCObject)
 	int test_case_count;
 	struct MCUnitTestSuite* next_suite;
 
-	fundef(addTestCase, void), struct MCUnitTestCase* volatile tcase);
-	fundef(runTestCases, void));
-	fundef(release, void));
-};
+	fundef(addTestCase, void), struct MCUnitTestCase* volatile tcase endfun;
+	fundef(runTestCases, void)endfun;
+	fundef(release, void)endfun;
+end;
 
-constructor(MCUnitTestSuite));
+constructor(MCUnitTestSuite)endfun;
 
 #endif
 
@@ -80,12 +80,12 @@ structure(MCUnitTestRunner, MCObject)
 	struct MCUnitTestSuite* first_suite;
 	int test_suite_count;
 
-	fundef(addTestSuite, void), struct MCUnitTestSuite* testSuite);
-	fundef(runTestSuites, void));
-	fundef(release, void));
-};
+	fundef(addTestSuite, void), struct MCUnitTestSuite* testSuite endfun;
+	fundef(runTestSuites, void)endfun;
+	fundef(release, void)endfun;
+end;
 
-constructor(MCUnitTestRunner));
+constructor(MCUnitTestRunner)endfun;
 
 #endif
 

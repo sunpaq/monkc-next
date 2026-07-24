@@ -30,64 +30,68 @@ static void delete_item(struct MCArray* obj, size_t index)
     obj->count--;
 }
 
-fun(addItem, void), mc_generic item) as(MCArray)
+fun(addItem, void), mc_generic item endfun is
+
+    cast_self(MCArray);
     if (self.indexLast >= self.maxcount) {
         expand_array(it);
-    }
+    end
     insert_item(it, item);
-end
+}
 
-fun(addTo, void), mc_generic item, size_t index) as(MCArray)
+fun(addTo, void), mc_generic item, size_t index endfun is
+
+    cast_self(MCArray);
     if(index >= self.maxcount){
         expand_array(it);
-    }
+    end
     insert_item(it, item);
-end
+}
 
-fun(removeLast, void)) as(MCArray)
+fun(removeLast, void)endfun as(MCArray)
     delete_item(it, it->indexLast);
 end
 
-fun(removeItem, void), mc_generic* item) as(MCArray)
+fun(removeItem, void), mc_generic* item endfun as(MCArray)
     size_t i;
     for (i=0; i<self.maxcount; i++) {
         if (&self.buff[i] == item) {
             delete_item(it, i);
         }
-    }
+    end
 end
 
-fun(removeAt, void), size_t index) as(MCArray)
+fun(removeAt, void), size_t index endfun as(MCArray)
     delete_item(it, index);
 end
 
-fun(clear, void)) as(MCArray)
+fun(clear, void)endfun as(MCArray)
     self.release(it);
     self.buff = (mc_generic*)malloc(sizeof(mc_generic) * 100);
 end
 
-fun(itemAt, mc_generic*), size_t index) as(MCArray)
+fun(itemAt, mc_generic*), size_t index endfun as(MCArray)
     return &self.buff[index];
 end
 
-fun(printAll, void), const char* delimiter) as(MCArray)
+fun(printAll, void), const char* delimiter endfun as(MCArray)
     size_t i;
     for (i=0; i<self.count; i++) {
         printf("%.2f%s", self.buff[i].f, delimiter);
-    }
+    end
     printf("\n");
 end
 
-fun(release, void)) as(MCObject)
+fun(release, void)endfun as(MCObject)
     self.release(it);
     as(MCArray)
         if (self.buff) {
             free(self.buff);
-        }
+        end
     end
 end
 
-constructor(MCArray), size_t maxcount) as(MCArray)
+constructor(MCArray), size_t maxcount endfun as(MCArray)
     MCObject(it);
     as(MCArray)
         self.maxcount = maxcount;

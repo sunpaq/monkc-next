@@ -2,12 +2,14 @@
 #include "MCMem.h"
 #include "MCLog.h"
 
-fun(retain, void)) as(MCObject)
+fun(retain, void) endfun is
+    cast_self(MCObject);
     if (!it) return;
     self.ref_count++;
 end
 
-fun(release, void)) as(MCObject)
+fun(release, void) endfun is
+    cast_self(MCObject);
     if (!it) return;
     if (self.ref_count > 0) {
         self.ref_count--;
@@ -19,7 +21,8 @@ fun(release, void)) as(MCObject)
     }
 end
 
-fun(info, void), char* buff) as(MCObject)
+fun(info, void), char* buff endfun is
+    cast_self(MCObject);
     if (buff) {
         const char* cname = "";
         if (self.claz) {
@@ -29,7 +32,8 @@ fun(info, void), char* buff) as(MCObject)
     }
 end
 
-fun(responseTo, void*), const char* name) as(MCObject)
+fun(responseTo, void*), const char* name endfun is
+    cast_self(MCObject);
     if (name != null) {
         if (self.claz != null) {
             MCFunction f;
@@ -45,7 +49,8 @@ fun(responseTo, void*), const char* name) as(MCObject)
     return null;
 end
 
-bool MCObject_class(obj it, const char* name) {
+bool MCObject_class(obj it, const char* name)
+{
     if (self.claz && strncmp(name, self.claz->name, strlen(name)) == 0) {
         runtime_log("class %s already loaded\n", name);
         return false;
@@ -61,16 +66,16 @@ bool MCObject_class(obj it, const char* name) {
     return false;
 }
 
-constructor(MCObject)) {
-    if (any) {
-        as(MCObject)
-            self.claz = null;
-            self.ref_count = 1;
-            funadd(info);
-            funadd(responseTo);
-            funadd(retain);
-            funadd(release);
-        end
+constructor(MCObject) endfun is
+    if (any == null) {
+        return null;
     }
-    return any;
-}
+    cast_self(MCObject);
+    self.claz = null;
+    self.ref_count = 1;
+    funadd(info);
+    funadd(responseTo);
+    funadd(retain);
+    funadd(release);
+    return it;
+end

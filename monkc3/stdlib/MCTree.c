@@ -25,11 +25,11 @@ static struct BSTNode* printnode(struct BSTNode* node) {
     return node;
 }
 
-fun(insert, struct BSTNode*), struct BSTNode* root, mc_generic newval) as(MCBST)
+fun(insert, struct BSTNode*), struct BSTNode* root, mc_generic newval endfun as(MCBST)
     if (!root) {
         root = BSTNodeCreate(newval);
         it->count++;
-    }
+    end
     if (MCGenericCompare(newval, root->value) < 0)
         root->left = insert(it, root->left, newval);
     if (MCGenericCompare(newval, root->value) > 0)
@@ -37,34 +37,34 @@ fun(insert, struct BSTNode*), struct BSTNode* root, mc_generic newval) as(MCBST)
     return root;
 }
 
-fun(traverse, void), struct BSTNode* root, struct BSTNode* (*funcptr)(struct BSTNode* node)) as(MCBST)
+fun(traverse, void), struct BSTNode* root, struct BSTNode* (*funcptr)(struct BSTNode* node)endfun as(MCBST)
     if (!root) return;
     if (root->left)
         traverse(it, root->left, funcptr);
     root = (*funcptr)(root);
     if (root->right)
         traverse(it, root->right, funcptr);
-}
+end
 
-fun(insertValue, void), mc_generic newval) as(MCBST)
+fun(insertValue, void), mc_generic newval endfun as(MCBST)
     it->root = insert(it, it->root, newval);
-}
+end
 
-fun(traverseTree, void), struct BSTNode* (*funcptr)(struct BSTNode* node)) as(MCBST)
+fun(traverseTree, void), struct BSTNode* (*funcptr)(struct BSTNode* node)endfun as(MCBST)
     traverse(it, it->root, funcptr);
-}
+end
 
-fun(printTree, void)) as(MCBST)
+fun(printTree, void)endfun as(MCBST)
     traverse(null, it->root, printnode);
     printf("total %ld nodes\n", it->count);
-}
+end
 
-constructor(MCBST)) {
+constructor(MCBST)endfun is
     MCObject(any);
     as(MCBST)
         it->root = null;
         it->count = 0;
-    };
+    end;
     dynamic(MCBST)
         funbind(insertValue);
         funbind(traverseTree);
@@ -79,7 +79,7 @@ constructor(MCBST)) {
  Trie Tree (Digital, Radix, Prefix - Tree)
  */
 
-fun(createNode, struct TrieNode*), char byte) {
+fun(createNode, struct TrieNode*), char byte endfun is
     struct TrieNode* node = (struct TrieNode*)malloc(sizeof(struct TrieNode));
     node->isLeaf = false;
     node->byte = byte;
@@ -87,25 +87,25 @@ fun(createNode, struct TrieNode*), char byte) {
     for (i=0; i<MCTrieWidth; i++)
         node->childs[i] = null;
     return node;
-}
+end
 
-fun(releaseNode, void), struct TrieNode* node) {
+fun(releaseNode, void), struct TrieNode* node endfun is
     if (node) {
         int i;
         for (i=0; i<MCTrieWidth; i++)
             if (node->childs[i])
                 releaseNode(0, node->childs[i]);
         free(node);
-    }
+    end
 }
 
 //return current node
-fun(insertNodeIntoParent, struct TrieNode*), struct TrieNode* parent, struct TrieNode* node)
+fun(insertNodeIntoParent, struct TrieNode*), struct TrieNode* parent, struct TrieNode* node endfun
 {
     if (parent && node) {
-        struct TrieNode* current = parent->childs[node->byte];
+        struct TrieNode* current = parent->childs[(int)node->byte];
         if (current == null) {
-            parent->childs[node->byte] = node;
+            parent->childs[(int)node->byte] = node;
             return node;
         } else {
             return current;
@@ -115,7 +115,7 @@ fun(insertNodeIntoParent, struct TrieNode*), struct TrieNode* parent, struct Tri
 }
 
 //return Leaf node
-fun(insertWordIntoParent, struct TrieNode*), struct TrieNode* parent, const char* word) as(MCTrie)
+fun(insertWordIntoParent, struct TrieNode*), struct TrieNode* parent, const char* word endfun as(MCTrie)
     if (parent && word) {
         size_t len = strlen(word);
         struct TrieNode *node=null, *p=parent;
@@ -132,22 +132,22 @@ fun(insertWordIntoParent, struct TrieNode*), struct TrieNode* parent, const char
             node->isLeaf = true;
         }
         return node;
-    }
+    end
     return null;
 }
 
-fun(retrievalNodeByKey, struct TrieNode*), const char* word) as(MCTrie)
+fun(retrievalNodeByKey, struct TrieNode*), const char* word endfun as(MCTrie)
     size_t len = strlen(word);
     struct TrieNode *node=null, *p=it->root;
     size_t i;
     for (i=0; i<len; i++) {
         char c = *word;
-        node = p->childs[c];
+        node = p->childs[(int)c];
         if (node) {
             p = node;
             word++;
         }
-    }
+    end
     return node;
 }
 
@@ -167,43 +167,43 @@ fun(retrievalNodeByKey, struct TrieNode*), const char* word) as(MCTrie)
 //    return array;
 //}
 
-fun(insertValueByKey, void), mc_generic newval, const char* word) as(MCTrie)
+fun(insertValueByKey, void), mc_generic newval, const char* word endfun as(MCTrie)
     struct TrieNode* leaf = insertWordIntoParent(it, it->root, word);
     leaf->value = newval;
-}
+end
 
-fun(valueOfKey, mc_generic), const char* word) as(MCTrie)
+fun(valueOfKey, mc_generic), const char* word endfun as(MCTrie)
     struct TrieNode* node = retrievalNodeByKey(it, word);
     //last leaf node have value
     if (node->isLeaf) {
         return node->value;
-    }
+    end
     return gen_p(null);
 }
 
-fun(keysWithPrefix, struct MCArray*), const char* prefix) {
+fun(keysWithPrefix, struct MCArray*), const char* prefix endfun is
     struct MCArray* array = MCArray(alloc(MCArray), 10);
     return array;
-}
+end
 
-fun(hasKey, bool), const char* word) as(MCTrie)
+fun(hasKey, bool), const char* word endfun as(MCTrie)
     struct TrieNode* node = retrievalNodeByKey(it, word);
     if (node && node->isLeaf) {
         return true;
-    }
+    end
     return false;
 }
 
-fun(bye, void)) as(MCTrie)
+fun(bye, void)endfun as(MCTrie)
     releaseNode(it, it->root);
-}
+end
 
-constructor(MCTrie)) {
+constructor(MCTrie)endfun is
     MCObject(any);
     as(MCTrie)
         it->root = createNode(0, ' ');
         it->count = 0;
-    };
+    end;
     dynamic(MCTrie)
         funbind(insertValueByKey);
         funbind(valueOfKey);

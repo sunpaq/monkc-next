@@ -55,7 +55,7 @@ void test_MCString(void) {
     MCString_t* strobj = MCString(&string, "1234.5678");
     char* errorMessage;
     double res1 = strobj->toDoubleValue(strobj, &errorMessage);
-    double res2 = ff_double(strobj, toDoubleValue), &errorMessage);
+    double res2 = ff_double(strobj, toDoubleValue), &errorMessage endfun;
     if (MCStringEqual(errorMessage, "")) {
         printf("%lf should equal %lf\n", res1, res2);
     } else {

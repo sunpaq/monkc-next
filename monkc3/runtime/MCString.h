@@ -6,27 +6,29 @@
 #include <time.h>
 #include "MCObject.h"
 
-structure(MCString, MCObject)
+struct MCString is
+    copy_super(MCObject);
+
     size_t length;
     size_t size;
     size_t cursor;
     char* buff;
 
-    fundef(add, void), const char* str);
-    fundef(toCString, const char*), char const buff[]);
-    fundef(equalTo, int), struct MCString* stringToComp);
-    fundef(getCharsUntilEnter, void), char resultString[]);
-    fundef(getOneChar, char));
-    fundef(print, void), bool withNewline);
-    fundef(startWith, bool), const char* str);
-    fundef(toDoubleValue, double), char** endptr);
-    fundef(copyCompressedString, struct MCString*));
-    fundef(copyExtractedString, struct MCString*));
-    fundef(randomString, const char*), size_t len);
-    fundef(release, void));
+    fundef(add, void), const char* str endfun;
+    fundef(toCString, const char*), char const buff[] endfun;
+    fundef(equalTo, int), struct MCString* stringToComp endfun;
+    fundef(getCharsUntilEnter, void), char resultString[] endfun;
+    fundef(getOneChar, char) endfun;
+    fundef(print, void), bool withNewline endfun;
+    fundef(startWith, bool), const char* str endfun;
+    fundef(toDoubleValue, double), char** endptr endfun;
+    fundef(copyCompressedString, struct MCString*) endfun;
+    fundef(copyExtractedString, struct MCString*) endfun;
+    fundef(randomString, const char*), size_t len endfun;
+    fundef(release, void) endfun;
 end;
 
-constructor(MCString), const char* cstring);
+constructor(MCString), const char* cstring endfun;
 
 alias(MCString);
 
@@ -48,7 +50,6 @@ const char* MCString_concatePath(const char* path1, const char* path2, char (*bu
 const char* MCString_compressToCharCount(const char* source, char* buff);
 const char* MCString_extractFromCharCount(const char* source, char* buff);
 void MCString_printPermutationOf(char str[]);
-
 
 static char* MCStringFill(char* dest, const char* src) {
     char* res = strcpy(dest, src);
@@ -75,8 +76,5 @@ static bool MCStringEqual(const char* A, const char* B) {
 static void MCStringSeedRandom(void) {
     srand((uint32_t)time(NULL));
 }
-
-//#define NUL '\0'
-//#define PATH_MAX 2048
 
 #endif

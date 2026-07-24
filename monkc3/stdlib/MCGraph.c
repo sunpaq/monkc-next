@@ -1,15 +1,15 @@
 #include "MCGraph.h"
 
-fun(bye, void)) as(MCGraph)
+fun(bye, void)endfun as(MCGraph)
     if (it->vertexSet) {
         free(it->vertexSet);
-    }
+    end
     if (it->edgeSet) {
         free(it->edgeSet);
     }
 end
 
-fun(isAdjacent, bool), MCGraphVertex x, MCGraphVertex y)
+fun(isAdjacent, bool), MCGraphVertex x, MCGraphVertex y endfun
 {
     MCGraphVertex* iter = x.neighbors;
     while (iter) {
@@ -21,7 +21,7 @@ fun(isAdjacent, bool), MCGraphVertex x, MCGraphVertex y)
     return false;
 }
 
-fun(copyNeighborsOf, struct MCArray*), MCGraphVertex x)
+fun(copyNeighborsOf, struct MCArray*), MCGraphVertex x endfun
 {
     struct MCArray* array = MCArray(alloc(MCArray), 10);
     MCGraphVertex* iter = x.neighbors;
@@ -33,15 +33,15 @@ fun(copyNeighborsOf, struct MCArray*), MCGraphVertex x)
 }
 
 //To-Do
-fun(addEdge, struct MCGraph*), MCGraphEdge e) as(MCGraph)
+fun(addEdge, struct MCGraph*), MCGraphEdge e endfun as(MCGraph)
     return it;
 end
 
-fun(removeEdge, struct MCGraph*), MCGraphEdge e) as(MCGraph)
+fun(removeEdge, struct MCGraph*), MCGraphEdge e endfun as(MCGraph)
     return it;
 end
 
-constructor(MCGraph)) as(MCObject)
+constructor(MCGraph)endfun as(MCObject)
     MCObject(it);
     as(MCGraph)
         self.vertexCount = 0;

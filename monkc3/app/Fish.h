@@ -3,16 +3,17 @@
 
 #include "Cell.h"
 
-structure(Fish, Cell)
+struct Fish is
+    copy_super(Cell);
     int age;
     char name[256];
-    fundef(initWithAge, void*), int age);
-    fundef(getAge, int));
-    fundef(printName, void));
-    fundef(release, void));
-};
+    fundef(initWithAge, void*), int age endfun;
+    fundef(getAge, int) endfun;
+    fundef(printName, void) endfun;
+    fundef(release, void) endfun;
+end;
 
-constructor(Fish), const char* name);
+constructor(Fish), const char* name endfun;
 
 alias(Fish);
 

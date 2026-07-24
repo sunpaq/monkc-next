@@ -1,27 +1,25 @@
 #ifndef monkc_h
 #define monkc_h
 
-#define alias(cls)\
-typedef struct cls cls##_t
+#define end          }
+#define endfun        )
 
-#define structure(cls, supercls)\
-struct cls { struct supercls Super;
+#define is           {
+#define as(cls)      { struct cls* it = (struct cls*)any;
+#define let(v, cls)  { struct cls* it = (struct cls*)v;
 
-#define constructor(cls)\
-void* cls(void* any
+#define alias(cls)   typedef struct cls cls##_t
 
-#define alloc(cls)\
-mc_alloc(sizeof(struct cls))
+#define structure(cls, supercls) struct cls { struct supercls Super;
 
-#define as(cls)\
-{ struct cls* it = (struct cls*)any;
+#define copy_super(cls) struct cls Super;
 
-#define let(any, cls)\
-{ struct cls* it = (struct cls*)any;
+#define constructor(cls) void* cls(void* any
+
+#define alloc(cls) mc_alloc(sizeof(struct cls))
+
+#define cast_self(cls) struct cls* it = (struct cls*)any;
 
 #define self (*it)
-
-#define is {
-#define end }
 
 #endif /* monkc_h */

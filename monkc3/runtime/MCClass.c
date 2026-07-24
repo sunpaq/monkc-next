@@ -6,7 +6,8 @@
 
 static struct MCHashTable* global_classes_table = null;
 
-struct MCClass* MCClass_load(const char* name) {
+struct MCClass* MCClass_load(const char* name)
+{
     if (!global_classes_table) {
         void* any = alloc(MCHashTable);
         if (any) {
@@ -23,13 +24,14 @@ struct MCClass* MCClass_load(const char* name) {
     return null;
 }
 
-fun(setFunction, void), const char* key, MCFunction value) as(MCClass)
+fun(setFunction, void), const char* key, MCFunction value endfun is
+    cast_self(MCClass);
     runtime_log("%s setFunction(%s)\n", self.name, key);
     self.methodtable->put(it->methodtable, key, gen_p(value));
-}
+end
 
-fun(getFunction, MCFunction), const char* key) as(MCClass)
-    struct MCClass* iter = it;
+fun(getFunction, MCFunction), const char* key endfun is
+    struct MCClass* iter = any;
     while (iter) {
         MCFunction f = iter->methodtable->get(iter->methodtable, key).p;
         if (f) {
@@ -38,10 +40,10 @@ fun(getFunction, MCFunction), const char* key) as(MCClass)
         iter = iter->super;
     }
     return null;
-}
+end
 
-fun(getFunctionDouble, MCFunctionDouble), const char* key) as(MCClass)
-    struct MCClass* iter = it;
+fun(getFunctionDouble, MCFunctionDouble), const char* key endfun is
+    struct MCClass* iter = any;
     while (iter) {
         MCFunctionDouble f = iter->methodtable->get(iter->methodtable, key).p;
         if (f) {
@@ -50,18 +52,17 @@ fun(getFunctionDouble, MCFunctionDouble), const char* key) as(MCClass)
         iter = iter->super;
     }
     return null;
-}
+end
 
-constructor(MCClass), const char* name) {
-    as(MCClass)
-        strncpy(self.name, name, strlen(name));
-        self.name[strlen(name)] = '\0';
-        self.super = null;
-        self.methodtable = MCHashTable(alloc(MCHashTable));
+constructor(MCClass), const char* name endfun is
+    cast_self(MCClass);
+    strncpy(self.name, name, strlen(name));
+    self.name[strlen(name)] = '\0';
+    self.super = null;
+    self.methodtable = MCHashTable(alloc(MCHashTable));
 
-        funadd(setFunction);
-        funadd(getFunction);
-        funadd(getFunctionDouble);
-    }
+    funadd(setFunction);
+    funadd(getFunction);
+    funadd(getFunctionDouble);
     return any;
-}
+end

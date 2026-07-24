@@ -1,29 +1,29 @@
 #include "MCThread.h"
 #include "MCLog.h"
 
-fun(bye, void)) as(MCThread)
+fun(bye, void)endfun as(MCThread)
     pthread_attr_destroy(&it->attribute);
-}
+end
 
-fun(initWithFPointerArgument, struct MCThread*), void* fp, void* farg) as(MCThread)
+fun(initWithFPointerArgument, struct MCThread*), void* fp, void* farg endfun as(MCThread)
     if (fp==null) {
         error_log("%s\n","fp can not be nil, do nothing");
         return null;
-    }
+    end
     it->functionPointer = fp;
     it->functionArgument = farg;
     return it;
 }
 
-fun(initWithFPointer, struct MCThread*), void* fp) as(MCThread)
+fun(initWithFPointer, struct MCThread*), void* fp endfun as(MCThread)
     return initWithFPointerArgument(it, fp, null);
-}
+end
 
-fun(detach, int)) as(MCThread)
+fun(detach, int)endfun as(MCThread)
     return pthread_detach(it->tid);
-}
+end
 
-fun(start, int)) as(MCThread)
+fun(start, int)endfun as(MCThread)
     int res;
     if (it->isRunOnce==1) {
         res = pthread_once(&(it->once_control), it->functionPointer);
@@ -32,13 +32,13 @@ fun(start, int)) as(MCThread)
                              &it->attribute,
                              it->functionPointer,
                              it->functionArgument);
-    }
+    end
     return res;
 }
 
-fun(equal, int), struct MCThread* thread) as(MCThread)
+fun(equal, int), struct MCThread* thread endfun as(MCThread)
     return pthread_equal(it->tid, thread->tid);
-}
+end
 
 
 int MCThread_cancelThread(pthread_t tid)
@@ -68,7 +68,7 @@ pthread_t MCThread_currentThread(void)
     return pthread_self();
 }
 
-constructor(MCThread)) {
+constructor(MCThread)endfun is
     MCObject(any);
     as(MCThread)
         //init the vars
@@ -81,7 +81,7 @@ constructor(MCThread)) {
 
         it->functionPointer = null;
         it->functionArgument = null;
-    };
+    end;
     dynamic(MCThread)
         funbind(bye);
         funbind(initWithFPointerArgument);

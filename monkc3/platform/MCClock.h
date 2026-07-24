@@ -32,29 +32,29 @@ structure(MCClock, MCObject)
 	char* currentTimeBuff;
 	char* currentGMTBuff;
 
-	fundef(bye, void));
-	fundef(setTimeToNow, struct MCClock*));
-	fundef(setTime, void), struct MCTime time);
-    fundef(adjustTime, void), struct MCTime time);
-    fundef(setRawTime, void), struct tm rawTime);
-    fundef(getTime, void), time_t* const result);
-    fundef(getRawTime, void), struct tm* const result);
-    fundef(getTimeByString, const char*));
+	fundef(bye, void)endfun;
+	fundef(setTimeToNow, struct MCClock*)endfun;
+	fundef(setTime, void), struct MCTime time endfun;
+    fundef(adjustTime, void), struct MCTime time endfun;
+    fundef(setRawTime, void), struct tm rawTime endfun;
+    fundef(getTime, void), time_t* const result endfun;
+    fundef(getRawTime, void), struct tm* const result endfun;
+    fundef(getTimeByString, const char*)endfun;
 
-    fundef(getCPUClocksPerSecond, void), clock_t* const result);
-    fundef(getCPUClocksSinceStart, void), clock_t* const result);
-    fundef(getCPUSecondsSinceStart, void), time_t* const result);
-    fundef(getCPUSecondsSince, void), time_t since, time_t* const result);
+    fundef(getCPUClocksPerSecond, void), clock_t* const result endfun;
+    fundef(getCPUClocksSinceStart, void), clock_t* const result endfun;
+    fundef(getCPUSecondsSinceStart, void), time_t* const result endfun;
+    fundef(getCPUSecondsSince, void), time_t since, time_t* const result endfun;
 
     //retrun the same format as asctime: Sun Sep 16 01:03:52 1973\n\0
-    fundef(getCurrentTimeString, const char*));
-    fundef(getCurrentGMTTimeString, const char*));
-    fundef(printTime, void));
-    fundef(printCurrentTime, void));
-    fundef(printCurrentGMTTime, void));
-};
+    fundef(getCurrentTimeString, const char*)endfun;
+    fundef(getCurrentGMTTimeString, const char*)endfun;
+    fundef(printTime, void)endfun;
+    fundef(printCurrentTime, void)endfun;
+    fundef(printCurrentGMTTime, void)endfun;
+end;
 
-constructor(MCClock));
+constructor(MCClock)endfun;
 
 alias(MCClock);
 

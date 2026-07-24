@@ -10,18 +10,18 @@
 #include "MCMem.h"
 #include "MCHashTable.h"
 
-struct MCClass {
+struct MCClass is
     struct MCClass* super;
     struct MCHashTable* methodtable;
 
-    fundef(setFunction, void), const char* key, MCFunction value);
-    fundef(getFunction, MCFunction), const char* key);
-    fundef(getFunctionDouble, MCFunctionDouble), const char* key);
+    fundef(setFunction, void), const char* key, MCFunction value endfun;
+    fundef(getFunction, MCFunction), const char* key endfun;
+    fundef(getFunctionDouble, MCFunctionDouble), const char* key endfun;
 
     char name[256];
-};
+end;
 
-constructor(MCClass), const char* name);
+constructor(MCClass), const char* name endfun;
 
 struct MCClass* MCClass_load(const char* name);
 

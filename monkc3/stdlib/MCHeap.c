@@ -95,65 +95,65 @@ static mc_generic deleteRoot(struct MCHeap* heap)
 
 
 
-fun(height, size_t)) as(MCHeap)
+fun(height, size_t)endfun as(MCHeap)
     //log2(x) = log10(x) / log10(2)
     //log2(x) = logE(x) / logE(2)
     if (it->count) {
         return (size_t)log2(it->count);
-    }
+    end
     return 0;
 }
 
-fun(width, size_t)) as(MCHeap)
+fun(width, size_t)endfun as(MCHeap)
     size_t height = it->height(it);
     return (size_t)exp2(height-1);
-}
+end
 
-fun(bye, void)) as(MCHeap)
+fun(bye, void)endfun as(MCHeap)
     if (it->values) {
         free(it->values);
-    }
+    end
 }
 
-fun(initWithCopy, struct MCHeap*), struct MCHeap* ref) as(MCHeap)
+fun(initWithCopy, struct MCHeap*), struct MCHeap* ref endfun as(MCHeap)
     MCHeap(it, ref->maxcount);
     memcpy(it->values, ref->values, sizeof(mc_generic) * ref->maxcount);
     it->count = ref->count;
     return it;
-}
+end
 
-fun(insertValue, size_t), mc_generic newval) as(MCHeap)
+fun(insertValue, size_t), mc_generic newval endfun as(MCHeap)
     struct MCHeap* heap = it;
     heap->values[++heap->count] = newval;
     shiftup(heap, heap->count);
     return 0;
-}
+end
 
-fun(copySortAscend, struct MCArray*)) as(MCHeap)
+fun(copySortAscend, struct MCArray*)endfun as(MCHeap)
     struct MCHeap* hcopy = MCHeap(alloc(MCHeap), it->maxcount);
     struct MCArray* array = MCArray(alloc(MCArray), it->maxcount);
     while (hcopy->count > 0) {
         array->addItem(array, deleteRoot(hcopy));
-    }
+    end
     hcopy->release(hcopy);
     return array;
 }
 
-fun(printAll, void)) as(MCHeap)
+fun(printAll, void)endfun as(MCHeap)
     int i;
     for (i=1; i<it->count; i++) {
         printf("%.2f ", it->values[i].f);
-    }
+    end
     printf("\n");
 
     //printNode(heap, 1);
 }
 
-fun(release, void)) as(MCObject)
+fun(release, void)endfun as(MCObject)
     it->release(it);
-}
+end
 
-constructor(MCHeap), size_t maxcount) {
+constructor(MCHeap), size_t maxcount endfun is
     MCObject(any);
     as(MCHeap)
         //index 0 is reserved
@@ -161,7 +161,7 @@ constructor(MCHeap), size_t maxcount) {
         it->values = (mc_generic*)malloc(sizeof(mc_generic) * maxcount);
         it->maxcount = maxcount;
         it->maxheight = (size_t)log2(maxcount);
-    }
+    end
     dynamic(MCHeap)
         funbind(height);
         funbind(width);

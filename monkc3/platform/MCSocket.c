@@ -3,15 +3,15 @@
 #include "MCSocket.h"
 #include "MCLog.h"
 
-fun(dumpInfo, void)) as(MCSocketClientInfo)
+fun(dumpInfo, void)endfun as(MCSocketClientInfo)
 	printf("accept a client: %s\n", it->address.sa_data);
-}
+end
 
-constructor(MCSocketClientInfo)) {
+constructor(MCSocketClientInfo)endfun is
 	as(MCSocketClientInfo)
 		it->returnSfd = 0;
 		it->address_len = 0;
-	}
+	end
 	return any;
 }
 
@@ -86,60 +86,60 @@ static void create_and_bind_socket(struct MCSocket* this, MCSocketType socket_ty
 //EBADF
 //ENOTSOCK
 //EOPNOTSUPP
-fun(listeningStart, int)) as(MCSocket)
+fun(listeningStart, int)endfun as(MCSocket)
 	if(it->isServer!=1)return -1;
 	return listen(it->sfd, MCSocket_Queue_Length);
-}
+end
 
-fun(acceptARequest, struct MCSocketClientInfo*)) as(MCSocket)
+fun(acceptARequest, struct MCSocketClientInfo*)endfun as(MCSocket)
 	if (it->isServer!=1)return null;
 	struct MCSocketClientInfo* clientinfo = MCSocketClientInfo(alloc(MCSocketClientInfo));
 	clientinfo->returnSfd = accept(it->sfd, &clientinfo->address, &clientinfo->address_len);
 	if (clientinfo->returnSfd > 0) {
 		it->currentClient = clientinfo;
-	}
+	end
 	return clientinfo;
 }
 
-fun(receive, void)) {
+fun(receive, void)endfun is
     //recv(int, void *, size_t, int)
-}
+end
 
-fun(receiveFrom, void)) {
+fun(receiveFrom, void)endfun is
     //recvfrom(int, void *, size_t, int, struct sockaddr *restrict, socklen_t *restrict)
-}
+end
 
-fun(receiveMsg, void)) {
+fun(receiveMsg, void)endfun is
     //recvmsg(int, struct msghdr *, int)
-}
+end
 
-fun(sendInfo, void)) {
+fun(sendInfo, void)endfun is
     //send(int, const void *, size_t, int)
-}
+end
 
-fun(sendTo, void)) {
+fun(sendTo, void)endfun is
     //sendto(int, const void *, size_t, int, const struct sockaddr *, socklen_t)
-}
+end
 
-fun(sendStringMsg, void), const char* msg) as(MCSocket)
+fun(sendStringMsg, void), const char* msg endfun as(MCSocket)
 	if (it->currentClient) {
 		write(it->currentClient->returnSfd, msg, strlen(msg));
-	}
+	end
 }
 
-fun(sendMsg, void)) {
+fun(sendMsg, void)endfun is
     //sendmsg(int, const struct msghdr *, int)
-}
+end
 
-fun(release, void)) as(MCSocket)
+fun(release, void)endfun as(MCSocket)
     close(it->sfd);
-}
+end
 
-constructor(MCSocket), MCSocketType socket_type, char* ip, char* port) {
+constructor(MCSocket), MCSocketType socket_type, char* ip, char* port endfun is
 	MCObject(any);
 	as(MCSocket)
 		create_and_bind_socket(it, socket_type, ip, port);
-	}
+	end
 	dynamic(MCSocket)
 		funbind(listeningStart);
 		funbind(acceptARequest);

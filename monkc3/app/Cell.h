@@ -6,14 +6,14 @@
 
 structure(Cell, MCObject)
     int age;
-    fundef(cellfunc, void));
-    fundef(initWithAge, void*), int age);
-    fundef(getAge, int));
-    fundef(printName, void));
-    fundef(release, void));
+    fundef(cellfunc, void) endfun;
+    fundef(initWithAge, void*), int age endfun;
+    fundef(getAge, int) endfun;
+    fundef(printName, void) endfun;
+    fundef(release, void) endfun;
 end;
 
-constructor(Cell), int age);
+constructor(Cell), int age endfun;
 
 alias(Cell);
 

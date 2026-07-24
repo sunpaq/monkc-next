@@ -12,17 +12,8 @@ MCHash MCHashTable_hash(const char* s) {
 }
 
 static unsigned probe(MCHash nkey, unsigned slots, unsigned times) {
-    //printf("probe %d times\n", times);
     return (nkey + times * times) % slots;
 }
-
-/*
- method table is initially set min one
- class  table is initially set max one
- 
- only the max size table use chain to slove collision
- other tables will expand(rehash) until they reach the max
- */
 
 static unsigned mc_hashtable_sizes[MCHashTableLevelCount] = {
     MIN_HASHTABLE_SIZE,
@@ -40,30 +31,6 @@ unsigned get_tablesize(MCHashTableLevel level)
     return mc_hashtable_sizes[level];
 }
 
-/* *
- * Configure hash table size:
- * have 5 levels of size
- * and it can auto expand to next level when some key collisioned
- *
- * Example of memory usage:
- * max memory useage for one class  table is: 4Byte x 10000 = 40KB
- * max memory useage for one method table is: 4Byte x 10000 = 40KB
- * max total memory useage is 4Byte x 10000 x 10000 = 400000KB = 400MB
- * */
-/*
-typedef enum {
-    MCHashTableLevel1 = 0,
-    MCHashTableLevel2,
-    MCHashTableLevel3,
-    MCHashTableLevel4,
-    MCHashTableLevelMax,
-    MCHashTableLevelCount
-} MCHashTableLevel;
-
-typedef MCUInt MCHashTableSize;
-typedef MCUInt MCHashTableIndex;
-*/
-
 static void copykey(char* des, const char* key, size_t maxlen) {
     size_t len = strlen(key);
     if (len > maxlen) {
@@ -73,29 +40,30 @@ static void copykey(char* des, const char* key, size_t maxlen) {
     des[len] = '\0';
 }
 
-fun(release, void)) as(MCHashItem)
-    if (it->doesAutoReleaseObject && it->value.mcobject) {
-        it->value.mcobject->release(it->value.mcobject);
+fun(release, void) endfun is
+    cast_self(MCHashItem);
+    if (self.doesAutoReleaseObject && self.value.mcobject) {
+        self.value.mcobject->release(self.value.mcobject);
     }
 end
 
-constructor(MCHashItem), const char* key, mc_generic value) as(MCObject)
+constructor(MCHashItem), const char* key, mc_generic value endfun is
+    cast_self(MCHashItem);
     MCObject(it);
-    as(MCHashItem)
-        it->next = null;
-        it->value = value;
-        it->tombstone = false;
-        it->doesAutoReleaseObject = false;
-        it->hash = MCHashTable_hash(key);
-        copykey(it->key, key, MAX_KEY_CHARS);
-        funadd(release);
-    end
-    return any;
+    self.next = null;
+    self.value = value;
+    self.tombstone = false;
+    self.doesAutoReleaseObject = false;
+    self.hash = MCHashTable_hash(key);
+    copykey(self.key, key, MAX_KEY_CHARS);
+    funadd(release);
+    return it;
 end
 
 //MCHashTable
 
-fun(getItem, struct MCHashItem*), const char* key) as(MCHashTable)
+fun(getItem, struct MCHashItem*), const char* key endfun is
+    cast_self(MCHashTable);
     MCHash hashval = MCHashTable_hash(key);
     unsigned tsize = get_tablesize(0);
 
@@ -118,7 +86,8 @@ fun(getItem, struct MCHashItem*), const char* key) as(MCHashTable)
     return null;
 end
 
-fun(putItem, struct MCHashItem*), struct MCHashItem* item) as(MCHashTable)
+fun(putItem, struct MCHashItem*), struct MCHashItem* item endfun is
+    cast_self(MCHashTable);
     MCHash hashval = item->hash;
     unsigned tsize = get_tablesize(0);
 
@@ -128,7 +97,6 @@ fun(putItem, struct MCHashItem*), struct MCHashItem* item) as(MCHashTable)
         //slot empty
         if (!it->items[i]) {
             it->items[i] = item;
-            //printf("add item[%d] = %s\n", i, item->key);
             return null;
         } else {
             struct MCHashItem* old = it->items[i];
@@ -151,26 +119,25 @@ fun(putItem, struct MCHashItem*), struct MCHashItem* item) as(MCHashTable)
     return null;
 end
 
-fun(put, mc_generic), const char* key, mc_generic value)
-{
+fun(put, mc_generic), const char* key, mc_generic value endfun is
     val item = MCHashItem(alloc(MCHashItem), key, value);
     struct MCHashItem* old = putItem(any, item);
     if (old) {
         return old->value;
     }
     return gen_p(null);
-}
+end
 
-fun(get, mc_generic), const char* key)
-{
+fun(get, mc_generic), const char* key endfun is
     struct MCHashItem* item = getItem(any, key);
     if (item) {
         return item->value;
     }
     return gen_p(null);
-}
+end
 
-constructor(MCHashTable)) as(MCHashTable)
+constructor(MCHashTable) endfun is
+    cast_self(MCHashTable);
     self.lock = 0;
     self.cache_count = 0;
     self.count = MIN_HASHTABLE_SIZE;

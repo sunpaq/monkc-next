@@ -9,11 +9,11 @@ structure(MCSet, MCObject)
     size_t maxcount;
     size_t count;
 
-    fundef(bye, void));
-    fundef(insertValue, struct MCSet*), mc_generic value);
-};
+    fundef(bye, void)endfun;
+    fundef(insertValue, struct MCSet*), mc_generic value endfun;
+end;
 
-constructor(MCSet), size_t maxcount);
+constructor(MCSet), size_t maxcount endfun;
 
 alias(MCSet);
 
@@ -25,11 +25,11 @@ alias(MCSet);
  */
 
 structure(MCUnionFind, MCSet)
-    fundef(findAction, void));
-    fundef(unionAction, void));
-};
+    fundef(findAction, void)endfun;
+    fundef(unionAction, void)endfun;
+end;
 
-constructor(MCUnionFind));
+constructor(MCUnionFind)endfun;
 
 alias(MCUnionFind);
 

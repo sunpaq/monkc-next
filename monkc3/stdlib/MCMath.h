@@ -80,12 +80,12 @@ static bool MCVector3PositiveNonZero(MCVector3 vec3)
 
 static MCVector2 MCVector2From3(MCVector3 vec3)
 {
-    return (MCVector2){vec3.x, vec3.y};
+    return (MCVector2){{vec3.x, vec3.y}};
 }
 
 static MCVector3 MCVector3From4(MCVector4 vec4)
 {
-    return (MCVector3){vec4.x, vec4.y, vec4.z};
+    return (MCVector3){{vec4.x, vec4.y, vec4.z}};
 }
 
 static bool MCVector2Equal(MCVector2 v1, MCVector2 v2)
@@ -114,12 +114,12 @@ static bool MCVector4Equal(MCVector4 v1, MCVector4 v2)
 
 static MCQuaternion MCQuaternionFromVec3(MCVector3 v)
 {
-    return (MCQuaternion){v.x, v.y, v.z, 0.0f};
+    return (MCQuaternion){{v.x, v.y, v.z, 0.0f}};
 }
 
 static MCQuaternion MCQuaternionZero(void)
 {
-    return (MCQuaternion){0,0,0,0};
+    return (MCQuaternion){{0,0,0,0}};
 }
 
 //OpenGL use column major storage matrix m21 is 2column 1row
@@ -144,18 +144,18 @@ typedef union {
     float m[16];
 } __attribute__((aligned(16))) MCMatrix4;
 
-static const MCMatrix3 MCMatrix3Identity = {
+static const MCMatrix3 MCMatrix3Identity = {{
     1.0f, 0.0f, 0.0f,
     0.0f, 1.0f, 0.0f,
     0.0f, 0.0f, 1.0f,
-};
+}};
 
-static const MCMatrix4 MCMatrix4Identity = {
+static const MCMatrix4 MCMatrix4Identity = {{
     1,0,0,0,
     0,1,0,0,
     0,0,1,0,
     0,0,0,1
-};
+}};
 
 static double MCDegreesToRadians(double degrees) { return degrees * (M_PI / 180); }
 static double MCRadiansToDegrees(double radians) { return radians * (180 / M_PI); }
@@ -188,36 +188,36 @@ static MCVector3 MCVector3Normalize(MCVector3 vector)
         return vector;
     }
 
-    return (MCVector3){x,y,z};
+    return (MCVector3){{x,y,z}};
 }
 
 static MCVector3 MCVector3Make(float x, float y, float z) {
-    return (MCVector3){x, y, z};
+    return (MCVector3){{x, y, z}};
 }
 
 static MCVector4 MCVector4Make(float x, float y, float z, float w) {
-    return (MCVector4){x, y, z, w};
+    return (MCVector4){{x, y, z, w}};
 }
 
 static MCVector3 MCVector3MakeReverse(float x, float y, float z) {
-    return (MCVector3){-x, -y, -z};
+    return (MCVector3){{-x, -y, -z}};
 }
 
 static MCVector3 MCVector3Reverse(MCVector3 vtx) {
-    return (MCVector3){-vtx.x, -vtx.y, -vtx.z};
+    return (MCVector3){{-vtx.x, -vtx.y, -vtx.z}};
 }
 
 static MCVector3 MCVector3Middle(MCVector3 v1, MCVector3 v2) {
-    return (MCVector3){(v1.x+v2.x)/2.0f, (v1.y+v2.y)/2.0f, (v1.z+v2.z)/2.0f};
+    return (MCVector3){{(v1.x+v2.x)/2.0f, (v1.y+v2.y)/2.0f, (v1.z+v2.z)/2.0f}};
 }
 
 static MCVector3 MCVector3Add(MCVector3 v1, MCVector3 v2) {
-    return (MCVector3){v1.x+v2.x, v1.y+v2.y, v1.z+v2.z};
+    return (MCVector3){{v1.x+v2.x, v1.y+v2.y, v1.z+v2.z}};
 }
 
 static MCVector3 MCVector3Sub(MCVector3 v1, MCVector3 v2) {
     //the same as add -v2
-    return (MCVector3){v1.x-v2.x, v1.y-v2.y, v1.z-v2.z};
+    return (MCVector3){{v1.x-v2.x, v1.y-v2.y, v1.z-v2.z}};
 }
 
 static double MCVector3Dot(MCVector3 v1, MCVector3 v2) {
@@ -225,9 +225,9 @@ static double MCVector3Dot(MCVector3 v1, MCVector3 v2) {
 }
 
 static MCVector3 MCVector3Cross(MCVector3 v1, MCVector3 v2) {
-    return (MCVector3){v1.y*v2.z - v2.y*v1.z,
+    return (MCVector3){{v1.y*v2.z - v2.y*v1.z,
         v2.x*v1.z - v1.x*v2.z,
-        v1.x*v2.y - v2.x*v1.y};
+        v1.x*v2.y - v2.x*v1.y}};
 }
 
 static MCQuaternion MCQuaternionGProduct(MCQuaternion p, MCQuaternion q)
@@ -235,16 +235,16 @@ static MCQuaternion MCQuaternionGProduct(MCQuaternion p, MCQuaternion q)
     float pscalar = p.w;
     float qscalar = q.w;
     
-    MCVector3 pvector = (MCVector3){p.x, p.y, p.z};
-    MCVector3 qvector = (MCVector3){q.x, q.y, q.z};
+    MCVector3 pvector = (MCVector3){{p.x, p.y, p.z}};
+    MCVector3 qvector = (MCVector3){{q.x, q.y, q.z}};
     MCVector3 pxq = MCVector3Cross(pvector, qvector);
     
-    return (MCQuaternion) {
+    return (MCQuaternion){{
         pscalar * qvector.x + qscalar * pvector.x + pxq.x,
         pscalar * qvector.y + qscalar * pvector.y + pxq.y,
         pscalar * qvector.z + qscalar * pvector.z + pxq.z,
         (float)(pscalar * qscalar - MCVector3Dot(pvector, qvector))
-    };
+    }};
 }
 
 static MCQuaternion MCQuaternionArrayGProduct(MCQuaternion p, MCQuaternion* qarray, int count)
@@ -262,32 +262,32 @@ static MCQuaternion MCQuaternionArrayGProduct(MCQuaternion p, MCQuaternion* qarr
 
 static MCQuaternion MCQuaternionConjugate(MCQuaternion q)
 {
-    return (MCQuaternion) { -q.x, -q.y, -q.z, q.w };
+    return (MCQuaternion){{ -q.x, -q.y, -q.z, q.w }};
 }
 
 static MCQuaternion MCQuaternionFromAxisAngle_Radian(MCVector3 axis, double radian)
 {
     double r = radian / 2.0f;
-    return (MCQuaternion) {
+    return (MCQuaternion){{
             (float)(axis.x * sin(r)),
             (float)(axis.y * sin(r)),
             (float)(axis.z * sin(r)),
             (float)(cos(r))
-    };
+    }};
 }
 
 static MCQuaternion MCQuaternionSwapYZ(MCQuaternion* q)
 {
-    MCVector3 axis = (MCVector3){q->x, q->y, q->z};
+    MCVector3 axis = (MCVector3){{q->x, q->y, q->z}};
     double radian = q->w;
     
     double r = radian / 2.0f;
-    return (MCQuaternion) {
+    return (MCQuaternion){{
             (float)(axis.x * sin(r)),
             (float)(axis.z * sin(r)),
             (float)(axis.y * sin(r)),
             (float)(cos(r))
-    };
+    }};
 }
 
 static MCQuaternion MCQuaternionFromAxisAngle(MCVector3 axis, double tht)
@@ -317,9 +317,9 @@ static MCQuaternion MCQuaternionByAxisAngles(double x, double y, double z)
 
 static MCVector3 MCVector3RotateByQuaternion(MCVector3 v, MCQuaternion q)
 {
-    MCQuaternion r1 = MCQuaternionGProduct(q, (MCQuaternion){v.x, v.y, v.z, 0.0f});
+    MCQuaternion r1 = MCQuaternionGProduct(q, (MCQuaternion){{v.x, v.y, v.z, 0.0f}});
     MCQuaternion r2 = MCQuaternionGProduct(r1, MCQuaternionConjugate(q));
-    return (MCVector3){r2.x, r2.y, r2.z};
+    return (MCVector3){{r2.x, r2.y, r2.z}};
 }
 
 static MCVector3 MCVector3RotateByAxisAngles(MCVector3 v, double z, double y, double x)

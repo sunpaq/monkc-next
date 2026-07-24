@@ -27,12 +27,12 @@ structure(MCBST, MCObject)
     struct BSTNode* root;
     size_t count;
 
-    fundef(insertValue, void), mc_generic newval);
-    fundef(traverseTree, void), struct BSTNode* (*funcptr)(struct BSTNode* node));
-    fundef(printTree, void));
-};
+    fundef(insertValue, void), mc_generic newval endfun;
+    fundef(traverseTree, void), struct BSTNode* (*funcptr)(struct BSTNode* node)endfun;
+    fundef(printTree, void)endfun;
+end;
 
-constructor(MCBST));
+constructor(MCBST)endfun;
 
 /*
  Trie Tree (Digital, Radix, Prefix - Tree)
@@ -52,13 +52,13 @@ structure(MCTrie, MCObject)
     struct TrieNode* root;
     size_t count;
 
-    fundef(bye, void));
-    fundef(insertValueByKey, void), mc_generic newval, const char* word);
-    fundef(valueOfKey, mc_generic), const char* word);
-    fundef(keysWithPrefix, struct MCArray*), const char* prefix);
-    fundef(hasKey, bool), const char* word);
-};
+    fundef(bye, void)endfun;
+    fundef(insertValueByKey, void), mc_generic newval, const char* word endfun;
+    fundef(valueOfKey, mc_generic), const char* word endfun;
+    fundef(keysWithPrefix, struct MCArray*), const char* prefix endfun;
+    fundef(hasKey, bool), const char* word endfun;
+end;
 
-constructor(MCTrie));
+constructor(MCTrie)endfun;
 
 #endif /* MCTree_h */
